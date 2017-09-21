@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4D59859-6235-4E81-A584-7AD20FE3F756}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kadrovska_sluzba</RootNamespace>
+    <AssemblyName>Kadrovska sluzba</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.50.0\lib\net45\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DbConnection.cs" />
+    <Compile Include="DB\Models\ModelGenerator1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Service\DrzavljanstvoService.cs" />
+    <Compile Include="DB\Service\FirmaService.cs" />
+    <Compile Include="DB\Service\MjestoService.cs" />
+    <Compile Include="DB\Service\NacinPrestankaROService.cs" />
+    <Compile Include="DB\Service\NacionalnostService.cs" />
+    <Compile Include="DB\Service\OpstinaService.cs" />
+    <Compile Include="DB\Service\PorodicnoStanjeService.cs" />
+    <Compile Include="DB\Service\PoslovnaJedinicaService.cs" />
+    <Compile Include="DB\Service\RadnikService.cs" />
+    <Compile Include="DB\Service\RadnoMjestoService.cs" />
+    <Compile Include="DB\Service\StrucnaSpremaService.cs" />
+    <Compile Include="DB\Service\TipRadnogOdnosaService.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sifarnici\frmPorodicnoStanjeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmPorodicnoStanjeEdit.Designer.cs">
+      <DependentUpon>frmPorodicnoStanjeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmNacionalnostEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmNacionalnostEdit.Designer.cs">
+      <DependentUpon>frmNacionalnostEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmMjestoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmMjestoEdit.Designer.cs">
+      <DependentUpon>frmMjestoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmDrzavljanstvoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmDrzavljanstvoEdit.Designer.cs">
+      <DependentUpon>frmDrzavljanstvoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmPoslovnaJedinicaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmPoslovnaJedinicaEdit.Designer.cs">
+      <DependentUpon>frmPoslovnaJedinicaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmNacinPrestankaROEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmNacinPrestankaROEdit.Designer.cs">
+      <DependentUpon>frmNacinPrestankaROEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmTipRadnogOdnosaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmTipRadnogOdnosaEdit.Designer.cs">
+      <DependentUpon>frmTipRadnogOdnosaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmRadnoMjestoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmRadnoMjestoEdit.Designer.cs">
+      <DependentUpon>frmRadnoMjestoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmStrucnaSpremaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmStrucnaSpremaEdit.Designer.cs">
+      <DependentUpon>frmStrucnaSpremaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\frmOpstinaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\frmOpstinaEdit.Designer.cs">
+      <DependentUpon>frmOpstinaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucPorodicnoStanje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucPorodicnoStanje.Designer.cs">
+      <DependentUpon>ucPorodicnoStanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucNacionalnost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucNacionalnost.Designer.cs">
+      <DependentUpon>ucNacionalnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucFirma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucFirma.Designer.cs">
+      <DependentUpon>ucFirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucMjesta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucMjesta.Designer.cs">
+      <DependentUpon>ucMjesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucDrzavljanstva.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucDrzavljanstva.Designer.cs">
+      <DependentUpon>ucDrzavljanstva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucPoslovneJedinice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucPoslovneJedinice.Designer.cs">
+      <DependentUpon>ucPoslovneJedinice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucNacinPrestankaRO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucNacinPrestankaRO.Designer.cs">
+      <DependentUpon>ucNacinPrestankaRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucTipRadnogOdnosa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucTipRadnogOdnosa.Designer.cs">
+      <DependentUpon>ucTipRadnogOdnosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucRadnoMjesto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucRadnoMjesto.Designer.cs">
+      <DependentUpon>ucRadnoMjesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucStrucnaSprema.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucStrucnaSprema.Designer.cs">
+      <DependentUpon>ucStrucnaSprema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\ucOpstine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\ucOpstine.Designer.cs">
+      <DependentUpon>ucOpstine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sifarnici\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifarnici\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRadnici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRadnici.Designer.cs">
+      <DependentUpon>ucRadnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRadnik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRadnik.Designer.cs">
+      <DependentUpon>ucRadnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSifarnici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSifarnici.Designer.cs">
+      <DependentUpon>ucSifarnici.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sifarnici\frmPorodicnoStanjeEdit.resx">
+      <DependentUpon>frmPorodicnoStanjeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmNacionalnostEdit.resx">
+      <DependentUpon>frmNacionalnostEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmMjestoEdit.resx">
+      <DependentUpon>frmMjestoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmDrzavljanstvoEdit.resx">
+      <DependentUpon>frmDrzavljanstvoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmPoslovnaJedinicaEdit.resx">
+      <DependentUpon>frmPoslovnaJedinicaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmNacinPrestankaROEdit.resx">
+      <DependentUpon>frmNacinPrestankaROEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmTipRadnogOdnosaEdit.resx">
+      <DependentUpon>frmTipRadnogOdnosaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmRadnoMjestoEdit.resx">
+      <DependentUpon>frmRadnoMjestoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmStrucnaSpremaEdit.resx">
+      <DependentUpon>frmStrucnaSpremaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\frmOpstinaEdit.resx">
+      <DependentUpon>frmOpstinaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucPorodicnoStanje.resx">
+      <DependentUpon>ucPorodicnoStanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucNacionalnost.resx">
+      <DependentUpon>ucNacionalnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucFirma.resx">
+      <DependentUpon>ucFirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucMjesta.resx">
+      <DependentUpon>ucMjesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucDrzavljanstva.resx">
+      <DependentUpon>ucDrzavljanstva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucPoslovneJedinice.resx">
+      <DependentUpon>ucPoslovneJedinice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucNacinPrestankaRO.resx">
+      <DependentUpon>ucNacinPrestankaRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucTipRadnogOdnosa.resx">
+      <DependentUpon>ucTipRadnogOdnosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucRadnoMjesto.resx">
+      <DependentUpon>ucRadnoMjesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucStrucnaSprema.resx">
+      <DependentUpon>ucStrucnaSprema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\ucOpstine.resx">
+      <DependentUpon>ucOpstine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRadnici.resx">
+      <DependentUpon>ucRadnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRadnik.resx">
+      <DependentUpon>ucRadnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSifarnici.resx">
+      <DependentUpon>ucSifarnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Examples.txt" />
+    <Content Include="DB\Models\ModelGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelGenerator1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

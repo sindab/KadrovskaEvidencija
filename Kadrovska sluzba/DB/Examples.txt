@@ -1,0 +1,176 @@
+﻿https://www.tritac.com/bp-24-dapper-net-by-example
+
+Dapper.Net by example
+Auteur : Jeroen Kuiper Geplaatst op : 6-1-2012 00:00
+When the team behind StackOverflow released the mini-ORM Dapper, we were enthousiastic. An ORM with performance in mind! 
+
+Microsoft's Entity Framework is still lagging behind and feels (is) like a beast. NHibernate is a beast as well, but is usally fast with second-level caching. For simple applications or scheduled tasks, it just too much. And for poorly designed legacy databases, it works against you. When you just need to write SQL queries and want to map the results to objects, a mini ORM suffices. 
+
+StackOverflow is one of the most responsive sites I know, so its ORM performance's is proven. Dapper's documentation however is somewhat sparse.
+Basic usage
+Download the single file SqlMapper.cs and dump it in your project.
+Put using Dapper in your file with queries, because Dapper extends the normal IDbConnection interface (which is somewhat of a bad practice imho).
+Use your favorite way (Dependency Injection of course) of providing a IDbConnection connection named conn,just as you normally would when using a ADO.NET. Basically like so:
+                using (var conn = new SqlConnection(myConnectionString)) {
+                    conn.Open();
+                    ....
+               }
+
+A list of objects
+Select a list of accounts from a certain webshop.
+IEnumerable<Account> resultList = conn.Query<Account>(@"
+                    SELECT * 
+                    FROM Account
+                    WHERE shopId = @ShopId", 
+new {  ShopId = shopId });
+The Account object is for example.
+public class Account {
+  public int? Id {get;set;}
+  public string Name {get;set;}
+  public string Address {get;set;}
+  public string Country {get;set;}
+  public int ShopId {get; set;}
+}
+Note that eventhough we use SELECT *, not all fields have to be present as class properties.
+A single object
+Account result = conn.Query<Account>(@"
+                    SELECT * 
+                    FROM Account
+                    WHERE Id = @Id", 
+   new {  Id = Id }).FirstOrDefault();
+A dynamic object
+If you're too lazy to type out a class, you can use a dynamic object. 
+dynamic account = conn.Query<dynamic>(@"
+                    SELECT Name, Address, Country
+                    FROM Account
+		    WHERE Id = @Id", new { Id = Id }).FirstOrDefault();
+Console.WriteLine(account.Name);
+Console.WriteLine(account.Address);
+Console.WriteLine(account.Country);
+Nice! Probably somewhat slower than if you type out the class.
+A list of objects with single child object (multimap)
+Imagine we want the Shop data with the Accounts as well. It is a legacy database, so the Shop's Id is named ShopId instead of Id. This can be overcome with the  'splitOn' option.
+public class Account {
+  public int? Id {get;set;}
+  public string Name {get;set;}
+  public string Address {get;set;}
+  public string Country {get;set;}
+  public int ShopId {get; set;}
+  public Shop Shop {get;set;}
+}
+public class Shop {
+  public int? ShopId {get;set;}
+  public string Name {get;set;}
+  public string Url {get;set;}
+}
+
+var resultList = conn.Query<Account, Shop, Account>(@"
+                    SELECT a.Name, a.Address, a.Country, a.ShopId
+                            s.ShopId, s.Name, s.Url
+                    FROM Account a
+                    INNER JOIN Shop s ON s.ShopId = a.ShopId                    
+                    ", (a, s) => {
+                         a.Shop = s;
+                         return a;
+                     },
+                     splitOn: "ShopId"
+                     ).AsQueryable();
+
+
+A parent object with its child objects
+And the other way around: find the shop with all its accounts. It's a little more complicated, as each row is given as (Shop s, Account a), but Shop s is a new object every time. So we have to remember one shop to add all accounts to.
+
+
+public class Shop {
+  public int? Id {get;set;}
+  public string Name {get;set;}
+  public string Url {get;set;}
+  public IList<Account> Accounts {get;set;}
+}
+
+public class Account {
+  public int? Id {get;set;}
+  public string Name {get;set;}
+  public string Address {get;set;}
+  public string Country {get;set;}
+  public int ShopId {get;set;}
+}
+
+var lookup = new Dictionary<int, Shop>()
+conn.Query<Shop, Account, Shop>(@"
+                    SELECT s.*, a.*
+                    FROM Shop s
+                    INNER JOIN Account a ON s.ShopId = a.ShopId                    
+                    ", (s, a) => {
+                         Shop shop;
+                         if (!lookup.TryGetValue(s.Id, out shop)) {
+                             lookup.Add(s.Id, shop = s);
+                         }
+                         if (shop.Accounts == null) 
+                             shop.Accounts = new List<Account>();
+                         shop.Accounts.Add(a);
+                         return shop;
+                     },
+                     ).AsQueryable();
+
+var resultList = lookup.Values;
+I got this dapper test ParentChildIdentityAssociations:   https://code.google.com/p/dapper-dot-net/source/browse/Tests/Tests.cs#1343
+
+Insert and update
+Insert and update is not part of the default Dapper file. However, these is an extension for these functions -- which usually are the most tedious to maintain, so it is more than welcome.
+
+Mark you identifier with [KeyAttribute]
+public class Account {
+  [KeyAttribute]
+  public int? Id {get;set;}
+  public string Name {get;set;}
+  public string Address {get;set;}
+  public string Country {get;set;}
+  public int ShopId {get; set;}
+}
+And then you can create a simple Persist function:
+        public void Persist(IDbConnection conn, Account acc) {
+            if (acc.Id == null) {
+                SqlMapperExtensions.Insert(conn, acc);
+            }
+            else {
+                SqlMapperExtensions.Update(conn, acc);
+            }
+        }
+
+MORE EXAMPLES ...
+
+var selectSql = "SELECT * FROM PersonTable WHERE (@FirstName IS NULL OR FirstName =  @FirstName) AND (@LastName IS NULL OR LastName =  @LastName) AND (@City IS NULL OR City =  @City) AND (@Id IS NULL OR Id =  @Id)";
+return conn.Query<PersonModel>(selectSql, new
+{
+    model.FirstName,
+    model.Lastname,
+    model.City,
+    Id = model.Id == 0? (int?)null: (int?)model.Id        
+}).ToList();
+
+[Test]
+    public void Test()
+    {
+        var model = new PersonModel {FirstName = "Bar", City = "New York"};
+
+        var builder = new SqlBuilder();
+        var selector = builder.AddTemplate("select * from table /**where**/");
+
+        if (model.Id > 0)
+            builder.Where("Id = @Id", new { model.Id });
+
+        if (!string.IsNullOrEmpty(model.FirstName))
+            builder.Where("FirstName = @FirstName", new { model.FirstName });
+
+        if (!string.IsNullOrEmpty(model.Lastname))
+            builder.Where("Lastname = @Lastname", new { model.Lastname });
+
+        if (!string.IsNullOrEmpty(model.City))
+            builder.Where("City = @City", new { model.City });
+
+        Assert.That(selector.RawSql, Is.EqualTo("select * from table WHERE FirstName = @FirstName AND City = @City\n"));
+
+        //var rows = sqlConnection.Query(selector.RawSql, selector.Parameters);
+    }
+
