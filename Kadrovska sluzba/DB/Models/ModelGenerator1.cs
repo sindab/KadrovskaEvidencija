@@ -192,26 +192,23 @@ namespace Kadrovska_sluzba.DB.Models
 		public virtual int Bitovi { get; set; }
 		public virtual string Titula { get; set; }
 		public virtual string Funkcija { get; set; }
-		public virtual string MjestoRodjenja { get; set; }
-		public virtual string OpstinaRodjenja { get; set; }
+		public virtual int? MjestoRodjenja { get; set; }
 		public virtual DateTime? DatumRodjenja { get; set; }
 		public virtual int? DrzavljanstvoID { get; set; }
 		public virtual int? NacionalnostID { get; set; }
 		public virtual int? PorodicnoStanjeID { get; set; }
-		public virtual string MjestoStan { get; set; }
+		public virtual int? MjestoStan { get; set; }
 		public virtual string AdresaStan { get; set; }
-		public virtual string OpstinaStan { get; set; }
 		public virtual string TelefonStan { get; set; }
 		public virtual string TelefonMob { get; set; }
 		public virtual string TelefonPosao { get; set; }
 		public virtual string Zanimanje { get; set; }
 		public virtual int? StrucnaSpremaID { get; set; }
 		public virtual string ZavrsenaSkola { get; set; }
-		public virtual string PoslovnaJedinica { get; set; }
 		public virtual int? RadnoMjestoID { get; set; }
 		public virtual string BrLK { get; set; }
 		public virtual string BrRadneKnj { get; set; }
-		public virtual string OpstinaIzdavanjaRK { get; set; }
+		public virtual int? OpstinaIzdavanjaRK { get; set; }
 		public virtual string LicniBrOsiguranja { get; set; }
 		public virtual DateTime? DatumPrvogZapos { get; set; }
 		public virtual int? PrethodniStazMj { get; set; }
@@ -229,21 +226,23 @@ namespace Kadrovska_sluzba.DB.Models
 		public virtual string Naziv { get; set; }
 		public virtual string eMail { get; set; }
 		public virtual int? PoslovnaJedinicaID { get; set; }
-		//public virtual Mjesto Mjesto { get; set; }
-		//public virtual Opstina Opstina { get; set; }
-		//public virtual Drzavljanstvo Drzavljanstvo { get; set; }
-		//public virtual Nacionalnost Nacionalnost { get; set; }
-		//public virtual PorodicnoStanje PorodicnoStanje { get; set; }
-		//public virtual Mjesto Mjesto { get; set; }
-		//public virtual Opstina Opstina { get; set; }
-		//public virtual StrucnaSprema StrucnaSprema { get; set; }
-		//public virtual RadnoMjesto RadnoMjesto { get; set; }
-		//public virtual Opstina Opstina { get; set; }
-		//public virtual TipRadnogOdnosa TipRadnogOdnosa { get; set; }
-		//public virtual NacinPrestankaRO NacinPrestankaRO { get; set; }
-		//public virtual PoslovnaJedinica PoslovnaJedinica { get; set; }
-		//public virtual IEnumerable<RadnikDjeca> RadnikDjeca { get; set; }
-	}
+        public virtual string Pol { get; set; }
+
+        //public virtual Mjesto Mjesto { get; set; }
+        //public virtual Opstina Opstina { get; set; }
+        //public virtual Drzavljanstvo Drzavljanstvo { get; set; }
+        //public virtual Nacionalnost Nacionalnost { get; set; }
+        //public virtual PorodicnoStanje PorodicnoStanje { get; set; }
+        //public virtual Mjesto Mjesto { get; set; }
+        //public virtual Opstina Opstina { get; set; }
+        //public virtual StrucnaSprema StrucnaSprema { get; set; }
+        //public virtual RadnoMjesto RadnoMjesto { get; set; }
+        //public virtual Opstina Opstina { get; set; }
+        //public virtual TipRadnogOdnosa TipRadnogOdnosa { get; set; }
+        //public virtual NacinPrestankaRO NacinPrestankaRO { get; set; }
+        //public virtual PoslovnaJedinica PoslovnaJedinica { get; set; }
+        //public virtual IEnumerable<RadnikDjeca> RadnikDjeca { get; set; }
+    }
 
     /// <summary>
     /// A class which represents the Mjesto table.

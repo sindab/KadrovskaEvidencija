@@ -34,6 +34,11 @@ namespace Kadrovska_sluzba
                 dataSource = GetDataSource();
                 gridControl.DataSource = dataSource;
                 bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
+
+                MjestoService ms = new MjestoService();
+                IEnumerable<Mjesto> mj = ms.GetAll();
+                lkpMjestoRodjenja.DataSource = mj.ToList();
+                lkpMjestoStan.DataSource = mj.ToList();
             }
         }
 

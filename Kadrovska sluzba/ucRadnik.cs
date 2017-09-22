@@ -40,12 +40,12 @@ namespace Kadrovska_sluzba
                 _radnik = value;
                 List<Radnik> lR = new List<Radnik>();
                 lR.Add(_radnik);
-                dataLayoutControl1.DataSource = lR;
-                dataLayoutControl1.RetrieveFields();
+                //dataLayoutControl1.DataSource = lR;
+                //dataLayoutControl1.RetrieveFields();
 
-                List<BaseLayoutItem> flatList = new FlatItemsList().GetItemsList(dataLayoutControl1.Root);
-                BaseLayoutItem aboutItem = flatList.First(e => e.Text == "Napomena");
-                aboutItem.TextLocation = DevExpress.Utils.Locations.Top;
+                //List<BaseLayoutItem> flatList = new FlatItemsList().GetItemsList(dataLayoutControl1.Root);
+                //BaseLayoutItem aboutItem = flatList.First(e => e.Text == "Napomena");
+                //aboutItem.TextLocation = DevExpress.Utils.Locations.Top;
             }
         }
 
