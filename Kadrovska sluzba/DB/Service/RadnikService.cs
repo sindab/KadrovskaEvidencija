@@ -89,6 +89,8 @@ namespace Kadrovska_sluzba.DB.Service
 
         public void Update(Radnik radnik)
         {
+            //radnik.FindStr
+            //radnik.Naziv
             _db.Update<Radnik>(radnik);
             //int rowsAffected = _db.Execute("UPDATE [Par] SET [Naziv] = @Naziv ,[Adresa] = @Adresa, [PostBr] = @PostBr " +
             //    "WHERE ParID = " + par.ParID, par);

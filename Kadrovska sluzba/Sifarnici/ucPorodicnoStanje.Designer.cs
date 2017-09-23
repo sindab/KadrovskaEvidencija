@@ -170,7 +170,7 @@
             this.ribbonPageGroup2});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Nacionalnosti";
+            this.ribbonPage1.Text = "Porodično stanje";
             // 
             // ribbonPageGroup1
             // 
@@ -199,14 +199,14 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
             // 
-            // ucNacionalnost
+            // ucPorodicnoStanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonControl);
-            this.Name = "ucNacionalnost";
+            this.Name = "ucPorodicnoStanje";
             this.Size = new System.Drawing.Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();

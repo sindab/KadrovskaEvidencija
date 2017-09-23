@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelGenerator.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Models\Radnik.cs" />
     <Compile Include="DB\Service\DrzavljanstvoService.cs" />
     <Compile Include="DB\Service\FirmaService.cs" />
     <Compile Include="DB\Service\MjestoService.cs" />
@@ -370,6 +371,12 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelGenerator1.cs</LastGenOutput>
     </Content>
+    <None Include="men.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="women.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
