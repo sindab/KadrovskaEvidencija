@@ -24,12 +24,12 @@ namespace Kadrovska_sluzba
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
         {
-            ucRadnik1.Radnik = ucRadnici1.TrenutniRadnik;
+            //ucRadnik1.Radnik = ucRadnici1.TrenutniRadnik;
             navigationFrame.SelectedPageIndex = navBarControl.Groups.IndexOf(e.Group);
         }
         void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ucRadnik1.Radnik = ucRadnici1.TrenutniRadnik;
+            //ucRadnik1.Radnik = ucRadnici1.TrenutniRadnik;
             int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
             navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
         }

@@ -47,6 +47,7 @@ namespace Kadrovska_sluzba
                 if (!(value == null))
                 {
                     _radnik = value;
+                    txtID.EditValue = _radnik.ID;
                     txtJMBG.EditValue = _radnik.JMBG;
                     txtPrezime.EditValue = _radnik.Prezime;
                     txtIme.EditValue = _radnik.Ime;
@@ -60,13 +61,13 @@ namespace Kadrovska_sluzba
                     }
                     else
                     {
-                        if (_radnik.Pol == "Muški")
+                        if (_radnik.Pol == "Ženski")
                         {
-                            pictureEdit1.Image = Image.FromFile("men.png");
+                            pictureEdit1.Image = Image.FromFile("women.png");
                         }
                         else
                         {
-                            pictureEdit1.Image = Image.FromFile("women.png");
+                            pictureEdit1.Image = Image.FromFile("men.png");
                         }
                     }
                 }
@@ -95,30 +96,28 @@ namespace Kadrovska_sluzba
             _radnik.DjevPrezime = txtDjevPrezime.EditValue.ToString();
             _radnik.ImeOca = txtImeOca.EditValue.ToString();
             _radnik.Slika = m_barrImg;
-            rs.Update(_radnik);
+            rs.CreateOrUpdate(_radnik);
         }
 
         byte[] m_barrImg;
         private void pictureEdit1_ContextButtonClick(object sender, DevExpress.Utils.ContextItemClickEventArgs e)
         {
-            //OpenFileDialog od = new OpenFileDialog();
-            //od.DefaultExt = "jpg";
-            //od.ShowDialog();
-            //pictureEdit1.Image = od.FileName;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             try
             {
-                openFileDialog1.ShowDialog(this);
-                string strFn = openFileDialog1.FileName;
-                pictureEdit1.Image = Image.FromFile(strFn);
-                FileInfo fiImage = new FileInfo(strFn);
-                long m_lImageFileLength = fiImage.Length;
-                FileStream fs = new FileStream(strFn, FileMode.Open,
-                                  FileAccess.Read, FileShare.Read);
-                m_barrImg = new byte[Convert.ToInt32(m_lImageFileLength)];
-                int iBytesRead = fs.Read(m_barrImg, 0,
-                                 Convert.ToInt32(m_lImageFileLength));
-                fs.Close();
+                if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
+                {
+                    string strFn = openFileDialog1.FileName;
+                    pictureEdit1.Image = Image.FromFile(strFn);
+                    FileInfo fiImage = new FileInfo(strFn);
+                    long m_lImageFileLength = fiImage.Length;
+                    FileStream fs = new FileStream(strFn, FileMode.Open,
+                                      FileAccess.Read, FileShare.Read);
+                    m_barrImg = new byte[Convert.ToInt32(m_lImageFileLength)];
+                    int iBytesRead = fs.Read(m_barrImg, 0,
+                                     Convert.ToInt32(m_lImageFileLength));
+                    fs.Close();
+                }
             }
             catch (Exception ex)
             {

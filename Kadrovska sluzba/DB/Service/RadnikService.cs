@@ -101,6 +101,18 @@ namespace Kadrovska_sluzba.DB.Service
             //return false;
         }
 
+        public void CreateOrUpdate(Radnik radnik)
+        {
+            if (radnik.ID == 0 || GetByID(radnik.ID) is null)
+            {
+                Create(radnik);
+            }
+            else
+            {
+                Update(radnik);
+            }
+        }
+
         public void Delete(Radnik radnik)
         {
             _db.Delete<Radnik>(radnik);
