@@ -16,27 +16,47 @@ using System.Collections.Generic;
 namespace Kadrovska_sluzba.DB.Models
 {
     /// <summary>
-    /// A class which represents the Firma table.
+    /// A class which represents the PorodicnoStanje table.
     /// </summary>
-	[Table("Firma")]
-	public partial class Firma
+	[Table("PorodicnoStanje")]
+	public partial class PorodicnoStanje
 	{
 		[Key]
 		public virtual int ID { get; set; }
 		public virtual string Naziv { get; set; }
-		public virtual string PuniNaziv { get; set; }
-		public virtual string PostBroj { get; set; }
-		public virtual string Adresa { get; set; }
-		public virtual string Telefon { get; set; }
-		public virtual string Fax { get; set; }
-		public virtual string Mobilni { get; set; }
-		public virtual string Maticni { get; set; }
-		public virtual string PIB { get; set; }
-		public virtual string JIB { get; set; }
-		public virtual string Ziro { get; set; }
-		public virtual string Web { get; set; }
-		public virtual string Mail { get; set; }
-		//public virtual Mjesto Mjesto { get; set; }
+		//public virtual IEnumerable<Radnik> Radnik { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Opstina table.
+    /// </summary>
+	[Table("Opstina")]
+	public partial class Opstina
+	{
+		[Key]
+		public virtual int ID { get; set; }
+		public virtual int Sifra { get; set; }
+		public virtual string Naziv { get; set; }
+		//public virtual IEnumerable<Mjesto> Mjesto { get; set; }
+		//public virtual IEnumerable<Radnik> Radnik { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Mjesto table.
+    /// </summary>
+	[Table("Mjesto")]
+	public partial class Mjesto
+	{
+		[Key]
+		public virtual int ID { get; set; }
+		public virtual int? OpstinaID { get; set; }
+		public virtual int PostBr { get; set; }
+		public virtual string Naziv { get; set; }
+		//public virtual Opstina Opstina { get; set; }
+		//public virtual IEnumerable<Radnik> Radnik { get; set; }
+		//public virtual IEnumerable<Radnik> Radnik { get; set; }
+		//public virtual IEnumerable<PoslovnaJedinica> PoslovnaJedinica { get; set; }
+		//public virtual IEnumerable<Firma> Firma { get; set; }
 	}
 
     /// <summary>
@@ -49,7 +69,7 @@ namespace Kadrovska_sluzba.DB.Models
 		public virtual int ID { get; set; }
 		public virtual string Naziv { get; set; }
 		public virtual string PuniNaziv { get; set; }
-		public virtual string PostBroj { get; set; }
+		public virtual int? Mjesto { get; set; }
 		public virtual string Adresa { get; set; }
 		public virtual string Telefon { get; set; }
 		public virtual string Fax { get; set; }
@@ -61,18 +81,6 @@ namespace Kadrovska_sluzba.DB.Models
 		public virtual string Web { get; set; }
 		public virtual string Mail { get; set; }
 		//public virtual Mjesto Mjesto { get; set; }
-		//public virtual IEnumerable<Radnik> Radnik { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the PorodicnoStanje table.
-    /// </summary>
-	[Table("PorodicnoStanje")]
-	public partial class PorodicnoStanje
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
 		//public virtual IEnumerable<Radnik> Radnik { get; set; }
 	}
 
@@ -88,6 +96,30 @@ namespace Kadrovska_sluzba.DB.Models
 		public virtual string Opis { get; set; }
 		public virtual int? Bitovi { get; set; }
 		//public virtual IEnumerable<Radnik> Radnik { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Firma table.
+    /// </summary>
+	[Table("Firma")]
+	public partial class Firma
+	{
+		[Key]
+		public virtual int ID { get; set; }
+		public virtual string Naziv { get; set; }
+		public virtual string PuniNaziv { get; set; }
+		public virtual int? Mjesto { get; set; }
+		public virtual string Adresa { get; set; }
+		public virtual string Telefon { get; set; }
+		public virtual string Fax { get; set; }
+		public virtual string Mobilni { get; set; }
+		public virtual string Maticni { get; set; }
+		public virtual string PIB { get; set; }
+		public virtual string JIB { get; set; }
+		public virtual string Ziro { get; set; }
+		public virtual string Web { get; set; }
+		public virtual string Mail { get; set; }
+		//public virtual Mjesto Mjesto { get; set; }
 	}
 
     /// <summary>
@@ -113,66 +145,6 @@ namespace Kadrovska_sluzba.DB.Models
 		public virtual int ID { get; set; }
 		public virtual string Naziv { get; set; }
 		public virtual string Opis { get; set; }
-		//public virtual IEnumerable<Radnik> Radnik { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the RadnikDjeca table.
-    /// </summary>
-	[Table("RadnikDjeca")]
-	public partial class RadnikDjeca
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual int RadID { get; set; }
-		public virtual string Ime { get; set; }
-		public virtual DateTime? DatumRodj { get; set; }
-		public virtual string JMBG { get; set; }
-		public virtual int Bitovi { get; set; }
-		public virtual string Napomena { get; set; }
-		//public virtual Radnik Radnik { get; set; }
-	}
-
- //   /// <summary>
- //   /// A class which represents the sysdiagrams table.
- //   /// </summary>
-	//[Table("sysdiagrams")]
-	//public partial class sysdiagram
-	//{
-	//	public virtual string name { get; set; }
-	//	public virtual int principal_id { get; set; }
-	//	[Key]
-	//	public virtual int diagram_id { get; set; }
-	//	public virtual int? version { get; set; }
-	//	public virtual byte[] definition { get; set; }
-	//}
-
-    /// <summary>
-    /// A class which represents the NacinPrestankaRO table.
-    /// </summary>
-	[Table("NacinPrestankaRO")]
-	public partial class NacinPrestankaRO
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string Opis { get; set; }
-		//public virtual IEnumerable<Radnik> Radnik { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the Opstina table.
-    /// </summary>
-	[Table("Opstina")]
-	public partial class Opstina
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Sifra { get; set; }
-		public virtual string Naziv { get; set; }
-		//public virtual IEnumerable<Mjesto> Mjesto { get; set; }
-		//public virtual IEnumerable<Radnik> Radnik { get; set; }
-		//public virtual IEnumerable<Radnik> Radnik { get; set; }
 		//public virtual IEnumerable<Radnik> Radnik { get; set; }
 	}
 
@@ -220,48 +192,69 @@ namespace Kadrovska_sluzba.DB.Models
 	//	public virtual int? NacinPrestankaRoID { get; set; }
 	//	public virtual DateTime? DatumPrestankaRO { get; set; }
 	//	public virtual string Napomena { get; set; }
- //       [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
- //       public virtual string FindStr { get; set; }
+	//	public virtual string FindStr { get; set; }
 	//	public virtual string Lozinka { get; set; }
 	//	public virtual byte[] Slika { get; set; }
- //       [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
- //       public virtual string Naziv { get; set; }
+	//	public virtual string Naziv { get; set; }
 	//	public virtual string eMail { get; set; }
 	//	public virtual int? PoslovnaJedinicaID { get; set; }
- //       public virtual string Pol { get; set; }
-
- //       //public virtual Mjesto Mjesto { get; set; }
- //       //public virtual Opstina Opstina { get; set; }
- //       //public virtual Drzavljanstvo Drzavljanstvo { get; set; }
- //       //public virtual Nacionalnost Nacionalnost { get; set; }
- //       //public virtual PorodicnoStanje PorodicnoStanje { get; set; }
- //       //public virtual Mjesto Mjesto { get; set; }
- //       //public virtual Opstina Opstina { get; set; }
- //       //public virtual StrucnaSprema StrucnaSprema { get; set; }
- //       //public virtual RadnoMjesto RadnoMjesto { get; set; }
- //       //public virtual Opstina Opstina { get; set; }
- //       //public virtual TipRadnogOdnosa TipRadnogOdnosa { get; set; }
- //       //public virtual NacinPrestankaRO NacinPrestankaRO { get; set; }
- //       //public virtual PoslovnaJedinica PoslovnaJedinica { get; set; }
- //       //public virtual IEnumerable<RadnikDjeca> RadnikDjeca { get; set; }
- //   }
+	//	public virtual string Pol { get; set; }
+	//	public virtual Mjesto Mjesto { get; set; }
+	//	public virtual Drzavljanstvo Drzavljanstvo { get; set; }
+	//	public virtual Nacionalnost Nacionalnost { get; set; }
+	//	public virtual PorodicnoStanje PorodicnoStanje { get; set; }
+	//	public virtual Mjesto Mjesto { get; set; }
+	//	public virtual StrucnaSprema StrucnaSprema { get; set; }
+	//	public virtual RadnoMjesto RadnoMjesto { get; set; }
+	//	public virtual Opstina Opstina { get; set; }
+	//	public virtual TipRadnogOdnosa TipRadnogOdnosa { get; set; }
+	//	public virtual NacinPrestankaRO NacinPrestankaRO { get; set; }
+	//	public virtual PoslovnaJedinica PoslovnaJedinica { get; set; }
+	//	public virtual IEnumerable<RadnikDjeca> RadnikDjeca { get; set; }
+	//}
 
     /// <summary>
-    /// A class which represents the Mjesto table.
+    /// A class which represents the RadnikDjeca table.
     /// </summary>
-	[Table("Mjesto")]
-	public partial class Mjesto
+	[Table("RadnikDjeca")]
+	public partial class RadnikDjeca
 	{
 		[Key]
 		public virtual int ID { get; set; }
-		public virtual int? OpstinaID { get; set; }
-		public virtual string PostBr { get; set; }
+		public virtual int RadID { get; set; }
+		public virtual string Ime { get; set; }
+		public virtual DateTime? DatumRodj { get; set; }
+		public virtual string JMBG { get; set; }
+		public virtual int Bitovi { get; set; }
+		public virtual string Napomena { get; set; }
+		//public virtual Radnik Radnik { get; set; }
+	}
+
+ //   /// <summary>
+ //   /// A class which represents the sysdiagrams table.
+ //   /// </summary>
+	//[Table("sysdiagrams")]
+	//public partial class sysdiagram
+	//{
+	//	public virtual string name { get; set; }
+	//	public virtual int principal_id { get; set; }
+	//	[Key]
+	//	public virtual int diagram_id { get; set; }
+	//	public virtual int? version { get; set; }
+	//	public virtual byte[] definition { get; set; }
+	//}
+
+    /// <summary>
+    /// A class which represents the NacinPrestankaRO table.
+    /// </summary>
+	[Table("NacinPrestankaRO")]
+	public partial class NacinPrestankaRO
+	{
+		[Key]
+		public virtual int ID { get; set; }
 		public virtual string Naziv { get; set; }
-		//public virtual Opstina Opstina { get; set; }
+		public virtual string Opis { get; set; }
 		//public virtual IEnumerable<Radnik> Radnik { get; set; }
-		//public virtual IEnumerable<Radnik> Radnik { get; set; }
-		//public virtual IEnumerable<Firma> Firma { get; set; }
-		//public virtual IEnumerable<PoslovnaJedinica> PoslovnaJedinica { get; set; }
 	}
 
     /// <summary>

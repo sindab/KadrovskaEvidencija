@@ -48,7 +48,7 @@ namespace Kadrovska_sluzba.Sifarnici
             txtZiro.EditValue = poslovnaJedinica.Ziro;
             txtWeb.EditValue = poslovnaJedinica.Web;
             txtMail.EditValue = poslovnaJedinica.Mail;
-            cbMjesto.EditValue = poslovnaJedinica.PostBroj;
+            cbMjesto.EditValue = poslovnaJedinica.Mjesto;
             txtAdresa.EditValue = poslovnaJedinica.Adresa;
             txtTelefon.EditValue = poslovnaJedinica.Telefon;
             txtFax.EditValue = poslovnaJedinica.Fax;
@@ -90,7 +90,7 @@ namespace Kadrovska_sluzba.Sifarnici
             poslovnaJedinica.Ziro = txtZiro.EditValue.ToString();
             poslovnaJedinica.Web = txtWeb.EditValue.ToString();
             poslovnaJedinica.Mail = txtMail.EditValue.ToString();
-            if (!(cbMjesto.EditValue is null)) { poslovnaJedinica.PostBroj = cbMjesto.EditValue.ToString(); }
+            if (!(cbMjesto.EditValue is null)) { poslovnaJedinica.Mjesto = (int)cbMjesto.EditValue; }
             poslovnaJedinica.Adresa = txtAdresa.EditValue.ToString();
             poslovnaJedinica.Telefon = txtTelefon.EditValue.ToString();
             poslovnaJedinica.Fax = txtFax.EditValue.ToString();

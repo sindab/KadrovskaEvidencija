@@ -290,6 +290,7 @@
             this.lkpMjestoRodjenja.DisplayMember = "Naziv";
             this.lkpMjestoRodjenja.KeyMember = "MjestoRodjenja";
             this.lkpMjestoRodjenja.Name = "lkpMjestoRodjenja";
+            this.lkpMjestoRodjenja.NullText = "";
             this.lkpMjestoRodjenja.ValueMember = "ID";
             this.lkpMjestoRodjenja.View = this.repositoryItemSearchLookUpEdit1View;
             // 
@@ -321,6 +322,7 @@
             this.lkpDrzavljanstvoID.DisplayMember = "Naziv";
             this.lkpDrzavljanstvoID.KeyMember = "DrzavljanstvoID";
             this.lkpDrzavljanstvoID.Name = "lkpDrzavljanstvoID";
+            this.lkpDrzavljanstvoID.NullText = "";
             this.lkpDrzavljanstvoID.ValueMember = "ID";
             this.lkpDrzavljanstvoID.View = this.gridView1;
             // 
@@ -346,6 +348,7 @@
             this.lkpNacionalnostID.DisplayMember = "Naziv";
             this.lkpNacionalnostID.KeyMember = "NacionalnostID";
             this.lkpNacionalnostID.Name = "lkpNacionalnostID";
+            this.lkpNacionalnostID.NullText = "";
             this.lkpNacionalnostID.ValueMember = "ID";
             this.lkpNacionalnostID.View = this.gridView2;
             // 
@@ -374,6 +377,7 @@
             this.lkpPorodicnoStanjeID.DisplayMember = "Naziv";
             this.lkpPorodicnoStanjeID.KeyMember = "PorodicnoStanjeID";
             this.lkpPorodicnoStanjeID.Name = "lkpPorodicnoStanjeID";
+            this.lkpPorodicnoStanjeID.NullText = "";
             this.lkpPorodicnoStanjeID.ValueMember = "ID";
             this.lkpPorodicnoStanjeID.View = this.gridView3;
             // 
@@ -402,6 +406,7 @@
             this.lkpMjestoStan.DisplayMember = "Naziv";
             this.lkpMjestoStan.KeyMember = "MjestoStan";
             this.lkpMjestoStan.Name = "lkpMjestoStan";
+            this.lkpMjestoStan.NullText = "";
             this.lkpMjestoStan.ValueMember = "ID";
             this.lkpMjestoStan.View = this.gridView4;
             // 
@@ -466,6 +471,7 @@
             this.lkpStrucnaSpremaID.DisplayMember = "Naziv";
             this.lkpStrucnaSpremaID.KeyMember = "StrucnaSpremaID";
             this.lkpStrucnaSpremaID.Name = "lkpStrucnaSpremaID";
+            this.lkpStrucnaSpremaID.NullText = "";
             this.lkpStrucnaSpremaID.ValueMember = "ID";
             this.lkpStrucnaSpremaID.View = this.gridView5;
             // 
@@ -500,6 +506,7 @@
             this.lkpRadnoMjestoID.DisplayMember = "Naziv";
             this.lkpRadnoMjestoID.KeyMember = "RadnoMjestoID";
             this.lkpRadnoMjestoID.Name = "lkpRadnoMjestoID";
+            this.lkpRadnoMjestoID.NullText = "";
             this.lkpRadnoMjestoID.ValueMember = "ID";
             this.lkpRadnoMjestoID.View = this.gridView7;
             // 
@@ -537,6 +544,7 @@
             this.lkpOpstinaIzdavanjaRK.DisplayMember = "Naziv";
             this.lkpOpstinaIzdavanjaRK.KeyMember = "OpstinaIzdavanjaRK";
             this.lkpOpstinaIzdavanjaRK.Name = "lkpOpstinaIzdavanjaRK";
+            this.lkpOpstinaIzdavanjaRK.NullText = "";
             this.lkpOpstinaIzdavanjaRK.ValueMember = "ID";
             this.lkpOpstinaIzdavanjaRK.View = this.gridView8;
             // 
@@ -607,6 +615,7 @@
             this.lkpTipRadnogOdnosaID.DisplayMember = "Naziv";
             this.lkpTipRadnogOdnosaID.KeyMember = "TipRadnogOdnosaID";
             this.lkpTipRadnogOdnosaID.Name = "lkpTipRadnogOdnosaID";
+            this.lkpTipRadnogOdnosaID.NullText = "";
             this.lkpTipRadnogOdnosaID.ValueMember = "ID";
             this.lkpTipRadnogOdnosaID.View = this.gridView9;
             // 
@@ -632,6 +641,7 @@
             this.lkpNacinPrestankaRoID.DisplayMember = "Naziv";
             this.lkpNacinPrestankaRoID.KeyMember = "NacinPrestankaRoID";
             this.lkpNacinPrestankaRoID.Name = "lkpNacinPrestankaRoID";
+            this.lkpNacinPrestankaRoID.NullText = "";
             this.lkpNacinPrestankaRoID.ValueMember = "ID";
             this.lkpNacinPrestankaRoID.View = this.gridView10;
             // 
@@ -678,6 +688,7 @@
             this.lkpPoslovnaJedinicaID.DisplayMember = "Naziv";
             this.lkpPoslovnaJedinicaID.KeyMember = "PoslovnaJedinicaID";
             this.lkpPoslovnaJedinicaID.Name = "lkpPoslovnaJedinicaID";
+            this.lkpPoslovnaJedinicaID.NullText = "";
             this.lkpPoslovnaJedinicaID.ValueMember = "ID";
             this.lkpPoslovnaJedinicaID.View = this.gridView11;
             // 
@@ -810,7 +821,7 @@
             this.Name = "ucRadnici";
             this.Size = new System.Drawing.Size(800, 600);
             this.Load += new System.EventHandler(this.ucRadnici_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ucRadnici_Paint);
+            this.VisibleChanged += new System.EventHandler(this.ucRadnici_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).EndInit();

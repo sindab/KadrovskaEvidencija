@@ -50,7 +50,7 @@ namespace Kadrovska_sluzba.Sifarnici
             if (mjestoID == 0)
             {
                 result = new Mjesto();
-                result.PostBr = "00000";
+                result.PostBr = 0;
                 result.Naziv = "";
             }
             else
@@ -62,7 +62,8 @@ namespace Kadrovska_sluzba.Sifarnici
 
         void Snimi()
         {
-            mjesto.PostBr = txtSifra.EditValue.ToString();
+            //mjesto.PostBr = (int)txtSifra.EditValue;
+            if (!(txtSifra.EditValue is null)) { mjesto.PostBr = (int)txtSifra.EditValue; }
             mjesto.Naziv = txtNaziv.EditValue.ToString();
             if (!(lkpOpstine.EditValue is null)) { mjesto.OpstinaID = (int)lkpOpstine.EditValue; }
             ms.CreateOrUpdate(mjesto);

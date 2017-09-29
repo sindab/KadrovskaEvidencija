@@ -31,7 +31,7 @@ namespace Kadrovska_sluzba
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                LoadData();
+                LoadData(0);
 
                 MjestoService ms = new MjestoService();
                 IEnumerable<Mjesto> mj = ms.GetAll();
@@ -40,15 +40,17 @@ namespace Kadrovska_sluzba
             }
         }
 
-        public void LoadData()
+        public void LoadData(int focusID)
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
                 dataSource = GetDataSource();
                 gridControl.DataSource = dataSource;
                 bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
+                TrenutniRadnik = dataSource.Where(x => x.ID == focusID).FirstOrDefault(); // dt.Rows.IndexOf(dt.Rows.Find(< key_value >));
+                gridView.FocusedRowHandle = gridView.FindRow(TrenutniRadnik);
             }
-            }
+        }
 
         public Radnik TrenutniRadnik
         {
@@ -106,7 +108,7 @@ namespace Kadrovska_sluzba
             RadnikArgs myArgs = new RadnikArgs(TrenutniRadnik);
             IzmjenaRadnika(this, myArgs);
         }
-        
+
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
             Radnik newR = new Radnik();
@@ -136,13 +138,16 @@ namespace Kadrovska_sluzba
 
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadData();
+            LoadData((int)gridView.GetFocusedRowCellValue("ID"));
         }
 
-        private void ucRadnici_Paint(object sender, PaintEventArgs e)
+        private void ucRadnici_VisibleChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("Paint");
-            //LoadData();
+            if (gridView.RowCount > 0)
+            {
+                LoadData((int)gridView.GetFocusedRowCellValue("ID"));
+            }
+            else { LoadData(0); }
         }
     }
 }
