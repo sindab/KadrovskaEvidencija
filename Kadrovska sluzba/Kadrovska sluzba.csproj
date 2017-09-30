@@ -93,6 +93,7 @@
     <Compile Include="DB\Service\OpstinaService.cs" />
     <Compile Include="DB\Service\PorodicnoStanjeService.cs" />
     <Compile Include="DB\Service\PoslovnaJedinicaService.cs" />
+    <Compile Include="DB\Service\RadnikDjecaService.cs" />
     <Compile Include="DB\Service\RadnikService.cs" />
     <Compile Include="DB\Service\RadnoMjestoService.cs" />
     <Compile Include="DB\Service\StrucnaSpremaService.cs" />
@@ -111,6 +112,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadnikTabele\ucDjeca.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucDjeca.Designer.cs">
+      <DependentUpon>ucDjeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucDjete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucDjete.Designer.cs">
+      <DependentUpon>ucDjete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sifarnici\frmPorodicnoStanjeEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +290,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RadnikTabele\ucDjeca.resx">
+      <DependentUpon>ucDjeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucDjete.resx">
+      <DependentUpon>ucDjete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sifarnici\frmPorodicnoStanjeEdit.resx">
       <DependentUpon>frmPorodicnoStanjeEdit.cs</DependentUpon>
     </EmbeddedResource>

@@ -64,9 +64,9 @@ namespace Kadrovska_sluzba.DB.Service
         //    return p.Naziv;
         //}
 
-        public void Create(Radnik radnik)
+        public int Create(Radnik radnik)
         {
-            _db.Insert<Radnik>(radnik);
+            return (int)_db.Insert<Radnik>(radnik);
             //int rowsAffected = _db.Execute(@"INSERT INTO [dbo].[Radnik]([JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],[Bitovi],[Titula],[Funkcija],[MjestoRodjenja],[OpstinaRodjenja],[DatumRodjenja],[Drzavljanstvo],[Nacionalnost],[PorodicnoStanje],[MjestoStan],[AdresaStan],[OpstinaStan],[TelefonStan],[TelefonMob],[TelefonPosao],[Zanimanje],[StrucnaSprema],[ZavrsenaSkola],[PoslovnaJedinica],[RadnoMjesto],[BrLK],[BrRadneKnj],[OpstinaIzdavanjaRK],[LicniBrOsiguranja],[NacinIsplate],[BrTekucegRn],[Banka],[DatumPrvogZapos],[PrethodniStazMj],[PrethodniStazDan],[PrethodniStazUFirmiMj],[PrethodniStazUFirmiDan],[DatumZapos],[TipRadnogOdnosa],[NacinPrestankaRO],[DatumPrestankaRO],[Napomena],[Lozinka],[Slika]) " +
             //    "VALUES(@JMBG,@Prezime,@DjevPrezime,@Ime,@ImeOca,@Bitovi,@Titula,@Funkcija,@MjestoRodjenja,@OpstinaRodjenja,@DatumRodjenja,@Drzavljanstvo,@Nacionalnost,@PorodicnoStanje,@MjestoStan,@AdresaStan,@OpstinaStan,@TelefonStan,@TelefonMob,@TelefonPosao,@Zanimanje,@StrucnaSprema,@ZavrsenaSkola,@PoslovnaJedinica,@RadnoMjesto,@BrLK,@BrRadneKnj,@OpstinaIzdavanjaRK,@LicniBrOsiguranja,@NacinIsplate,@BrTekucegRn,@Banka,@DatumPrvogZapos,@PrethodniStazMj,@PrethodniStazDan,@PrethodniStazUFirmiMj,@PrethodniStazUFirmiDan,@DatumZapos,@TipRadnogOdnosa,@NacinPrestankaRO,@DatumPrestankaRO,@Napomena,@Lozinka,@Slika)", 
             //    new
@@ -101,16 +101,21 @@ namespace Kadrovska_sluzba.DB.Service
             //return false;
         }
 
-        public void CreateOrUpdate(Radnik radnik)
+        public int CreateOrUpdate(Radnik radnik)
         {
-            if (radnik.ID == 0 || GetByID(radnik.ID) is null)
+            int result = radnik.ID;
+            if (!(string.IsNullOrEmpty(radnik.Prezime)) && !(string.IsNullOrEmpty(radnik.Ime)))
             {
-                Create(radnik);
+                if (radnik.ID == 0 || GetByID(radnik.ID) is null)
+                {
+                    result = Create(radnik);
+                }
+                else
+                {
+                    Update(radnik);
+                }
             }
-            else
-            {
-                Update(radnik);
-            }
+            return result;
         }
 
         public void Delete(Radnik radnik)

@@ -66,6 +66,7 @@ namespace Kadrovska_sluzba
             }
             set
             {
+                xtraTabControl1.Enabled = false;
                 if (!(value == null))
                 {
                     _radnik = value;
@@ -126,7 +127,9 @@ namespace Kadrovska_sluzba
                             pictureEdit1.Image = Image.FromFile("men.png");
                         }
                     }
+                    xtraTabControl1.Enabled = (_radnik.ID>0);
                 }
+                SetTabs();
                 //List<Radnik> lR = new List<Radnik>();
                 //lR.Add(_radnik);
                 //txtPrezime.DataBindings.Clear();
@@ -244,10 +247,32 @@ namespace Kadrovska_sluzba
             if (lkpPoslovnaJedinica.EditValue == null) _radnik.PoslovnaJedinicaID = null;
             else _radnik.PoslovnaJedinicaID = Convert.ToInt32(lkpPoslovnaJedinica.EditValue);
 
-            _radnik.Pol = cbPol.EditValue.ToString();
+            //_radnik.Pol = cbPol.EditValue.ToString();
+            if (cbPol.EditValue == null) _radnik.Pol = null;
+            else _radnik.Pol = cbPol.EditValue.ToString();
 
             _radnik.Slika = m_barrImg;
-            rs.CreateOrUpdate(_radnik);
+            _radnik.ID = rs.CreateOrUpdate(_radnik);
+            Radnik = rs.GetByID(_radnik.ID);
+        }
+
+        private void SetTabs()
+        {
+            if (!(Radnik == null))
+            {
+                ucDjeca1.Roditelj = Radnik;
+            } else
+            {
+                Radnik r = new Radnik();
+                r.ID = 0;
+                ucDjeca1.Roditelj = r;
+            }
+            ucDjete1.AfterSave += this.DjeteAfterSave;
+        }
+
+        private void DjeteAfterSave(object sender,EventArgs e)
+        {
+            ucDjeca1.LoadData();
         }
 
         byte[] m_barrImg;
@@ -274,6 +299,11 @@ namespace Kadrovska_sluzba
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ucDjeca1_IzmjenaDjeteta(object myObject, RadnikTabele.ucDjeca.DjeteArgs myArgs)
+        {
+            ucDjete1.Djete = myArgs.Djete;
         }
 
         //public static Image Base64ToImage(string base64Image)

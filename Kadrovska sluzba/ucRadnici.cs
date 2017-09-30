@@ -17,6 +17,7 @@ namespace Kadrovska_sluzba
 {
     public partial class ucRadnici : DevExpress.XtraEditors.XtraUserControl
     {
+        RadnikService rs;
         IEnumerable<Radnik> dataSource;
         Radnik trenutni;
         public delegate void RadnikChangedHandler(object myObject, RadnikArgs myArgs);
@@ -47,8 +48,11 @@ namespace Kadrovska_sluzba
                 dataSource = GetDataSource();
                 gridControl.DataSource = dataSource;
                 bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
-                TrenutniRadnik = dataSource.Where(x => x.ID == focusID).FirstOrDefault(); // dt.Rows.IndexOf(dt.Rows.Find(< key_value >));
-                gridView.FocusedRowHandle = gridView.FindRow(TrenutniRadnik);
+                if (focusID > 0)
+                {
+                    TrenutniRadnik = dataSource.Where(x => x.ID == focusID).FirstOrDefault(); // dt.Rows.IndexOf(dt.Rows.Find(< key_value >));
+                    gridView.FocusedRowHandle = gridView.FindRow(TrenutniRadnik);
+                }
             }
         }
 
@@ -86,7 +90,7 @@ namespace Kadrovska_sluzba
         }
         public IEnumerable<Radnik> GetDataSource()
         {
-            RadnikService rs = new RadnikService();
+            rs = new RadnikService();
             IEnumerable<Radnik> result = rs.GetAll();
             return result;
         }
@@ -148,6 +152,12 @@ namespace Kadrovska_sluzba
                 LoadData((int)gridView.GetFocusedRowCellValue("ID"));
             }
             else { LoadData(0); }
+        }
+
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rs.Delete(TrenutniRadnik);
+            LoadData(0);
         }
     }
 }
