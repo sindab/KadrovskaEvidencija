@@ -38,7 +38,6 @@
             this.bbPJ = new DevExpress.XtraBars.BarButtonItem();
             this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtPuniNaziv = new DevExpress.XtraEditors.TextEdit();
             this.txtNaziv = new DevExpress.XtraEditors.TextEdit();
@@ -107,7 +106,8 @@
             this.bbiClose,
             this.bbPJ});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.MaxItemId = 11;
+            this.mainRibbonControl.MaxItemId = 1;
+            this.mainRibbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
@@ -175,11 +175,10 @@
             // mainRibbonPage
             // 
             this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.mainRibbonPageGroup,
-            this.ribbonPageGroup1});
+            this.mainRibbonPageGroup});
             this.mainRibbonPage.MergeOrder = 0;
             this.mainRibbonPage.Name = "mainRibbonPage";
-            this.mainRibbonPage.Text = "Podaci o firmi";
+            this.mainRibbonPage.Text = "Kadrovska evidencija";
             // 
             // mainRibbonPageGroup
             // 
@@ -193,13 +192,6 @@
             this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
             this.mainRibbonPageGroup.ShowCaptionButton = false;
             this.mainRibbonPageGroup.Text = "Podaci";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbPJ);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Poslovne jedinice";
-            this.ribbonPageGroup1.Visible = false;
             // 
             // groupControl1
             // 
@@ -461,7 +453,9 @@
             this.cbMjesto.Name = "cbMjesto";
             this.cbMjesto.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbMjesto.Properties.DisplayMember = "Naziv";
             this.cbMjesto.Properties.NullText = "";
+            this.cbMjesto.Properties.ValueMember = "ID";
             this.cbMjesto.Size = new System.Drawing.Size(340, 20);
             this.cbMjesto.TabIndex = 25;
             // 
@@ -563,7 +557,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LookUpEdit cbMjesto;
         private DevExpress.XtraBars.BarButtonItem bbPJ;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private ucPoslovneJedinice ucPoslovneJedinice1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
     }

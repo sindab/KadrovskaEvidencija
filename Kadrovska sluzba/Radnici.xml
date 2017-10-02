@@ -1,0 +1,352 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="OptionsBehavior" isnull="true" iskey="true">
+    <property name="Editable">false</property>
+    <property name="ReadOnly">true</property>
+  </property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ShowPreview">true</property>
+  </property>
+  <property name="OptionsFind" isnull="true" iskey="true">
+    <property name="AlwaysVisible">true</property>
+    <property name="FindNullPrompt">Tekst za pretragu...</property>
+  </property>
+  <property name="FixedLineWidth">2</property>
+  <property name="IndicatorWidth">-1</property>
+  <property name="ColumnPanelRowHeight">-1</property>
+  <property name="RowSeparatorHeight">0</property>
+  <property name="FooterPanelHeight">-1</property>
+  <property name="HorzScrollVisibility">Auto</property>
+  <property name="VertScrollVisibility">Auto</property>
+  <property name="RowHeight">-1</property>
+  <property name="GroupRowHeight">-1</property>
+  <property name="GroupFormat">{0}: [#image]{1} {2}</property>
+  <property name="ChildGridLevelName" />
+  <property name="VertScrollTipFieldName" />
+  <property name="PreviewFieldName">Napomena</property>
+  <property name="GroupPanelText" />
+  <property name="NewItemRowText" />
+  <property name="LevelIndent">-1</property>
+  <property name="PreviewIndent">-1</property>
+  <property name="PreviewLineCount">1</property>
+  <property name="ScrollStyle">LiveVertScroll, LiveHorzScroll</property>
+  <property name="FocusRectStyle">CellFocus</property>
+  <property name="HorzScrollStep">0</property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="OptionsLayout" isnull="true" iskey="true">
+    <property name="StoreAppearance">true</property>
+    <property name="StoreFormatRules">true</property>
+    <property name="StoreAllOptions">true</property>
+    <property name="Columns" isnull="true" iskey="true">
+      <property name="StoreAppearance">true</property>
+      <property name="StoreAllOptions">true</property>
+    </property>
+  </property>
+  <property name="ViewCaptionHeight">-1</property>
+  <property name="Columns" iskey="true" value="41">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Name">gcID</property>
+      <property name="Caption">Šifra</property>
+      <property name="FieldName">ID</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Name">gcJMBG</property>
+      <property name="Caption">JMBG</property>
+      <property name="FieldName">JMBG</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">0</property>
+      <property name="Visible">true</property>
+      <property name="Width">77</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Name">gcPrezime</property>
+      <property name="Caption">Prezime</property>
+      <property name="FieldName">Prezime</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">1</property>
+      <property name="Visible">true</property>
+      <property name="Width">128</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Name">gcDjevPrezime</property>
+      <property name="Caption">Djev.prezime</property>
+      <property name="FieldName">DjevPrezime</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Name">gcIme</property>
+      <property name="Caption">Ime</property>
+      <property name="FieldName">Ime</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">3</property>
+      <property name="Visible">true</property>
+      <property name="Width">132</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Name">gcImeOca</property>
+      <property name="Caption">Ime oca</property>
+      <property name="FieldName">ImeOca</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">2</property>
+      <property name="Visible">true</property>
+      <property name="Width">87</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Name">gcBitovi</property>
+      <property name="Caption">Bitovi</property>
+      <property name="FieldName">Bitovi</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Name">gcTitula</property>
+      <property name="Caption">Titula</property>
+      <property name="FieldName">Titula</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Name">gcFunkcija</property>
+      <property name="Caption">Funkcija</property>
+      <property name="FieldName">Funkcija</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Name">gcMjestoRodjenja</property>
+      <property name="Caption">Mjesto rođenja</property>
+      <property name="FieldName">MjestoRodjenja</property>
+      <property name="ColumnEditName">lkpMjestoRodjenja</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Name">gcDatumRodjenja</property>
+      <property name="Caption">Datum rođenja</property>
+      <property name="FieldName">DatumRodjenja</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Name">gcDrzavljanstvoID</property>
+      <property name="Caption">Državljanstvo</property>
+      <property name="FieldName">DrzavljanstvoID</property>
+      <property name="ColumnEditName">lkpDrzavljanstvoID</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Name">gcNacionalnostID</property>
+      <property name="Caption">Nacionalnost</property>
+      <property name="FieldName">NacionalnostID</property>
+      <property name="ColumnEditName">lkpNacionalnostID</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Name">gcPorodicnoStanjeID</property>
+      <property name="Caption">Porodično stanje</property>
+      <property name="FieldName">PorodicnoStanjeID</property>
+      <property name="ColumnEditName">lkpPorodicnoStanjeID</property>
+      <property name="VisibleIndex">5</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Name">gcMjestoStan</property>
+      <property name="Caption">Mjesto stanovanja</property>
+      <property name="FieldName">MjestoStan</property>
+      <property name="ColumnEditName">lkpMjestoStan</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Name">gcAdresaStan</property>
+      <property name="Caption">Adresa</property>
+      <property name="FieldName">AdresaStan</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">6</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Name">gcTelefonStan</property>
+      <property name="Caption">Telefon</property>
+      <property name="FieldName">TelefonStan</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Name">gcTelefonMob</property>
+      <property name="Caption">Mobilni</property>
+      <property name="FieldName">TelefonMob</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">8</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Name">gcTelefonPosao</property>
+      <property name="Caption">Telefon posao</property>
+      <property name="FieldName">TelefonPosao</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">9</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Name">gcZanimanje</property>
+      <property name="Caption">Zanimanje</property>
+      <property name="FieldName">Zanimanje</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Name">gcStrucnaSpremaID</property>
+      <property name="Caption">Stručna sprema</property>
+      <property name="FieldName">StrucnaSpremaID</property>
+      <property name="ColumnEditName">lkpStrucnaSpremaID</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Name">gcZavrsenaSkola</property>
+      <property name="Caption">Završena škola</property>
+      <property name="FieldName">ZavrsenaSkola</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Name">gcRadnoMjestoID</property>
+      <property name="Caption">Radno mjesto</property>
+      <property name="FieldName">RadnoMjestoID</property>
+      <property name="ColumnEditName">lkpRadnoMjestoID</property>
+      <property name="VisibleIndex">10</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Name">gcBrLK</property>
+      <property name="Caption">LK broj</property>
+      <property name="FieldName">BrLK</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="Name">gcBrRadneKnj</property>
+      <property name="Caption">Rad.knj.br.</property>
+      <property name="FieldName">BrRadneKnj</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="Name">gcOpstinaIzdavanjaRK</property>
+      <property name="Caption">Opš.izd.RK</property>
+      <property name="FieldName">OpstinaIzdavanjaRK</property>
+      <property name="ColumnEditName">lkpOpstinaIzdavanjaRK</property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="Name">gcLicniBrOsiguranja</property>
+      <property name="Caption">LicniBrOsiguranja</property>
+      <property name="FieldName">LicniBrOsiguranja</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="Name">gcDatumPrvogZapos</property>
+      <property name="Caption">DatumPrvogZapos</property>
+      <property name="FieldName">DatumPrvogZapos</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="Name">gcPrethodniStazMj</property>
+      <property name="Caption">PrethodniStazMj</property>
+      <property name="FieldName">PrethodniStazMj</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="Name">gcPrethodniStazDan</property>
+      <property name="Caption">PrethodniStazDan</property>
+      <property name="FieldName">PrethodniStazDan</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="Name">gcPrethodniStazUFirmiMj</property>
+      <property name="Caption">PrethodniStazUFirmiMj</property>
+      <property name="FieldName">PrethodniStazUFirmiMj</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="Name">gcPrethodniStazUFirmiDan</property>
+      <property name="Caption">PrethodniStazUFirmiDan</property>
+      <property name="FieldName">PrethodniStazUFirmiDan</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="Name">gcDatumZapos</property>
+      <property name="Caption">Datum zapos.</property>
+      <property name="FieldName">DatumZapos</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="Name">gcTipRadnogOdnosaID</property>
+      <property name="Caption">Tip radnog odnosa</property>
+      <property name="FieldName">TipRadnogOdnosaID</property>
+      <property name="ColumnEditName">lkpTipRadnogOdnosaID</property>
+      <property name="VisibleIndex">11</property>
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item35" isnull="true" iskey="true">
+      <property name="Name">gcNacinPrestankaRoID</property>
+      <property name="Caption">Način prestanka RO</property>
+      <property name="FieldName">NacinPrestankaRoID</property>
+      <property name="ColumnEditName">lkpNacinPrestankaRoID</property>
+    </property>
+    <property name="Item36" isnull="true" iskey="true">
+      <property name="Name">gcDatumPrestankaRO</property>
+      <property name="Caption">DatumPrestankaRO</property>
+      <property name="FieldName">DatumPrestankaRO</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item37" isnull="true" iskey="true">
+      <property name="Name">gcNapomena</property>
+      <property name="Caption">Napomena</property>
+      <property name="FieldName">Napomena</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item38" isnull="true" iskey="true">
+      <property name="Name">gcEMail</property>
+      <property name="Caption">eMail</property>
+      <property name="FieldName">eMail</property>
+      <property name="ColumnEditName" />
+    </property>
+    <property name="Item39" isnull="true" iskey="true">
+      <property name="Name">gcPoslovnaJedinicaID</property>
+      <property name="Caption">Poslovna jedinica</property>
+      <property name="FieldName">PoslovnaJedinicaID</property>
+      <property name="ColumnEditName">lkpPoslovnaJedinicaID</property>
+      <property name="VisibleIndex">12</property>
+      <property name="Visible">true</property>
+      <property name="Width">172</property>
+    </property>
+    <property name="Item40" isnull="true" iskey="true">
+      <property name="Name">gcPol</property>
+      <property name="Caption">Pol</property>
+      <property name="FieldName">Pol</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">4</property>
+      <property name="Visible">true</property>
+      <property name="Width">61</property>
+    </property>
+    <property name="Item41" isnull="true" iskey="true">
+      <property name="Name">gridColumn1</property>
+      <property name="Caption">Starost</property>
+      <property name="FieldName">gridColumn1</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">13</property>
+      <property name="Visible">true</property>
+      <property name="Width">76</property>
+      <property name="UnboundType">Integer</property>
+      <property name="UnboundExpression">DateDiffMonth([DatumRodjenja], LocalDateTimeNow())/12</property>
+    </property>
+  </property>
+  <property name="ViewCaption" />
+  <property name="BorderStyle">NoBorder</property>
+  <property name="SynchronizeClones">true</property>
+  <property name="DetailTabHeaderLocation">Top</property>
+  <property name="Name">gridView</property>
+  <property name="DetailHeight">350</property>
+  <property name="Tag" isnull="true" />
+  <property name="GroupSummary" iskey="true" value="0" />
+  <property name="ActiveFilterString" />
+  <property name="FormatRules" iskey="true" value="0" />
+  <property name="FormatConditions" iskey="true" value="0" />
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

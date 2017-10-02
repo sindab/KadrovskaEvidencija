@@ -12,6 +12,7 @@ using DevExpress.XtraEditors;
 using System.ComponentModel.DataAnnotations;
 using Kadrovska_sluzba.DB.Models;
 using Kadrovska_sluzba.DB.Service;
+using Microsoft.Win32;
 
 namespace Kadrovska_sluzba
 {
@@ -22,17 +23,35 @@ namespace Kadrovska_sluzba
         Radnik trenutni;
         public delegate void RadnikChangedHandler(object myObject, RadnikArgs myArgs);
         public event RadnikChangedHandler IzmjenaRadnika;
+        //RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(@"Software\Kadrovska\frmRadnikLayout");
 
         public ucRadnici()
         {
             InitializeComponent();
+            //gridView.RestoreLayoutFromXml("frmRadnikLayout.xml");
+
         }
+        //private string PathName
+        //{
+        //    get
+        //    {
+        //        //using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(@"Software\Kadrovska"))
+        //        //{
+        //            return (string)registryKey.GetValue("frmRadnikLayout");
+        //        //}
+        //    }
+        //}
 
         private void ucRadnici_Load(object sender, EventArgs e)
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
+                if (System.IO.File.Exists(openFileDialog1.FileName))
+                    gridView.RestoreLayoutFromXml(openFileDialog1.FileName);
+
                 LoadData(0);
+
+                //gridView1.RestoreLayoutFromRegistry("frmRadnikLayout");
 
                 MjestoService ms = new MjestoService();
                 IEnumerable<Mjesto> mj = ms.GetAll();
@@ -109,8 +128,11 @@ namespace Kadrovska_sluzba
 
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RadnikArgs myArgs = new RadnikArgs(TrenutniRadnik);
-            IzmjenaRadnika(this, myArgs);
+            if (TrenutniRadnik.ID > 0)
+            {
+                RadnikArgs myArgs = new RadnikArgs(TrenutniRadnik);
+                IzmjenaRadnika(this, myArgs);
+            }
         }
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
@@ -142,12 +164,13 @@ namespace Kadrovska_sluzba
 
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadData((int)gridView.GetFocusedRowCellValue("ID"));
+            if (gridView.FocusedRowHandle > -1)
+                LoadData((int)gridView.GetFocusedRowCellValue("ID"));
         }
 
         private void ucRadnici_VisibleChanged(object sender, EventArgs e)
         {
-            if (gridView.RowCount > 0)
+            if ((gridView.FocusedRowHandle > -1) && (int)gridView.GetFocusedRowCellValue("ID") > 0)
             {
                 LoadData((int)gridView.GetFocusedRowCellValue("ID"));
             }
@@ -156,8 +179,31 @@ namespace Kadrovska_sluzba
 
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            rs.Delete(TrenutniRadnik);
-            LoadData(0);
+            if (TrenutniRadnik.ID > 0)
+            {
+                if (MessageBox.Show("Da li ste sigurni u brisanje podatka?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    rs.Delete(TrenutniRadnik);
+                    LoadData(0);
+                }
+            }
+        }
+
+        private void ucRadnici_Layout(object sender, LayoutEventArgs e)
+        {
+            //gridView.SaveLayoutToXml(openFileDialog1.FileName);
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            gridView.SaveLayoutToXml(openFileDialog1.FileName);
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            gridView.RestoreLayoutFromXml(openFileDialog1.FileName);
         }
     }
 }

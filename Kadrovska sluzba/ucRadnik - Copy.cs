@@ -96,11 +96,11 @@ namespace Kadrovska_sluzba
                     txtBrojRK.EditValue = _radnik.BrRadneKnj;
                     lkpOpstinaIzdavanjaRK.EditValue = _radnik.OpstinaIzdavanjaRK;
                     txtLicniBrO.EditValue = _radnik.LicniBrOsiguranja;
-                    //dtPrvoZapos.EditValue = _radnik.DatumPrvogZapos;
+                    dtPrvoZapos.EditValue = _radnik.DatumPrvogZapos;
                     txtPreMjeseci.EditValue = _radnik.PrethodniStazMj;
-                    //txtPreDana.EditValue = _radnik.PrethodniStazDan;
-                    //txtPreFirmaMj.EditValue = _radnik.PrethodniStazUFirmiMj;
-                    //txtPreFirmaDana.EditValue = _radnik.PrethodniStazUFirmiDan;
+                    txtPreDana.EditValue = _radnik.PrethodniStazDan;
+                    txtPreFirmaMj.EditValue = _radnik.PrethodniStazUFirmiMj;
+                    txtPreFirmaDana.EditValue = _radnik.PrethodniStazUFirmiDan;
                     dtZapos.EditValue = _radnik.DatumZapos;
                     lkpTipRadnogOdnosa.EditValue = _radnik.TipRadnogOdnosaID;
                     lkpNacinPrestanka.EditValue = _radnik.NacinPrestankaRoID;
@@ -110,7 +110,7 @@ namespace Kadrovska_sluzba
                     lkpPoslovnaJedinica.EditValue = _radnik.PoslovnaJedinicaID;
                     cbPol.EditValue = _radnik.Pol;
 
-                    //pictureEdit1.Image = null;
+                    pictureEdit1.Image = null;
                     if (!(_radnik.Slika is null))
                     {
                         MemoryStream ms = new MemoryStream(_radnik.Slika);
@@ -127,7 +127,7 @@ namespace Kadrovska_sluzba
                             pictureEdit1.Image = Image.FromFile("men.png");
                         }
                     }
-                    xtraTabControl1.Enabled = (_radnik.ID > 0);
+                    xtraTabControl1.Enabled = (_radnik.ID>0);
                 }
                 SetTabs();
                 //List<Radnik> lR = new List<Radnik>();
@@ -146,8 +146,7 @@ namespace Kadrovska_sluzba
             }
         }
 
-
-        private void Snimi()
+        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             rs = new RadnikService();
             _radnik.JMBG = txtJMBG.EditValue.ToString();
@@ -204,25 +203,25 @@ namespace Kadrovska_sluzba
             else _radnik.OpstinaIzdavanjaRK = Convert.ToInt32(lkpOpstinaIzdavanjaRK.EditValue);
 
             _radnik.LicniBrOsiguranja = txtLicniBrO.EditValue.ToString();
-            ////_radnik.DatumPrvogZapos = (DateTime)dtPrvoZapos.EditValue;
-            //if (dtPrvoZapos.EditValue == null) _radnik.DatumPrvogZapos = null;
-            //else _radnik.DatumPrvogZapos = Convert.ToDateTime(dtPrvoZapos.EditValue);
+            //_radnik.DatumPrvogZapos = (DateTime)dtPrvoZapos.EditValue;
+            if (dtPrvoZapos.EditValue == null) _radnik.DatumPrvogZapos = null;
+            else _radnik.DatumPrvogZapos = Convert.ToDateTime(dtPrvoZapos.EditValue);
 
             //_radnik.PrethodniStazMj = (int)txtPreMjeseci.EditValue;
             if (txtPreMjeseci.EditValue == null) _radnik.PrethodniStazMj = null;
             else _radnik.PrethodniStazMj = Convert.ToInt32(txtPreMjeseci.EditValue);
 
-            ////_radnik.PrethodniStazDan = (int)txtPreDana.EditValue;
-            //if (txtPreDana.EditValue == null) _radnik.PrethodniStazDan = null;
-            //else _radnik.PrethodniStazDan = Convert.ToInt32(txtPreDana.EditValue);
+            //_radnik.PrethodniStazDan = (int)txtPreDana.EditValue;
+            if (txtPreDana.EditValue == null) _radnik.PrethodniStazDan = null;
+            else _radnik.PrethodniStazDan = Convert.ToInt32(txtPreDana.EditValue);
 
-            ////_radnik.PrethodniStazUFirmiMj = (int)txtPreFirmaMj.EditValue;
-            //if (txtPreFirmaMj.EditValue == null) _radnik.PrethodniStazUFirmiMj = null;
-            //else _radnik.PrethodniStazUFirmiMj = Convert.ToInt32(txtPreFirmaMj.EditValue);
+            //_radnik.PrethodniStazUFirmiMj = (int)txtPreFirmaMj.EditValue;
+            if (txtPreFirmaMj.EditValue == null) _radnik.PrethodniStazUFirmiMj = null;
+            else _radnik.PrethodniStazUFirmiMj = Convert.ToInt32(txtPreFirmaMj.EditValue);
 
-            ////_radnik.PrethodniStazUFirmiDan = (int)txtPreFirmaDana.EditValue;
-            //if (txtPreFirmaDana.EditValue == null) _radnik.PrethodniStazUFirmiDan = null;
-            //else _radnik.PrethodniStazUFirmiDan = Convert.ToInt32(txtPreFirmaDana.EditValue);
+            //_radnik.PrethodniStazUFirmiDan = (int)txtPreFirmaDana.EditValue;
+            if (txtPreFirmaDana.EditValue == null) _radnik.PrethodniStazUFirmiDan = null;
+            else _radnik.PrethodniStazUFirmiDan = Convert.ToInt32(txtPreFirmaDana.EditValue);
 
             //_radnik.DatumZapos = (DateTime)dtZapos.EditValue;
             if (dtZapos.EditValue == null) _radnik.DatumZapos = null;
@@ -252,11 +251,7 @@ namespace Kadrovska_sluzba
             if (cbPol.EditValue == null) _radnik.Pol = null;
             else _radnik.Pol = cbPol.EditValue.ToString();
 
-            //_radnik.Slika = m_barrImg;
-            MemoryStream ms = new MemoryStream();
-            pictureEdit1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            _radnik.Slika = ms.ToArray();
-
+            _radnik.Slika = m_barrImg;
             _radnik.ID = rs.CreateOrUpdate(_radnik);
             Radnik = rs.GetByID(_radnik.ID);
         }
@@ -266,8 +261,7 @@ namespace Kadrovska_sluzba
             if (!(Radnik == null))
             {
                 ucDjeca1.Roditelj = Radnik;
-            }
-            else
+            } else
             {
                 Radnik r = new Radnik();
                 r.ID = 0;
@@ -276,7 +270,7 @@ namespace Kadrovska_sluzba
             ucDjete1.AfterSave += this.DjeteAfterSave;
         }
 
-        private void DjeteAfterSave(object sender, EventArgs e)
+        private void DjeteAfterSave(object sender,EventArgs e)
         {
             ucDjeca1.LoadData();
         }
@@ -310,33 +304,6 @@ namespace Kadrovska_sluzba
         private void ucDjeca1_IzmjenaDjeteta(object myObject, RadnikTabele.ucDjeca.DjeteArgs myArgs)
         {
             ucDjete1.Djete = myArgs.Djete;
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Snimi();
-        }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Snimi();
-        }
-
-        private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (_radnik.Pol == "Ženski")
-            {
-                pictureEdit1.Image = Image.FromFile("women.png");
-            }
-            else
-            {
-                pictureEdit1.Image = Image.FromFile("men.png");
-            }
         }
 
         //public static Image Base64ToImage(string base64Image)

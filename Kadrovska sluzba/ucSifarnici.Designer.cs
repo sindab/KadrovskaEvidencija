@@ -111,7 +111,7 @@
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 234;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(234, 559);
+            this.navBarControl.Size = new System.Drawing.Size(234, 648);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("Office 2013");
@@ -198,24 +198,23 @@
             this.porodicnoStanjeNavigationPage});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.firmaNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(566, 559);
+            this.navigationFrame.Size = new System.Drawing.Size(770, 648);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
             // opstinaNavigationPage
             // 
-            this.opstinaNavigationPage.Caption = "opstinaNavigationPage";
             this.opstinaNavigationPage.Controls.Add(this.ucOpstine1);
             this.opstinaNavigationPage.Controls.Add(this.employeesLabelControl);
             this.opstinaNavigationPage.Name = "opstinaNavigationPage";
-            this.opstinaNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.opstinaNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucOpstine1
             // 
             this.ucOpstine1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucOpstine1.Location = new System.Drawing.Point(0, 0);
             this.ucOpstine1.Name = "ucOpstine1";
-            this.ucOpstine1.Size = new System.Drawing.Size(566, 559);
+            this.ucOpstine1.Size = new System.Drawing.Size(770, 648);
             this.ucOpstine1.TabIndex = 1;
             // 
             // employeesLabelControl
@@ -231,24 +230,23 @@
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(566, 559);
+            this.employeesLabelControl.Size = new System.Drawing.Size(770, 648);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Opština";
             // 
             // mjestoNavigationPage
             // 
-            this.mjestoNavigationPage.Caption = "mjestoNavigationPage";
             this.mjestoNavigationPage.Controls.Add(this.ucMjesta1);
             this.mjestoNavigationPage.Controls.Add(this.customersLabelControl);
             this.mjestoNavigationPage.Name = "mjestoNavigationPage";
-            this.mjestoNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.mjestoNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucMjesta1
             // 
             this.ucMjesta1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucMjesta1.Location = new System.Drawing.Point(0, 0);
             this.ucMjesta1.Name = "ucMjesta1";
-            this.ucMjesta1.Size = new System.Drawing.Size(566, 559);
+            this.ucMjesta1.Size = new System.Drawing.Size(770, 648);
             this.ucMjesta1.TabIndex = 2;
             // 
             // customersLabelControl
@@ -264,24 +262,23 @@
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(566, 559);
+            this.customersLabelControl.Size = new System.Drawing.Size(770, 648);
             this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Mjesto";
             // 
             // drzavljanstvoNavigationPage
             // 
-            this.drzavljanstvoNavigationPage.Caption = "drzavljanstvoNavigationPage";
             this.drzavljanstvoNavigationPage.Controls.Add(this.ucDrzavljanstva1);
             this.drzavljanstvoNavigationPage.Controls.Add(this.labelControl1);
             this.drzavljanstvoNavigationPage.Name = "drzavljanstvoNavigationPage";
-            this.drzavljanstvoNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.drzavljanstvoNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucDrzavljanstva1
             // 
             this.ucDrzavljanstva1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDrzavljanstva1.Location = new System.Drawing.Point(0, 0);
             this.ucDrzavljanstva1.Name = "ucDrzavljanstva1";
-            this.ucDrzavljanstva1.Size = new System.Drawing.Size(566, 559);
+            this.ucDrzavljanstva1.Size = new System.Drawing.Size(770, 648);
             this.ucDrzavljanstva1.TabIndex = 3;
             // 
             // labelControl1
@@ -297,24 +294,23 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(566, 559);
+            this.labelControl1.Size = new System.Drawing.Size(770, 648);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Državljanstvo";
             // 
             // nacionalnostNavigationPage
             // 
-            this.nacionalnostNavigationPage.Caption = "nacionalnostNavigationPage";
             this.nacionalnostNavigationPage.Controls.Add(this.ucNacionalnost1);
             this.nacionalnostNavigationPage.Controls.Add(this.labelControl2);
             this.nacionalnostNavigationPage.Name = "nacionalnostNavigationPage";
-            this.nacionalnostNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.nacionalnostNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucNacionalnost1
             // 
             this.ucNacionalnost1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucNacionalnost1.Location = new System.Drawing.Point(0, 0);
             this.ucNacionalnost1.Name = "ucNacionalnost1";
-            this.ucNacionalnost1.Size = new System.Drawing.Size(566, 559);
+            this.ucNacionalnost1.Size = new System.Drawing.Size(770, 648);
             this.ucNacionalnost1.TabIndex = 3;
             // 
             // labelControl2
@@ -330,24 +326,23 @@
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl2.Location = new System.Drawing.Point(0, 0);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(566, 559);
+            this.labelControl2.Size = new System.Drawing.Size(770, 648);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Nacionalnost";
             // 
             // strucnaSpremaNavigationPage
             // 
-            this.strucnaSpremaNavigationPage.Caption = "strucnaSpremaNavigationPage";
             this.strucnaSpremaNavigationPage.Controls.Add(this.ucStrucnaSprema1);
             this.strucnaSpremaNavigationPage.Controls.Add(this.labelControl3);
             this.strucnaSpremaNavigationPage.Name = "strucnaSpremaNavigationPage";
-            this.strucnaSpremaNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.strucnaSpremaNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucStrucnaSprema1
             // 
             this.ucStrucnaSprema1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucStrucnaSprema1.Location = new System.Drawing.Point(0, 0);
             this.ucStrucnaSprema1.Name = "ucStrucnaSprema1";
-            this.ucStrucnaSprema1.Size = new System.Drawing.Size(566, 559);
+            this.ucStrucnaSprema1.Size = new System.Drawing.Size(770, 648);
             this.ucStrucnaSprema1.TabIndex = 3;
             // 
             // labelControl3
@@ -363,24 +358,23 @@
             this.labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl3.Location = new System.Drawing.Point(0, 0);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(566, 559);
+            this.labelControl3.Size = new System.Drawing.Size(770, 648);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Stručna sprema";
             // 
             // radnoMjestoNavigationPage
             // 
-            this.radnoMjestoNavigationPage.Caption = "radnoMjestoNavigationPage";
             this.radnoMjestoNavigationPage.Controls.Add(this.ucRadnoMjesto1);
             this.radnoMjestoNavigationPage.Controls.Add(this.labelControl4);
             this.radnoMjestoNavigationPage.Name = "radnoMjestoNavigationPage";
-            this.radnoMjestoNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.radnoMjestoNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucRadnoMjesto1
             // 
             this.ucRadnoMjesto1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucRadnoMjesto1.Location = new System.Drawing.Point(0, 0);
             this.ucRadnoMjesto1.Name = "ucRadnoMjesto1";
-            this.ucRadnoMjesto1.Size = new System.Drawing.Size(566, 559);
+            this.ucRadnoMjesto1.Size = new System.Drawing.Size(770, 648);
             this.ucRadnoMjesto1.TabIndex = 3;
             // 
             // labelControl4
@@ -396,24 +390,23 @@
             this.labelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl4.Location = new System.Drawing.Point(0, 0);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(566, 559);
+            this.labelControl4.Size = new System.Drawing.Size(770, 648);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Radno mjesto";
             // 
             // tipRadnogOdnosaNavigationPage
             // 
-            this.tipRadnogOdnosaNavigationPage.Caption = "tipRadnogOdnosaNavigationPage";
             this.tipRadnogOdnosaNavigationPage.Controls.Add(this.ucTipRadnogOdnosa1);
             this.tipRadnogOdnosaNavigationPage.Controls.Add(this.labelControl5);
             this.tipRadnogOdnosaNavigationPage.Name = "tipRadnogOdnosaNavigationPage";
-            this.tipRadnogOdnosaNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.tipRadnogOdnosaNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucTipRadnogOdnosa1
             // 
             this.ucTipRadnogOdnosa1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucTipRadnogOdnosa1.Location = new System.Drawing.Point(0, 0);
             this.ucTipRadnogOdnosa1.Name = "ucTipRadnogOdnosa1";
-            this.ucTipRadnogOdnosa1.Size = new System.Drawing.Size(566, 559);
+            this.ucTipRadnogOdnosa1.Size = new System.Drawing.Size(770, 648);
             this.ucTipRadnogOdnosa1.TabIndex = 3;
             // 
             // labelControl5
@@ -429,24 +422,23 @@
             this.labelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl5.Location = new System.Drawing.Point(0, 0);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(566, 559);
+            this.labelControl5.Size = new System.Drawing.Size(770, 648);
             this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "Tip radnog odnosa";
             // 
             // nacinPrestankaRONavigationPage
             // 
-            this.nacinPrestankaRONavigationPage.Caption = "nacinPrestankaRONavigationPage";
             this.nacinPrestankaRONavigationPage.Controls.Add(this.ucNacinPrestankaRO1);
             this.nacinPrestankaRONavigationPage.Controls.Add(this.labelControl6);
             this.nacinPrestankaRONavigationPage.Name = "nacinPrestankaRONavigationPage";
-            this.nacinPrestankaRONavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.nacinPrestankaRONavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucNacinPrestankaRO1
             // 
             this.ucNacinPrestankaRO1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucNacinPrestankaRO1.Location = new System.Drawing.Point(0, 0);
             this.ucNacinPrestankaRO1.Name = "ucNacinPrestankaRO1";
-            this.ucNacinPrestankaRO1.Size = new System.Drawing.Size(566, 559);
+            this.ucNacinPrestankaRO1.Size = new System.Drawing.Size(770, 648);
             this.ucNacinPrestankaRO1.TabIndex = 3;
             // 
             // labelControl6
@@ -462,24 +454,23 @@
             this.labelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl6.Location = new System.Drawing.Point(0, 0);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(566, 559);
+            this.labelControl6.Size = new System.Drawing.Size(770, 648);
             this.labelControl6.TabIndex = 2;
             this.labelControl6.Text = "Način prestanka radnog odnosa";
             // 
             // porodicnoStanjeNavigationPage
             // 
-            this.porodicnoStanjeNavigationPage.Caption = "porodicnoStanjeNavigationPage";
             this.porodicnoStanjeNavigationPage.Controls.Add(this.ucPorodicnoStanje1);
             this.porodicnoStanjeNavigationPage.Controls.Add(this.labelControl7);
             this.porodicnoStanjeNavigationPage.Name = "porodicnoStanjeNavigationPage";
-            this.porodicnoStanjeNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.porodicnoStanjeNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucPorodicnoStanje1
             // 
             this.ucPorodicnoStanje1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucPorodicnoStanje1.Location = new System.Drawing.Point(0, 0);
             this.ucPorodicnoStanje1.Name = "ucPorodicnoStanje1";
-            this.ucPorodicnoStanje1.Size = new System.Drawing.Size(566, 559);
+            this.ucPorodicnoStanje1.Size = new System.Drawing.Size(770, 648);
             this.ucPorodicnoStanje1.TabIndex = 3;
             // 
             // labelControl7
@@ -495,17 +486,16 @@
             this.labelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl7.Location = new System.Drawing.Point(0, 0);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(566, 559);
+            this.labelControl7.Size = new System.Drawing.Size(770, 648);
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "Porodično stanje";
             // 
             // firmaNavigationPage
             // 
-            this.firmaNavigationPage.Caption = "firmaNavigationPage";
             this.firmaNavigationPage.Controls.Add(this.ucFirma1);
             this.firmaNavigationPage.Controls.Add(this.labelControl8);
             this.firmaNavigationPage.Name = "firmaNavigationPage";
-            this.firmaNavigationPage.Size = new System.Drawing.Size(566, 559);
+            this.firmaNavigationPage.Size = new System.Drawing.Size(770, 648);
             // 
             // ucFirma1
             // 
@@ -513,7 +503,7 @@
             this.ucFirma1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucFirma1.Location = new System.Drawing.Point(0, 0);
             this.ucFirma1.Name = "ucFirma1";
-            this.ucFirma1.Size = new System.Drawing.Size(566, 559);
+            this.ucFirma1.Size = new System.Drawing.Size(770, 648);
             this.ucFirma1.TabIndex = 4;
             // 
             // labelControl8
@@ -529,7 +519,7 @@
             this.labelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl8.Location = new System.Drawing.Point(0, 0);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(566, 559);
+            this.labelControl8.Size = new System.Drawing.Size(770, 648);
             this.labelControl8.TabIndex = 3;
             this.labelControl8.Text = "Firma";
             // 
@@ -540,7 +530,7 @@
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.navBarControl);
             this.Name = "ucSifarnici";
-            this.Size = new System.Drawing.Size(800, 559);
+            this.Size = new System.Drawing.Size(1004, 648);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();

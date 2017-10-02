@@ -72,7 +72,8 @@ namespace Kadrovska_sluzba.RadnikTabele
                             //LoadData(value.ID);
                         }
                     }
-                } else
+                }
+                else
                 {
                     layoutControlGroup1.Enabled = false;
                 }
@@ -112,7 +113,10 @@ namespace Kadrovska_sluzba.RadnikTabele
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            djete.JMBG = txtJMBG.EditValue.ToString();
+            if (txtIme.EditValue == null) return; //OBAVEZNO POLJE
+            //djete.JMBG = txtJMBG.EditValue.ToString();
+            if (txtJMBG.EditValue == null) djete.JMBG = null;
+            else djete.JMBG = txtJMBG.EditValue.ToString();
             djete.Ime = txtIme.EditValue.ToString();
             //djete.DatumRodj = dtRodj.EditValue;
             if (dtRodj.EditValue == null) djete.DatumRodj = null;
@@ -123,5 +127,6 @@ namespace Kadrovska_sluzba.RadnikTabele
             ms.CreateOrUpdate(djete);
             this.AfterSave(this, new EventArgs());
         }
+
     }
 }

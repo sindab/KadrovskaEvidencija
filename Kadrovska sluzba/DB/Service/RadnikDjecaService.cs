@@ -27,7 +27,7 @@ namespace Kadrovska_sluzba.DB.Service
 
         public IEnumerable<RadnikDjeca> GetByRadId(int radId)
         {
-            return _db.Query<RadnikDjeca>("SELECT * FROM [RadnikDjeca] WHERE [RadID] = @RadId", new { RadId = radId });
+            return _db.Query<RadnikDjeca>("SELECT ID, RadID, Ime, DatumRodj, JMBG, Bitovi, Napomena/*, DATEDIFF(month, DatumRodj, GETDATE()) / 2 Starost*/ FROM [RadnikDjeca] WHERE [RadID] = @RadId", new { RadId = radId });
         }
 
         public void CreateOrUpdate(RadnikDjeca radnikDjeca)

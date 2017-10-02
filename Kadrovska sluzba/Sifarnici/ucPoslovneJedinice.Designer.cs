@@ -30,6 +30,8 @@
         {
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcNaziv = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -41,8 +43,6 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcNaziv = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -70,6 +70,24 @@
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
+            // 
+            // gcID
+            // 
+            this.gcID.Caption = "ID";
+            this.gcID.FieldName = "ID";
+            this.gcID.Name = "gcID";
+            this.gcID.Visible = true;
+            this.gcID.VisibleIndex = 0;
+            this.gcID.Width = 196;
+            // 
+            // gcNaziv
+            // 
+            this.gcNaziv.Caption = "Naziv";
+            this.gcNaziv.FieldName = "Naziv";
+            this.gcNaziv.Name = "gcNaziv";
+            this.gcNaziv.Visible = true;
+            this.gcNaziv.VisibleIndex = 1;
+            this.gcNaziv.Width = 588;
             // 
             // ribbonControl
             // 
@@ -174,22 +192,6 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
-            // 
-            // gcID
-            // 
-            this.gcID.Caption = "ID";
-            this.gcID.FieldName = "ID";
-            this.gcID.Name = "gcID";
-            this.gcID.Visible = true;
-            this.gcID.VisibleIndex = 0;
-            // 
-            // gcNaziv
-            // 
-            this.gcNaziv.Caption = "Naziv";
-            this.gcNaziv.FieldName = "Naziv";
-            this.gcNaziv.Name = "gcNaziv";
-            this.gcNaziv.Visible = true;
-            this.gcNaziv.VisibleIndex = 1;
             // 
             // ucPoslovneJedinice
             // 

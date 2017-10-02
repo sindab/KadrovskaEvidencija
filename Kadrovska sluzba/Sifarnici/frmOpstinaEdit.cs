@@ -47,7 +47,7 @@ namespace Kadrovska_sluzba.Sifarnici
             if (opstinaID == 0)
             {
                 result = new Opstina();
-                result.Sifra = 0;
+                result.Sifra = "";
                 result.Naziv = "";
             }
             else
@@ -60,7 +60,7 @@ namespace Kadrovska_sluzba.Sifarnici
         void Snimi()
         {
             //opstina.Sifra = txtSifra.EditValue.ToString();
-            if (!(txtSifra.EditValue is null)) { opstina.Sifra = (int)txtSifra.EditValue; }
+            if (!(txtSifra.EditValue is null)) { opstina.Sifra = txtSifra.EditValue.ToString(); }
             opstina.Naziv = txtNaziv.EditValue.ToString();
             os.CreateOrUpdate(opstina);
         }

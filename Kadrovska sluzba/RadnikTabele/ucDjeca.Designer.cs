@@ -48,6 +48,7 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -56,11 +57,11 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 116);
+            this.gridControl.Location = new System.Drawing.Point(0, 52);
             this.gridControl.MainView = this.gridView;
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(800, 484);
+            this.gridControl.Size = new System.Drawing.Size(800, 548);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -75,7 +76,8 @@
             this.gcDatumRodj,
             this.gcJMBG,
             this.gcBitovi,
-            this.gcNapomena});
+            this.gcNapomena,
+            this.gridColumn1});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
@@ -102,8 +104,8 @@
             this.gcIme.FieldName = "Ime";
             this.gcIme.Name = "gcIme";
             this.gcIme.Visible = true;
-            this.gcIme.VisibleIndex = 0;
-            this.gcIme.Width = 196;
+            this.gcIme.VisibleIndex = 1;
+            this.gcIme.Width = 329;
             // 
             // gcDatumRodj
             // 
@@ -111,8 +113,8 @@
             this.gcDatumRodj.FieldName = "DatumRodj";
             this.gcDatumRodj.Name = "gcDatumRodj";
             this.gcDatumRodj.Visible = true;
-            this.gcDatumRodj.VisibleIndex = 1;
-            this.gcDatumRodj.Width = 110;
+            this.gcDatumRodj.VisibleIndex = 2;
+            this.gcDatumRodj.Width = 157;
             // 
             // gcJMBG
             // 
@@ -120,8 +122,8 @@
             this.gcJMBG.FieldName = "JMBG";
             this.gcJMBG.Name = "gcJMBG";
             this.gcJMBG.Visible = true;
-            this.gcJMBG.VisibleIndex = 2;
-            this.gcJMBG.Width = 121;
+            this.gcJMBG.VisibleIndex = 0;
+            this.gcJMBG.Width = 188;
             // 
             // gcBitovi
             // 
@@ -152,9 +154,9 @@
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.OfficeUniversal;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(800, 116);
+            this.ribbonControl.Size = new System.Drawing.Size(800, 52);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -176,7 +178,7 @@
             // 
             this.bbiNew.Caption = "Novi";
             this.bbiNew.Id = 16;
-            this.bbiNew.ImageOptions.ImageUri.Uri = "New";
+            this.bbiNew.ImageOptions.ImageUri.Uri = "Copy";
             this.bbiNew.Name = "bbiNew";
             this.bbiNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiNew_ItemClick);
             // 
@@ -241,6 +243,17 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Starost";
+            this.gridColumn1.FieldName = "gridColumn1";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.UnboundExpression = "DateDiffMonth([DatumRodj], LocalDateTimeNow())/12";
+            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.Width = 110;
+            // 
             // ucDjeca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,5 +292,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcJMBG;
         private DevExpress.XtraGrid.Columns.GridColumn gcBitovi;
         private DevExpress.XtraGrid.Columns.GridColumn gcNapomena;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

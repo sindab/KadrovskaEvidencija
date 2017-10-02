@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>People.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
@@ -390,6 +393,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelGenerator1.cs</LastGenOutput>
     </Content>
+    <Content Include="People.ico" />
     <None Include="men.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

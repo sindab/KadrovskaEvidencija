@@ -92,6 +92,7 @@
             this.lkpPoslovnaJedinicaID = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcPol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -99,10 +100,14 @@
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).BeginInit();
@@ -197,13 +202,19 @@
             this.gcNapomena,
             this.gcEMail,
             this.gcPoslovnaJedinicaID,
-            this.gcPol});
+            this.gcPol,
+            this.gridColumn1});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
             this.gridView.OptionsFind.AlwaysVisible = true;
             this.gridView.OptionsFind.FindNullPrompt = "Tekst za pretragu...";
+            this.gridView.OptionsLayout.Columns.StoreAllOptions = true;
+            this.gridView.OptionsLayout.Columns.StoreAppearance = true;
+            this.gridView.OptionsLayout.StoreAllOptions = true;
+            this.gridView.OptionsLayout.StoreAppearance = true;
+            this.gridView.OptionsLayout.StoreFormatRules = true;
             this.gridView.OptionsView.ShowPreview = true;
             this.gridView.PreviewFieldName = "Napomena";
             this.gridView.PreviewLineCount = 1;
@@ -222,7 +233,7 @@
             this.gcJMBG.Name = "gcJMBG";
             this.gcJMBG.Visible = true;
             this.gcJMBG.VisibleIndex = 0;
-            this.gcJMBG.Width = 76;
+            this.gcJMBG.Width = 77;
             // 
             // gcPrezime
             // 
@@ -231,7 +242,7 @@
             this.gcPrezime.Name = "gcPrezime";
             this.gcPrezime.Visible = true;
             this.gcPrezime.VisibleIndex = 1;
-            this.gcPrezime.Width = 127;
+            this.gcPrezime.Width = 128;
             // 
             // gcDjevPrezime
             // 
@@ -246,7 +257,7 @@
             this.gcIme.Name = "gcIme";
             this.gcIme.Visible = true;
             this.gcIme.VisibleIndex = 3;
-            this.gcIme.Width = 131;
+            this.gcIme.Width = 132;
             // 
             // gcImeOca
             // 
@@ -255,7 +266,7 @@
             this.gcImeOca.Name = "gcImeOca";
             this.gcImeOca.Visible = true;
             this.gcImeOca.VisibleIndex = 2;
-            this.gcImeOca.Width = 86;
+            this.gcImeOca.Width = 87;
             // 
             // gcBitovi
             // 
@@ -367,7 +378,7 @@
             this.gcPorodicnoStanjeID.Name = "gcPorodicnoStanjeID";
             this.gcPorodicnoStanjeID.Visible = true;
             this.gcPorodicnoStanjeID.VisibleIndex = 5;
-            this.gcPorodicnoStanjeID.Width = 139;
+            this.gcPorodicnoStanjeID.Width = 140;
             // 
             // lkpPorodicnoStanjeID
             // 
@@ -396,7 +407,7 @@
             this.gcMjestoStan.Name = "gcMjestoStan";
             this.gcMjestoStan.Visible = true;
             this.gcMjestoStan.VisibleIndex = 7;
-            this.gcMjestoStan.Width = 139;
+            this.gcMjestoStan.Width = 140;
             // 
             // lkpMjestoStan
             // 
@@ -424,7 +435,7 @@
             this.gcAdresaStan.Name = "gcAdresaStan";
             this.gcAdresaStan.Visible = true;
             this.gcAdresaStan.VisibleIndex = 6;
-            this.gcAdresaStan.Width = 139;
+            this.gcAdresaStan.Width = 140;
             // 
             // gcTelefonStan
             // 
@@ -439,7 +450,7 @@
             this.gcTelefonMob.Name = "gcTelefonMob";
             this.gcTelefonMob.Visible = true;
             this.gcTelefonMob.VisibleIndex = 8;
-            this.gcTelefonMob.Width = 139;
+            this.gcTelefonMob.Width = 140;
             // 
             // gcTelefonPosao
             // 
@@ -448,7 +459,7 @@
             this.gcTelefonPosao.Name = "gcTelefonPosao";
             this.gcTelefonPosao.Visible = true;
             this.gcTelefonPosao.VisibleIndex = 9;
-            this.gcTelefonPosao.Width = 139;
+            this.gcTelefonPosao.Width = 140;
             // 
             // gcZanimanje
             // 
@@ -496,7 +507,7 @@
             this.gcRadnoMjestoID.Name = "gcRadnoMjestoID";
             this.gcRadnoMjestoID.Visible = true;
             this.gcRadnoMjestoID.VisibleIndex = 10;
-            this.gcRadnoMjestoID.Width = 139;
+            this.gcRadnoMjestoID.Width = 140;
             // 
             // lkpRadnoMjestoID
             // 
@@ -605,7 +616,7 @@
             this.gcTipRadnogOdnosaID.Name = "gcTipRadnogOdnosaID";
             this.gcTipRadnogOdnosaID.Visible = true;
             this.gcTipRadnogOdnosaID.VisibleIndex = 11;
-            this.gcTipRadnogOdnosaID.Width = 139;
+            this.gcTipRadnogOdnosaID.Width = 140;
             // 
             // lkpTipRadnogOdnosaID
             // 
@@ -678,7 +689,7 @@
             this.gcPoslovnaJedinicaID.Name = "gcPoslovnaJedinicaID";
             this.gcPoslovnaJedinicaID.Visible = true;
             this.gcPoslovnaJedinicaID.VisibleIndex = 12;
-            this.gcPoslovnaJedinicaID.Width = 171;
+            this.gcPoslovnaJedinicaID.Width = 172;
             // 
             // lkpPoslovnaJedinicaID
             // 
@@ -706,7 +717,18 @@
             this.gcPol.Name = "gcPol";
             this.gcPol.Visible = true;
             this.gcPol.VisibleIndex = 4;
-            this.gcPol.Width = 60;
+            this.gcPol.Width = 61;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Starost";
+            this.gridColumn1.FieldName = "gridColumn1";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.UnboundExpression = "DateDiffMonth([DatumRodjenja], LocalDateTimeNow())/12";
+            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 13;
+            this.gridColumn1.Width = 76;
             // 
             // ribbonControl
             // 
@@ -718,9 +740,11 @@
             this.bbiNew,
             this.bbiEdit,
             this.bbiDelete,
-            this.bbiRefresh});
+            this.bbiRefresh,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 1;
+            this.ribbonControl.MaxItemId = 3;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -776,6 +800,22 @@
             this.bbiRefresh.Name = "bbiRefresh";
             this.bbiRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRefresh_ItemClick);
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Snimi izgled tabele";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.ImageOptions.ImageUri.Uri = "ExportToXML";
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Učitaj izgled tabele";
+            this.barButtonItem2.Id = 2;
+            this.barButtonItem2.ImageOptions.ImageUri.Uri = "SaveAndNew";
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -792,6 +832,8 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Podaci";
@@ -812,6 +854,17 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "xml";
+            this.openFileDialog1.FileName = "Radnici.xml";
+            this.openFileDialog1.Filter = "XML|*.xml";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Radnici.xml";
+            this.saveFileDialog1.Filter = "XML|*.xml";
+            // 
             // ucRadnici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -823,6 +876,7 @@
             this.Size = new System.Drawing.Size(800, 600);
             this.Load += new System.EventHandler(this.ucRadnici_Load);
             this.VisibleChanged += new System.EventHandler(this.ucRadnici_VisibleChanged);
+            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.ucRadnici_Layout);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).EndInit();
@@ -930,5 +984,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit lkpPoslovnaJedinicaID;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
         private DevExpress.XtraGrid.Columns.GridColumn gcPol;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
