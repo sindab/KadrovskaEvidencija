@@ -35,8 +35,8 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
 	ClassPrefix = "";
 	ClassSuffix = "";
     IncludeViews = true;
-    IncludeRelationships = true;
-	ExcludeTablePrefixes = new string[]{"aspnet_","webpages_"};
+    IncludeRelationships = false;
+	ExcludeTablePrefixes = new string[]{"aspnet_","webpages_","sys"};
 
     // Read schema
 	var tables = LoadTables();
@@ -49,6 +49,9 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
 	tables["tablename"]["columnname"].PropertyName="newname";	// To change the property name of a column
 	tables["tablename"]["columnname"].PropertyType="bool";		// To change the property type of a column
 */
+
+tables["Radnik"].Ignore = true;
+
 #>
 using System;
 using System.ComponentModel.DataAnnotations;

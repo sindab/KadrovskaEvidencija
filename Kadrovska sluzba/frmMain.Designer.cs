@@ -60,7 +60,7 @@
             this.ucSifarnici1 = new Kadrovska_sluzba.ucSifarnici();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            //this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -408,6 +408,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private System.Windows.Forms.Timer timer1;
+        //private System.Windows.Forms.Timer timer1;
     }
 }

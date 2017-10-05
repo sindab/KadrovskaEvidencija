@@ -1,6 +1,6 @@
-﻿namespace Kadrovska_sluzba.Sifarnici
+﻿namespace Kadrovska_sluzba.RadnikTabele
 {
-    partial class ucPorodicnoStanje
+    partial class ucGOList
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,12 @@
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcNaziv = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcRadID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDatumOd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDatumDo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcZaduzio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcRazduzio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcNapomena = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -65,35 +70,80 @@
             this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcID,
-            this.gcNaziv});
+            this.gcRadID,
+            this.gcDatumOd,
+            this.gcDatumDo,
+            this.gcZaduzio,
+            this.gcRazduzio,
+            this.gcNapomena});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
-            this.gridView.OptionsEditForm.ActionOnModifiedRowChange = DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction.Save;
-            this.gridView.OptionsEditForm.EditFormColumnCount = 1;
-            this.gridView.OptionsEditForm.ShowOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsEditForm.ShowOnEnterKey = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsView.ShowGroupPanel = false;
+            this.gridView.OptionsView.ShowFooter = true;
+            this.gridView.OptionsView.ShowPreview = true;
+            this.gridView.PreviewFieldName = "Napomena";
+            this.gridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView_FocusedRowChanged);
             // 
             // gcID
             // 
             this.gcID.Caption = "ID";
             this.gcID.FieldName = "ID";
             this.gcID.Name = "gcID";
-            this.gcID.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.False;
-            this.gcID.Visible = true;
-            this.gcID.VisibleIndex = 0;
-            this.gcID.Width = 98;
+            this.gcID.Width = 130;
             // 
-            // gcNaziv
+            // gcRadID
             // 
-            this.gcNaziv.Caption = "Naziv";
-            this.gcNaziv.FieldName = "Naziv";
-            this.gcNaziv.Name = "gcNaziv";
-            this.gcNaziv.Visible = true;
-            this.gcNaziv.VisibleIndex = 1;
-            this.gcNaziv.Width = 686;
+            this.gcRadID.Caption = "RadID";
+            this.gcRadID.FieldName = "RadID";
+            this.gcRadID.Name = "gcRadID";
+            this.gcRadID.Width = 76;
+            // 
+            // gcDatumOd
+            // 
+            this.gcDatumOd.Caption = "Datum od";
+            this.gcDatumOd.FieldName = "DatumOd";
+            this.gcDatumOd.Name = "gcDatumOd";
+            this.gcDatumOd.Visible = true;
+            this.gcDatumOd.VisibleIndex = 0;
+            this.gcDatumOd.Width = 143;
+            // 
+            // gcDatumDo
+            // 
+            this.gcDatumDo.Caption = "Datum do";
+            this.gcDatumDo.FieldName = "DatumDo";
+            this.gcDatumDo.Name = "gcDatumDo";
+            this.gcDatumDo.Visible = true;
+            this.gcDatumDo.VisibleIndex = 1;
+            this.gcDatumDo.Width = 143;
+            // 
+            // gcZaduzio
+            // 
+            this.gcZaduzio.Caption = "Ima pravo na";
+            this.gcZaduzio.FieldName = "Zaduzio";
+            this.gcZaduzio.Name = "gcZaduzio";
+            this.gcZaduzio.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Zaduzio", "{0:0}")});
+            this.gcZaduzio.Visible = true;
+            this.gcZaduzio.VisibleIndex = 2;
+            this.gcZaduzio.Width = 143;
+            // 
+            // gcRazduzio
+            // 
+            this.gcRazduzio.Caption = "Iskorišteno";
+            this.gcRazduzio.FieldName = "Razduzio";
+            this.gcRazduzio.Name = "gcRazduzio";
+            this.gcRazduzio.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Razduzio", "{0:0}")});
+            this.gcRazduzio.Visible = true;
+            this.gcRazduzio.VisibleIndex = 3;
+            this.gcRazduzio.Width = 149;
+            // 
+            // gcNapomena
+            // 
+            this.gcNapomena.Caption = "Napomena";
+            this.gcNapomena.FieldName = "Napomena";
+            this.gcNapomena.Name = "gcNapomena";
             // 
             // ribbonControl
             // 
@@ -119,7 +169,7 @@
             // 
             // bbiPrintPreview
             // 
-            this.bbiPrintPreview.Caption = "Štampaj tabelu";
+            this.bbiPrintPreview.Caption = "Štampa tabele";
             this.bbiPrintPreview.Id = 14;
             this.bbiPrintPreview.ImageOptions.ImageUri.Uri = "Preview";
             this.bbiPrintPreview.Name = "bbiPrintPreview";
@@ -145,7 +195,7 @@
             this.bbiEdit.Id = 17;
             this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
             this.bbiEdit.Name = "bbiEdit";
-            this.bbiEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiEdit_ItemClick);
+            this.bbiEdit.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // bbiDelete
             // 
@@ -170,7 +220,7 @@
             this.ribbonPageGroup2});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Porodično stanje";
+            this.ribbonPage1.Text = "Godišnji odmori";
             // 
             // ribbonPageGroup1
             // 
@@ -199,14 +249,14 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
             // 
-            // ucPorodicnoStanje
+            // ucGOList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.Name = "ucPorodicnoStanje";
+            this.Name = "ucGOList";
             this.Size = new System.Drawing.Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
@@ -231,6 +281,11 @@
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
         private DevExpress.XtraGrid.Columns.GridColumn gcID;
-        private DevExpress.XtraGrid.Columns.GridColumn gcNaziv;
+        private DevExpress.XtraGrid.Columns.GridColumn gcRadID;
+        private DevExpress.XtraGrid.Columns.GridColumn gcDatumOd;
+        private DevExpress.XtraGrid.Columns.GridColumn gcDatumDo;
+        private DevExpress.XtraGrid.Columns.GridColumn gcZaduzio;
+        private DevExpress.XtraGrid.Columns.GridColumn gcRazduzio;
+        private DevExpress.XtraGrid.Columns.GridColumn gcNapomena;
     }
 }

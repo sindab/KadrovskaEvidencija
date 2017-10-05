@@ -154,7 +154,7 @@
             this.lkpTipRadnogOdnosaID,
             this.lkpNacinPrestankaRoID,
             this.lkpPoslovnaJedinicaID});
-            this.gridControl.Size = new System.Drawing.Size(800, 484);
+            this.gridControl.Size = new System.Drawing.Size(800, 457);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -206,6 +206,7 @@
             this.gridColumn1});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
+            this.gridView.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
             this.gridView.OptionsFind.AlwaysVisible = true;
@@ -869,8 +870,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.gridControl);
+            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
             this.Name = "ucRadnici";
             this.Size = new System.Drawing.Size(800, 600);

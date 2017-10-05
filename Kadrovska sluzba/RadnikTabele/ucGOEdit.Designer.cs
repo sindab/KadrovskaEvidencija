@@ -326,7 +326,7 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(390, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(362, 24);
-            this.layoutControlItem4.Text = "Potrošeno";
+            this.layoutControlItem4.Text = "Iskorišteno";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(75, 13);
             // 
             // layoutControlItem5

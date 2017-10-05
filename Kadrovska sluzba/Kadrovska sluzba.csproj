@@ -97,6 +97,7 @@
     <Compile Include="DB\Service\PorodicnoStanjeService.cs" />
     <Compile Include="DB\Service\PoslovnaJedinicaService.cs" />
     <Compile Include="DB\Service\RadnikDjecaService.cs" />
+    <Compile Include="DB\Service\RadnikGOService.cs" />
     <Compile Include="DB\Service\RadnikService.cs" />
     <Compile Include="DB\Service\RadnoMjestoService.cs" />
     <Compile Include="DB\Service\StrucnaSpremaService.cs" />
@@ -126,6 +127,24 @@
     </Compile>
     <Compile Include="RadnikTabele\ucDjete.Designer.cs">
       <DependentUpon>ucDjete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucGOEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucGOEdit.Designer.cs">
+      <DependentUpon>ucGOEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucGOList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucGOList.Designer.cs">
+      <DependentUpon>ucGOList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucRadniStaz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucRadniStaz.Designer.cs">
+      <DependentUpon>ucRadniStaz.cs</DependentUpon>
     </Compile>
     <Compile Include="Sifarnici\frmPorodicnoStanjeEdit.cs">
       <SubType>Form</SubType>
@@ -298,6 +317,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RadnikTabele\ucDjete.resx">
       <DependentUpon>ucDjete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucGOEdit.resx">
+      <DependentUpon>ucGOEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucGOList.resx">
+      <DependentUpon>ucGOList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucRadniStaz.resx">
+      <DependentUpon>ucRadniStaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sifarnici\frmPorodicnoStanjeEdit.resx">
       <DependentUpon>frmPorodicnoStanjeEdit.cs</DependentUpon>

@@ -40,6 +40,12 @@ namespace Kadrovska_sluzba.DB.Service
             //    "[TipRadnogOdnosa],[NacinPrestankaRO],[DatumPrestankaRO],[Napomena],[FindStr],[Lozinka],[Slika],eMail FROM [dbo].[Radnik] WHERE ID = @ID", new { ID = Id }).SingleOrDefault();
         }
 
+        public RadnikStaz GetStaz(int Id)
+        {
+            //return _db.Get<Radnik>(Id);
+            return _db.Query<RadnikStaz>("SELECT * FROM [dbo].[RadnikStaz] WHERE RadID = @ID", new { ID = Id }).SingleOrDefault();
+        }
+
         ////public vPar GetByWhere(string where)
         ////{
         ////    try

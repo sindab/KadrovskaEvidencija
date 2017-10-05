@@ -37,6 +37,7 @@
             this.gcJMBG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcBitovi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcNapomena = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -48,7 +49,6 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -61,7 +61,7 @@
             this.gridControl.MainView = this.gridView;
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(800, 548);
+            this.gridControl.Size = new System.Drawing.Size(800, 521);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -137,6 +137,17 @@
             this.gcNapomena.FieldName = "Napomena";
             this.gcNapomena.Name = "gcNapomena";
             this.gcNapomena.Width = 357;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Starost";
+            this.gridColumn1.FieldName = "gridColumn1";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.UnboundExpression = "DateDiffMonth([DatumRodj], LocalDateTimeNow())/12";
+            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.Width = 110;
             // 
             // ribbonControl
             // 
@@ -243,23 +254,12 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Starost";
-            this.gridColumn1.FieldName = "gridColumn1";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.UnboundExpression = "DateDiffMonth([DatumRodj], LocalDateTimeNow())/12";
-            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
-            this.gridColumn1.Width = 110;
-            // 
             // ucDjeca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.gridControl);
+            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
             this.Name = "ucDjeca";
             this.Size = new System.Drawing.Size(800, 600);
