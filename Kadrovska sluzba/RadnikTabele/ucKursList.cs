@@ -15,28 +15,28 @@ using Kadrovska_sluzba.DB.Models;
 
 namespace Kadrovska_sluzba.RadnikTabele
 {
-    public partial class ucDjeca : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucKursList : DevExpress.XtraEditors.XtraUserControl
     {
-        public delegate void DjeteChangedHandler(object myObject, DjeteArgs myArgs);
-        public event DjeteChangedHandler IzmjenaDjeteta;
-        RadnikDjecaService rds;
-        public ucDjeca()
+        public delegate void KursChangedHandler(object myObject, KursArgs myArgs);
+        public event KursChangedHandler IzmjenaKurs;
+        RadnikKursService rds;
+        public ucKursList()
         {
             InitializeComponent();
         }
-        public class DjeteArgs : EventArgs
+        public class KursArgs : EventArgs
         {
-            private RadnikDjeca djete;
-            public DjeteArgs(RadnikDjeca djete)
+            private RadnikKurs kurs;
+            public KursArgs(RadnikKurs kurs)
             {
-                this.djete = djete;
+                this.kurs = kurs;
             }
             // This is a straightforward implementation for declaring a public field
-            public RadnikDjeca Djete
+            public RadnikKurs Kurs
             {
                 get
                 {
-                    return djete;
+                    return kurs;
                 }
             }
         }
@@ -52,7 +52,7 @@ namespace Kadrovska_sluzba.RadnikTabele
                 if (!(value == null))
                 {
                     _roditelj = value;
-                    rds = new RadnikDjecaService();
+                    rds = new RadnikKursService();
                     LoadData();
                 }
             }
@@ -62,7 +62,7 @@ namespace Kadrovska_sluzba.RadnikTabele
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                IEnumerable<RadnikDjeca> dataSource = GetDataSource();
+                IEnumerable<RadnikKurs> dataSource = GetDataSource();
                 gridControl.DataSource = dataSource;
                 bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
                 gridView.MoveLastVisible();
@@ -72,9 +72,9 @@ namespace Kadrovska_sluzba.RadnikTabele
         {
             gridControl.ShowRibbonPrintPreview();
         }
-        public IEnumerable<RadnikDjeca> GetDataSource()
+        public IEnumerable<RadnikKurs> GetDataSource()
         {
-            IEnumerable<RadnikDjeca> result = rds.GetByRadId(Roditelj.ID);
+            IEnumerable<RadnikKurs> result = rds.GetByRadId(Roditelj.ID);
             return result;
         }
 
@@ -85,44 +85,49 @@ namespace Kadrovska_sluzba.RadnikTabele
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RadnikDjeca trenutnoDjete = new RadnikDjeca()
+            RadnikKurs trenutniKurs = new RadnikKurs()
             {
-                ID = 0,
-                RadID = Roditelj.ID
+                //ID = 0,
+                RadID = Roditelj.ID,
+                Datum = DateTime.Today,
+                Opis = string.Empty
             };
-            DjeteArgs myArgs = new DjeteArgs(trenutnoDjete);
-            IzmjenaDjeteta(this, myArgs);
+            KursArgs myArgs = new KursArgs(trenutniKurs);
+            IzmjenaKurs(this, myArgs);
         }
 
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (gridView.FocusedRowHandle > -1)
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                rds.Delete((int)gridView.GetFocusedRowCellValue(gcID));
-                LoadData();
+                if (gridView.FocusedRowHandle > -1)
+                {
+                    rds.Delete((int)gridView.GetFocusedRowCellValue(gcID));
+                    LoadData();
+                }
             }
         }
 
         private void gridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            // proslijedi DjeteID ucDjete
+            // proslijedi 
 
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                RadnikDjeca trenutnoDjete;
+                RadnikKurs trenutniKurs;
                 try
                 {
-                    trenutnoDjete = rds.GetByID((int)gridView.GetFocusedRowCellValue(gcID));
+                    trenutniKurs = rds.GetByID((int)gridView.GetFocusedRowCellValue(gcID));
                 }
                 catch (Exception)
                 {
-                    trenutnoDjete = new RadnikDjeca()
+                    trenutniKurs = new RadnikKurs()
                     {
                         ID = 0
                     };
                 }
-                DjeteArgs myArgs = new DjeteArgs(trenutnoDjete);
-                IzmjenaDjeteta(this, myArgs);
+                KursArgs myArgs = new KursArgs(trenutniKurs);
+                IzmjenaKurs(this, myArgs);
             }
         }
     }

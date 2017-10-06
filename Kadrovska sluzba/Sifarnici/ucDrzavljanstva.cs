@@ -22,18 +22,18 @@ namespace Kadrovska_sluzba.Sifarnici
         {
             InitializeComponent();
 
-            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
-            {
                 os = new DrzavljanstvoService();
                 LoadData();
-            }
         }
         void LoadData()
         {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
             IEnumerable<Drzavljanstvo> dataSource = GetDataSource();
             gridControl.DataSource = dataSource;
             bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
             gridView.MoveLastVisible();
+            }
         }
         void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
         {

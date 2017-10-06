@@ -1,6 +1,6 @@
 ﻿namespace Kadrovska_sluzba.RadnikTabele
 {
-    partial class ucDjeca
+    partial class ucBolovanjeList
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,9 @@
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcRadID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcIme = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcDatumRodj = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcJMBG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcBitovi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcNapomena = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDatumOd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDatumDo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcOpis = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -57,11 +54,11 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 52);
+            this.gridControl.Location = new System.Drawing.Point(0, 116);
             this.gridControl.MainView = this.gridView;
             this.gridControl.MenuManager = this.ribbonControl;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(800, 521);
+            this.gridControl.Size = new System.Drawing.Size(800, 457);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -72,18 +69,14 @@
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcID,
             this.gcRadID,
-            this.gcIme,
-            this.gcDatumRodj,
-            this.gcJMBG,
-            this.gcBitovi,
-            this.gcNapomena,
-            this.gridColumn1});
+            this.gcDatumOd,
+            this.gcDatumDo,
+            this.gcOpis});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
-            this.gridView.OptionsView.ShowGroupPanel = false;
-            this.gridView.OptionsView.ShowPreview = true;
-            this.gridView.PreviewFieldName = "Napomena";
+            this.gridView.OptionsBehavior.ReadOnly = true;
+            this.gridView.OptionsView.ShowFooter = true;
             this.gridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView_FocusedRowChanged);
             // 
             // gcID
@@ -91,63 +84,41 @@
             this.gcID.Caption = "ID";
             this.gcID.FieldName = "ID";
             this.gcID.Name = "gcID";
+            this.gcID.Width = 130;
             // 
             // gcRadID
             // 
             this.gcRadID.Caption = "RadID";
             this.gcRadID.FieldName = "RadID";
             this.gcRadID.Name = "gcRadID";
+            this.gcRadID.Width = 76;
             // 
-            // gcIme
+            // gcDatumOd
             // 
-            this.gcIme.Caption = "Ime";
-            this.gcIme.FieldName = "Ime";
-            this.gcIme.Name = "gcIme";
-            this.gcIme.Visible = true;
-            this.gcIme.VisibleIndex = 1;
-            this.gcIme.Width = 329;
+            this.gcDatumOd.Caption = "Datum od";
+            this.gcDatumOd.FieldName = "DatumOd";
+            this.gcDatumOd.Name = "gcDatumOd";
+            this.gcDatumOd.Visible = true;
+            this.gcDatumOd.VisibleIndex = 0;
+            this.gcDatumOd.Width = 143;
             // 
-            // gcDatumRodj
+            // gcDatumDo
             // 
-            this.gcDatumRodj.Caption = "Datum rođenja";
-            this.gcDatumRodj.FieldName = "DatumRodj";
-            this.gcDatumRodj.Name = "gcDatumRodj";
-            this.gcDatumRodj.Visible = true;
-            this.gcDatumRodj.VisibleIndex = 2;
-            this.gcDatumRodj.Width = 157;
+            this.gcDatumDo.Caption = "Datum do";
+            this.gcDatumDo.FieldName = "DatumDo";
+            this.gcDatumDo.Name = "gcDatumDo";
+            this.gcDatumDo.Visible = true;
+            this.gcDatumDo.VisibleIndex = 1;
+            this.gcDatumDo.Width = 155;
             // 
-            // gcJMBG
+            // gcOpis
             // 
-            this.gcJMBG.Caption = "JMBG";
-            this.gcJMBG.FieldName = "JMBG";
-            this.gcJMBG.Name = "gcJMBG";
-            this.gcJMBG.Visible = true;
-            this.gcJMBG.VisibleIndex = 0;
-            this.gcJMBG.Width = 188;
-            // 
-            // gcBitovi
-            // 
-            this.gcBitovi.Caption = "Bit";
-            this.gcBitovi.FieldName = "Bitovi";
-            this.gcBitovi.Name = "gcBitovi";
-            // 
-            // gcNapomena
-            // 
-            this.gcNapomena.Caption = "Napomena";
-            this.gcNapomena.FieldName = "Napomena";
-            this.gcNapomena.Name = "gcNapomena";
-            this.gcNapomena.Width = 357;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Starost";
-            this.gridColumn1.FieldName = "gridColumn1";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.UnboundExpression = "DateDiffMonth([DatumRodj], LocalDateTimeNow())/12";
-            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
-            this.gridColumn1.Width = 110;
+            this.gcOpis.Caption = "Opis";
+            this.gcOpis.FieldName = "Opis";
+            this.gcOpis.Name = "gcOpis";
+            this.gcOpis.Visible = true;
+            this.gcOpis.VisibleIndex = 2;
+            this.gcOpis.Width = 486;
             // 
             // ribbonControl
             // 
@@ -165,9 +136,9 @@
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.OfficeUniversal;
+            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(800, 52);
+            this.ribbonControl.Size = new System.Drawing.Size(800, 116);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -189,7 +160,7 @@
             // 
             this.bbiNew.Caption = "Novi";
             this.bbiNew.Id = 16;
-            this.bbiNew.ImageOptions.ImageUri.Uri = "Copy";
+            this.bbiNew.ImageOptions.ImageUri.Uri = "New";
             this.bbiNew.Name = "bbiNew";
             this.bbiNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiNew_ItemClick);
             // 
@@ -200,7 +171,6 @@
             this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
             this.bbiEdit.Name = "bbiEdit";
             this.bbiEdit.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            //this.bbiEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiEdit_ItemClick);
             // 
             // bbiDelete
             // 
@@ -225,7 +195,7 @@
             this.ribbonPageGroup2});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Spisak djece radnika";
+            this.ribbonPage1.Text = "Bolovanja";
             // 
             // ribbonPageGroup1
             // 
@@ -254,14 +224,14 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(800, 27);
             // 
-            // ucDjeca
+            // ucBolovanjeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.Name = "ucDjeca";
+            this.Name = "ucBolovanjeList";
             this.Size = new System.Drawing.Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
@@ -287,11 +257,8 @@
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
         private DevExpress.XtraGrid.Columns.GridColumn gcID;
         private DevExpress.XtraGrid.Columns.GridColumn gcRadID;
-        private DevExpress.XtraGrid.Columns.GridColumn gcIme;
-        private DevExpress.XtraGrid.Columns.GridColumn gcDatumRodj;
-        private DevExpress.XtraGrid.Columns.GridColumn gcJMBG;
-        private DevExpress.XtraGrid.Columns.GridColumn gcBitovi;
-        private DevExpress.XtraGrid.Columns.GridColumn gcNapomena;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gcDatumOd;
+        private DevExpress.XtraGrid.Columns.GridColumn gcDatumDo;
+        private DevExpress.XtraGrid.Columns.GridColumn gcOpis;
     }
 }

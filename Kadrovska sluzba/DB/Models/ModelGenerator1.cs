@@ -16,6 +16,34 @@ using System.Collections.Generic;
 namespace Kadrovska_sluzba.DB.Models
 {
     /// <summary>
+    /// A class which represents the RadnikKurs table.
+    /// </summary>
+	[Table("RadnikKurs")]
+	public partial class RadnikKurs
+	{
+		[Key]
+		public virtual int ID { get; set; }
+		public virtual int RadID { get; set; }
+		public virtual DateTime? Datum { get; set; }
+		public virtual DateTime? DatumDo { get; set; }
+		public virtual string Opis { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the RadnikBolovanje table.
+    /// </summary>
+	[Table("RadnikBolovanje")]
+	public partial class RadnikBolovanje
+	{
+		[Key]
+		public virtual int ID { get; set; }
+		public virtual int RadID { get; set; }
+		public virtual DateTime? DatumOd { get; set; }
+		public virtual DateTime? DatumDo { get; set; }
+		public virtual string Opis { get; set; }
+	}
+
+    /// <summary>
     /// A class which represents the PorodicnoStanje table.
     /// </summary>
 	[Table("PorodicnoStanje")]

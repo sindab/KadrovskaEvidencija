@@ -24,12 +24,10 @@ namespace Kadrovska_sluzba
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
         {
-            //ucRadnik1.Radnik = ucRadnici1.TrenutniRadnik;
             navigationFrame.SelectedPageIndex = navBarControl.Groups.IndexOf(e.Group);
         }
         void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //ucRadnik1.Radnik = ucRadnici1.TrenutniRadnik;
             int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
             navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
         }
@@ -43,7 +41,19 @@ namespace Kadrovska_sluzba
         private void ucRadnici1_IzmjenaRadnika(object myObject, ucRadnici.RadnikArgs myArgs)
         {
             //radnik
+            // ucRadnik ucRadnik1 = new ucRadnik();
+            //// 
+            //// ucRadnik1
+            //// 
+            //ucRadnik1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            //ucRadnik1.Dock = System.Windows.Forms.DockStyle.Fill;
+            //ucRadnik1.Location = new System.Drawing.Point(0, 0);
+            //ucRadnik1.Name = "ucRadnik1";
+            ////ucRadnik1.Radnik = null;
             ucRadnik1.Radnik = myArgs.Radnik;
+            //ucRadnik1.Size = new System.Drawing.Size(756, 380);
+            //ucRadnik1.TabIndex = 2;
+            //employeeNavigationPage.Controls.Add(ucRadnik1);
             navBarControl.ActiveGroup = navBarControl.Groups[1];
         }
 
@@ -55,28 +65,28 @@ namespace Kadrovska_sluzba
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //PodsjetiMe();
+            PodsjetiMe();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //PodsjetiMe();
+            PodsjetiMe();
         }
 
         private void PodsjetiMe()
         {
-            //DevExpress.XtraBars.Alerter.AlertInfo a = new DevExpress.XtraBars.Alerter.AlertInfo("Podsjetnik", "Imate sastanak!");
-            //a.HotTrackedText = "VAZAN SASTANAK";
-            //alertControl1.Show(this, a);
+            DevExpress.XtraBars.Alerter.AlertInfo a = new DevExpress.XtraBars.Alerter.AlertInfo("Podsjetnik", "Imate sastanak!");
+            a.HotTrackedText = "VAZAN SASTANAK";
+            alertControl1.Show(this, a);
         }
 
         private void alertControl1_ButtonClick(object sender, DevExpress.XtraBars.Alerter.AlertButtonClickEventArgs e)
         {
            if (e.ButtonName == "Open")
             {
-                ////TEST
-                //frmLogin fl = new frmLogin();
-                //fl.Show();
+                //TEST
+                frmLogin fl = new frmLogin();
+                fl.Show();
             }
         }
         

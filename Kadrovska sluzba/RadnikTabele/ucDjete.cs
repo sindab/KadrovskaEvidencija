@@ -22,24 +22,12 @@ namespace Kadrovska_sluzba.RadnikTabele
         public event EventHandler AfterSave;
         RadnikDjecaService ms;
         RadnikDjeca djete;
-        //int djeteID;
-        //Radnik _roditelj;
 
         public ucDjete()
         {
             InitializeComponent();
         }
-        //public Radnik Roditelj
-        //{
-        //    get
-        //    {
-        //        return _roditelj;
-        //    }
-        //    set
-        //    {
-        //            _roditelj = value;
-        //    }
-        //}
+
         public RadnikDjeca Djete
         {
             get
@@ -65,11 +53,9 @@ namespace Kadrovska_sluzba.RadnikTabele
                         else
                         {
                             mainRibbonPage.Text = djete.Ime;
-                            //djeteID = djete.ID;
                             txtJMBG.EditValue = djete.JMBG;
                             txtIme.EditValue = djete.Ime;
                             dtRodj.EditValue = djete.DatumRodj;
-                            //LoadData(value.ID);
                         }
                     }
                 }
@@ -79,37 +65,6 @@ namespace Kadrovska_sluzba.RadnikTabele
                 }
             }
         }
-        //void LoadData(int Id)
-        //{
-        //    djete = GetDataSource(Id);
-        //    //txtSifra.EditValue = mjesto.PostBr;
-        //    //txtNaziv.EditValue = mjesto.Naziv;
-        //    //lkpOpstine.EditValue = mjesto.OpstinaID;
-        //}
-        //public RadnikDjeca GetDataSource(int iD)
-        //{
-        //    RadnikDjeca result;
-        //    if (djeteID == 0)
-        //    {
-        //        result = new RadnikDjeca();
-        //        //result.PostBr = 0;
-        //        //result.Naziv = "";
-        //    }
-        //    else
-        //    {
-        //        result = ms.GetByID(djeteID);
-        //    }
-        //    return result;
-        //}
-
-        //void Snimi()
-        //{
-        //    ////mjesto.PostBr = (int)txtSifra.EditValue;
-        //    //if (!(txtSifra.EditValue is null)) { mjesto.PostBr = (int)txtSifra.EditValue; }
-        //    //mjesto.Naziv = txtNaziv.EditValue.ToString();
-        //    //if (!(lkpOpstine.EditValue is null)) { mjesto.OpstinaID = (int)lkpOpstine.EditValue; }
-        //    //ms.CreateOrUpdate(mjesto);
-        //}
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

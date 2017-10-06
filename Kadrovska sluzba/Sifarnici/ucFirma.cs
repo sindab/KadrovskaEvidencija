@@ -64,9 +64,11 @@ namespace Kadrovska_sluzba.Sifarnici
             f = fs.GetData();
             if (f is null)
             {
-                f = new Firma();
-                f.ID = 1;
-                f.Naziv = "Ime firme";
+                f = new Firma()
+                {
+                    ID = 1,
+                    Naziv = "Ime firme"
+                };
                 fs.CreateOrUpdate(f);
             }
             return f;
@@ -88,10 +90,6 @@ namespace Kadrovska_sluzba.Sifarnici
             f.Mobilni = txtMobilni.EditValue.ToString();
             fs.CreateOrUpdate(f);
         }
-
-        private void bbPJ_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -52,21 +52,21 @@ namespace Kadrovska_sluzba.RadnikTabele
                 if (!(value == null))
                 {
                     _roditelj = value;
-                    if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
-                    {
                         rds = new RadnikGOService();
                         LoadData();
-                    }
                 }
             }
         }
 
         public void LoadData()
         {
-            IEnumerable<RadnikGO> dataSource = GetDataSource();
-            gridControl.DataSource = dataSource;
-            bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
-            gridView.MoveLastVisible();
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                IEnumerable<RadnikGO> dataSource = GetDataSource();
+                gridControl.DataSource = dataSource;
+                bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
+                gridView.MoveLastVisible();
+            }
         }
         void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -74,8 +74,8 @@ namespace Kadrovska_sluzba.RadnikTabele
         }
         public IEnumerable<RadnikGO> GetDataSource()
         {
-            IEnumerable<RadnikGO> result = rds.GetByRadId(Roditelj.ID);
-            return result;
+                IEnumerable<RadnikGO> result = rds.GetByRadId(Roditelj.ID);
+                return result;
         }
 
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
@@ -85,29 +85,24 @@ namespace Kadrovska_sluzba.RadnikTabele
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RadnikGO trenutniGO = new RadnikGO();
-            trenutniGO.ID = 0;
-            trenutniGO.RadID = Roditelj.ID;
+            RadnikGO trenutniGO = new RadnikGO()
+            {
+                ID = 0,
+                RadID = Roditelj.ID
+            };
             GOArgs myArgs = new GOArgs(trenutniGO);
             IzmjenaGO(this, myArgs);
         }
 
-        private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
+                private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (gridView.FocusedRowHandle > -1)
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                //frmMjestoEdit fOE = new frmMjestoEdit((int)gridView.GetFocusedRowCellValue(gcID));
-                //fOE.ShowDialog();
-                //LoadData();
-            }
-        }
-
-        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (gridView.FocusedRowHandle > -1)
-            {
-                rds.Delete((int)gridView.GetFocusedRowCellValue(gcID));
-                LoadData();
+                if (gridView.FocusedRowHandle > -1)
+                {
+                    rds.Delete((int)gridView.GetFocusedRowCellValue(gcID));
+                    LoadData();
+                }
             }
         }
 
@@ -115,18 +110,23 @@ namespace Kadrovska_sluzba.RadnikTabele
         {
             // proslijedi 
 
-            RadnikGO trenutniGO;
-            try
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                trenutniGO = rds.GetByID((int)gridView.GetFocusedRowCellValue(gcID));
+                RadnikGO trenutniGO;
+                try
+                {
+                    trenutniGO = rds.GetByID((int)gridView.GetFocusedRowCellValue(gcID));
+                }
+                catch (Exception)
+                {
+                    trenutniGO = new RadnikGO()
+                    {
+                        ID = 0
+                    };
+                }
+                GOArgs myArgs = new GOArgs(trenutniGO);
+                IzmjenaGO(this, myArgs);
             }
-            catch (Exception)
-            {
-                trenutniGO = new RadnikGO();
-                trenutniGO.ID = 0;
-            }
-            GOArgs myArgs = new GOArgs(trenutniGO);
-            IzmjenaGO(this, myArgs);
         }
     }
 }

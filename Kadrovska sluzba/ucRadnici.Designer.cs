@@ -108,6 +108,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).BeginInit();
@@ -821,7 +822,8 @@
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Kadrovska evidencija";
@@ -833,8 +835,6 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Podaci";
@@ -866,6 +866,13 @@
             this.saveFileDialog1.FileName = "Radnici.xml";
             this.saveFileDialog1.Filter = "XML|*.xml";
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Tema";
+            // 
             // ucRadnici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -877,7 +884,6 @@
             this.Size = new System.Drawing.Size(800, 600);
             this.Load += new System.EventHandler(this.ucRadnici_Load);
             this.VisibleChanged += new System.EventHandler(this.ucRadnici_VisibleChanged);
-            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.ucRadnici_Layout);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).EndInit();
@@ -990,5 +996,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }

@@ -51,6 +51,7 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
 */
 
 tables["Radnik"].Ignore = true;
+tables["RadnikKurs"].ClassName = "RadnikKurs";
 
 #>
 using System;

@@ -66,6 +66,7 @@ namespace Kadrovska_sluzba
             {
                 dataSource = GetDataSource();
                 gridControl.DataSource = dataSource;
+                gridView.ExpandAllGroups();
                 bsiRecordsCount.Caption = "RECORDS : " + dataSource.ToList().Count;
                 if (focusID > 0)
                 {
@@ -109,9 +110,12 @@ namespace Kadrovska_sluzba
         }
         public IEnumerable<Radnik> GetDataSource()
         {
-            rs = new RadnikService();
-            IEnumerable<Radnik> result = rs.GetAll();
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                rs = new RadnikService();
+                IEnumerable<Radnik> result = rs.GetAll();
             return result;
+            } else { return null; }
         }
 
         private void gridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -137,27 +141,29 @@ namespace Kadrovska_sluzba
 
         private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Radnik newR = new Radnik();
-            newR.AdresaStan = string.Empty;
-            newR.Bitovi = 0;
-            newR.BrLK = string.Empty;
-            newR.BrRadneKnj = string.Empty;
-            newR.DjevPrezime = string.Empty;
-            newR.eMail = string.Empty;
-            newR.Funkcija = string.Empty;
-            newR.Ime = string.Empty;
-            newR.ImeOca = string.Empty;
-            newR.JMBG = string.Empty;
-            newR.LicniBrOsiguranja = string.Empty;
-            newR.Napomena = string.Empty;
-            newR.Pol = "Muški";
-            newR.Prezime = string.Empty;
-            newR.TelefonMob = string.Empty;
-            newR.TelefonPosao = string.Empty;
-            newR.TelefonStan = string.Empty;
-            newR.Titula = string.Empty;
-            newR.Zanimanje = string.Empty;
-            newR.ZavrsenaSkola = string.Empty;
+            Radnik newR = new Radnik()
+            {
+                AdresaStan = string.Empty,
+                Bitovi = 0,
+                BrLK = string.Empty,
+                BrRadneKnj = string.Empty,
+                DjevPrezime = string.Empty,
+                eMail = string.Empty,
+                Funkcija = string.Empty,
+                Ime = string.Empty,
+                ImeOca = string.Empty,
+                JMBG = string.Empty,
+                LicniBrOsiguranja = string.Empty,
+                Napomena = string.Empty,
+                Pol = "Muški",
+                Prezime = string.Empty,
+                TelefonMob = string.Empty,
+                TelefonPosao = string.Empty,
+                TelefonStan = string.Empty,
+                Titula = string.Empty,
+                Zanimanje = string.Empty,
+                ZavrsenaSkola = string.Empty
+            };
             RadnikArgs myArgs = new RadnikArgs(newR);
             IzmjenaRadnika(this, myArgs);
         }
@@ -170,11 +176,14 @@ namespace Kadrovska_sluzba
 
         private void ucRadnici_VisibleChanged(object sender, EventArgs e)
         {
-            if ((gridView.FocusedRowHandle > -1) && (int)gridView.GetFocusedRowCellValue("ID") > 0)
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                LoadData((int)gridView.GetFocusedRowCellValue("ID"));
+                if ((gridView.FocusedRowHandle > -1) && (int)gridView.GetFocusedRowCellValue("ID") > 0)
+                {
+                    LoadData((int)gridView.GetFocusedRowCellValue("ID"));
+                }
+                else { LoadData(0); }
             }
-            else { LoadData(0); }
         }
 
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
@@ -188,12 +197,7 @@ namespace Kadrovska_sluzba
                 }
             }
         }
-
-        private void ucRadnici_Layout(object sender, LayoutEventArgs e)
-        {
-            //gridView.SaveLayoutToXml(openFileDialog1.FileName);
-        }
-
+        
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             saveFileDialog1.ShowDialog();

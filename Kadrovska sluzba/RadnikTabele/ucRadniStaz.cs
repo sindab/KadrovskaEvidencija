@@ -37,35 +37,38 @@ namespace Kadrovska_sluzba.RadnikTabele
 
         private void LoadData()
         {
-            if (!(Radnik == null))
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                RadnikService rs = new RadnikService();
-                RadnikStaz rst = rs.GetStaz(Radnik.ID);
-                txtGF.EditValue = rst.Godina;
-                txtGP.EditValue = rst.StazGPrethodni;
-                txtGU.EditValue = rst.G;
+                if (!(Radnik == null))
+                {
+                    RadnikService rs = new RadnikService();
+                    RadnikStaz rst = rs.GetStaz(Radnik.ID);
+                    txtGF.EditValue = rst.Godina;
+                    txtGP.EditValue = rst.StazGPrethodni;
+                    txtGU.EditValue = rst.G;
 
-                txtMF.EditValue = rst.Mjeseci;
-                txtMP.EditValue = rst.StazMjPrethodni;
-                txtMU.EditValue = rst.M;
+                    txtMF.EditValue = rst.Mjeseci;
+                    txtMP.EditValue = rst.StazMjPrethodni;
+                    txtMU.EditValue = rst.M;
 
-                txtDF.EditValue = rst.Dana;
-                txtDP.EditValue = rst.StazDanaPrethodni;
-                txtDU.EditValue = rst.D;
-            }
-            else
-            {
-                txtGF.EditValue = 0;
-                txtGP.EditValue = 0;
-                txtGU.EditValue = 0;
+                    txtDF.EditValue = rst.Dana;
+                    txtDP.EditValue = rst.StazDanaPrethodni;
+                    txtDU.EditValue = rst.D;
+                }
+                else
+                {
+                    txtGF.EditValue = 0;
+                    txtGP.EditValue = 0;
+                    txtGU.EditValue = 0;
 
-                txtMF.EditValue = 0;
-                txtMP.EditValue = 0;
-                txtMU.EditValue = 0;
+                    txtMF.EditValue = 0;
+                    txtMP.EditValue = 0;
+                    txtMU.EditValue = 0;
 
-                txtDF.EditValue = 0;
-                txtDP.EditValue = 0;
-                txtDU.EditValue = 0;
+                    txtDF.EditValue = 0;
+                    txtDP.EditValue = 0;
+                    txtDU.EditValue = 0;
+                }
             }
         }
     }

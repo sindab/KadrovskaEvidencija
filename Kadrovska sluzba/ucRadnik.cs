@@ -31,8 +31,8 @@ namespace Kadrovska_sluzba
 
         private void ucRadnik_Load(object sender, EventArgs e)
         {
-            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
-            {
+            if (!this.DesignMode)
+            { 
                 MjestoService ms = new MjestoService();
                 IEnumerable<Mjesto> mj = ms.GetAll();
                 lkpMjestoRodj.Properties.DataSource = mj.ToList();
@@ -57,19 +57,6 @@ namespace Kadrovska_sluzba
                 lkpNacinPrestanka.Properties.DataSource = nps.GetAll().ToList();
 
                 ucRadniStaz1.Radnik = Radnik;
-                //rs = new RadnikService();
-                //RadnikStaz rst = rs.GetStaz(Radnik.ID);
-                //txtGF.EditValue = rst.Godina;
-                //txtGP.EditValue = rst.StazGPrethodni;
-                //txtGU.EditValue = rst.G;
-
-                //txtMF.EditValue = rst.Mjeseci;
-                //txtMP.EditValue = rst.StazMjPrethodni;
-                //txtMU.EditValue = rst.M;
-
-                //txtDF.EditValue = rst.Dana;
-                //txtDP.EditValue = rst.StazDanaPrethodni;
-                //txtDU.EditValue = rst.D;
             }
         }
         private Radnik _radnik;
@@ -143,8 +130,9 @@ namespace Kadrovska_sluzba
                         }
                     }
                     xtraTabControl1.Enabled = (_radnik.ID > 0);
-                }
+
                 SetTabs();
+                }
                 //List<Radnik> lR = new List<Radnik>();
                 //lR.Add(_radnik);
                 //txtPrezime.DataBindings.Clear();
@@ -307,12 +295,7 @@ namespace Kadrovska_sluzba
         {
             Snimi();
         }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Snimi();
@@ -332,39 +315,89 @@ namespace Kadrovska_sluzba
 
         private void SetTabs()
         {
-            if (!(Radnik == null))
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                ucDjeca1.Roditelj = Radnik;
-                ucGOList1.Roditelj = Radnik;
+                if (!(Radnik == null))
+                {
+                    ucDjeca1.Roditelj = Radnik;
+                    ucGOList1.Roditelj = Radnik;
+                    ucKursList1.Roditelj = Radnik;
+                    ucBolovanjeList1.Roditelj = Radnik;
+                }
+                else
+                {
+                    Radnik r = new Radnik()
+                    {
+                        ID = 0
+                    };
+                    ucDjeca1.Roditelj = r;
+                    ucGOList1.Roditelj = r;
+                    ucKursList1.Roditelj = r;
+                    ucBolovanjeList1.Roditelj = r;
+                }
+                ucDjete1.AfterSave += this.DjeteAfterSave;
+                ucGOEdit1.AfterSave += this.GOAfterSave;
+                ucKursEdit1.AfterSave += this.KursAfterSave;
+                ucBolovanjeEdit1.AfterSave += this.BolovanjeAfterSave;
             }
-            else
-            {
-                Radnik r = new Radnik();
-                r.ID = 0;
-                ucDjeca1.Roditelj = r;
-                ucGOList1.Roditelj = r;
-            }
-            ucDjete1.AfterSave += this.DjeteAfterSave;
-            ucGOEdit1.AfterSave += this.GOAfterSave;
         }
 
         private void DjeteAfterSave(object sender, EventArgs e)
         {
-            ucDjeca1.LoadData();
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucDjeca1.LoadData();
+            }
         }
         private void GOAfterSave(object sender, EventArgs e)
         {
-            ucGOList1.LoadData();
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucGOList1.LoadData();
+            }
+        }
+        private void KursAfterSave(object sender, EventArgs e)
+        {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucKursList1.LoadData();
+            }
+        }
+        private void BolovanjeAfterSave(object sender, EventArgs e)
+        {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucBolovanjeList1.LoadData();
+            }
         }
 
         private void ucDjeca1_IzmjenaDjeteta(object myObject, RadnikTabele.ucDjeca.DjeteArgs myArgs)
         {
-            ucDjete1.Djete = myArgs.Djete;
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucDjete1.Djete = myArgs.Djete;
+            }
         }
-
         private void ucGOList1_IzmjenaGO(object myObject, RadnikTabele.ucGOList.GOArgs myArgs)
         {
-            ucGOEdit1.GOdmor = myArgs.GOdmor;
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucGOEdit1.GOdmor = myArgs.GOdmor;
+            }
+        }
+        private void ucKursList1_IzmjenaKurs(object myObject, RadnikTabele.ucKursList.KursArgs myArgs)
+        {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucKursEdit1.Kurs = myArgs.Kurs;
+            }
+        }
+        private void ucBolovanjeList1_IzmjenaBolovanje(object myObject, RadnikTabele.ucBolovanjeList.BolovanjeArgs myArgs)
+        {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucBolovanjeEdit1.Bolovanje = myArgs.Bolovanje;
+            }
         }
 
     }

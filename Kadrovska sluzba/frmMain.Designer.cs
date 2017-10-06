@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            Kadrovska_sluzba.DB.Models.Radnik radnik1 = new Kadrovska_sluzba.DB.Models.Radnik();
             DevExpress.XtraBars.Alerter.AlertButton alertButton1 = new DevExpress.XtraBars.Alerter.AlertButton();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -54,13 +55,12 @@
             this.ucRadnici1 = new Kadrovska_sluzba.ucRadnici();
             this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.employeeNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.ucRadnik1 = new Kadrovska_sluzba.ucRadnik();
             this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.sifarniciNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucSifarnici1 = new Kadrovska_sluzba.ucSifarnici();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.ucRadnik1 = new ucRadnik();
             this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            //this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -255,10 +255,23 @@
             // 
             // employeesNavigationPage
             // 
+            this.employeeNavigationPage.Controls.Add(this.ucRadnik1);
             this.employeesNavigationPage.Controls.Add(this.ucRadnici1);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
             this.employeesNavigationPage.Size = new System.Drawing.Size(756, 380);
+
+            // 
+            // ucRadnik1
+            // 
+            this.ucRadnik1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucRadnik1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucRadnik1.Location = new System.Drawing.Point(0, 0);
+            this.ucRadnik1.Name = "ucRadnik1";
+            //this.ucRadnik1.Radnik = null;
+            this.ucRadnik1.Size = new System.Drawing.Size(756, 380);
+            this.ucRadnik1.TabIndex = 2;
+            
             // 
             // ucRadnici1
             // 
@@ -267,7 +280,51 @@
             this.ucRadnici1.Name = "ucRadnici1";
             this.ucRadnici1.Size = new System.Drawing.Size(756, 380);
             this.ucRadnici1.TabIndex = 1;
-            this.ucRadnici1.TrenutniRadnik = null;
+            radnik1.AdresaStan = null;
+            radnik1.Bitovi = 0;
+            radnik1.BrLK = null;
+            radnik1.BrRadneKnj = null;
+            radnik1.DatumPrestankaRO = null;
+            radnik1.DatumPrvogZapos = null;
+            radnik1.DatumRodjenja = null;
+            radnik1.DatumZapos = null;
+            radnik1.DjevPrezime = null;
+            radnik1.DrzavljanstvoID = null;
+            radnik1.eMail = null;
+            radnik1.FindStr = null;
+            radnik1.Funkcija = null;
+            radnik1.ID = 0;
+            radnik1.Ime = null;
+            radnik1.ImeOca = null;
+            radnik1.JMBG = null;
+            radnik1.LicniBrOsiguranja = null;
+            radnik1.Lozinka = null;
+            radnik1.MjestoRodjenja = null;
+            radnik1.MjestoStan = null;
+            radnik1.NacinPrestankaRoID = null;
+            radnik1.NacionalnostID = null;
+            radnik1.Napomena = null;
+            radnik1.Naziv = null;
+            radnik1.OpstinaIzdavanjaRK = null;
+            radnik1.Pol = null;
+            radnik1.PorodicnoStanjeID = null;
+            radnik1.PoslovnaJedinicaID = null;
+            radnik1.PrethodniStazDan = null;
+            radnik1.PrethodniStazMj = null;
+            radnik1.PrethodniStazUFirmiDan = null;
+            radnik1.PrethodniStazUFirmiMj = null;
+            radnik1.Prezime = null;
+            radnik1.RadnoMjestoID = null;
+            radnik1.Slika = null;
+            radnik1.StrucnaSpremaID = null;
+            radnik1.TelefonMob = null;
+            radnik1.TelefonPosao = null;
+            radnik1.TelefonStan = null;
+            radnik1.TipRadnogOdnosaID = null;
+            radnik1.Titula = null;
+            radnik1.Zanimanje = null;
+            radnik1.ZavrsenaSkola = null;
+            this.ucRadnici1.TrenutniRadnik = radnik1;
             this.ucRadnici1.IzmjenaRadnika += new Kadrovska_sluzba.ucRadnici.RadnikChangedHandler(this.ucRadnici1_IzmjenaRadnika);
             // 
             // employeesLabelControl
@@ -289,20 +346,9 @@
             // 
             // employeeNavigationPage
             // 
-            this.employeeNavigationPage.Controls.Add(this.ucRadnik1);
             this.employeeNavigationPage.Controls.Add(this.customersLabelControl);
             this.employeeNavigationPage.Name = "employeeNavigationPage";
             this.employeeNavigationPage.Size = new System.Drawing.Size(756, 380);
-            // 
-            // ucRadnik1
-            // 
-            this.ucRadnik1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucRadnik1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucRadnik1.Location = new System.Drawing.Point(0, 0);
-            this.ucRadnik1.Name = "ucRadnik1";
-            this.ucRadnik1.Radnik = null;
-            this.ucRadnik1.Size = new System.Drawing.Size(756, 380);
-            this.ucRadnik1.TabIndex = 2;
             // 
             // customersLabelControl
             // 

@@ -15,7 +15,17 @@ namespace Kadrovska_sluzba.DB.Service
 
         public IEnumerable<Radnik> GetAll()
         {
+            try
+            {
             return _db.GetAll<Radnik>();
+
+            }
+            catch (Exception)
+            {
+                List<Radnik> er=new List<Radnik>();
+                er.Add(new Radnik { ID = 0 });
+                return er;
+            }
             //return _db.Query<Radnik>("SELECT [ID],[JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],[Bitovi],[Titula],[Funkcija]," +
             //    "[MjestoRodjenja],[OpstinaRodjenja],[DatumRodjenja],[Drzavljanstvo],[Nacionalnost],[PorodicnoStanje]," +
             //    "[MjestoStan],[AdresaStan],[OpstinaStan],[TelefonStan],[TelefonMob],[TelefonPosao],[Zanimanje],[StrucnaSprema],[ZavrsenaSkola]," +
@@ -31,7 +41,16 @@ namespace Kadrovska_sluzba.DB.Service
 
         public Radnik GetByID(int Id)
         {
+            try
+            {
             return _db.Get<Radnik>(Id);
+
+            }
+            catch (Exception)
+            {
+                Radnik er = new Radnik(){ ID = 0 };
+                return er;
+            }
             //return _db.Query<Radnik>("SELECT [ID],[JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],Naziv,[Bitovi],[Titula],[Funkcija]," +
             //    "[MjestoRodjenja],[OpstinaRodjenja],[DatumRodjenja],[Drzavljanstvo],[Nacionalnost],[PorodicnoStanje]," +
             //    "[MjestoStan],[AdresaStan],[OpstinaStan],[TelefonStan],[TelefonMob],[TelefonPosao],[Zanimanje],[StrucnaSprema],[ZavrsenaSkola]," +

@@ -98,6 +98,8 @@
     <Compile Include="DB\Service\PoslovnaJedinicaService.cs" />
     <Compile Include="DB\Service\RadnikDjecaService.cs" />
     <Compile Include="DB\Service\RadnikGOService.cs" />
+    <Compile Include="DB\Service\RadnikBolovanjeService.cs" />
+    <Compile Include="DB\Service\RadnikKursService.cs" />
     <Compile Include="DB\Service\RadnikService.cs" />
     <Compile Include="DB\Service\RadnoMjestoService.cs" />
     <Compile Include="DB\Service\StrucnaSpremaService.cs" />
@@ -128,11 +130,35 @@
     <Compile Include="RadnikTabele\ucDjete.Designer.cs">
       <DependentUpon>ucDjete.cs</DependentUpon>
     </Compile>
+    <Compile Include="RadnikTabele\ucBolovanjeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucBolovanjeEdit.Designer.cs">
+      <DependentUpon>ucBolovanjeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucKursEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucKursEdit.Designer.cs">
+      <DependentUpon>ucKursEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="RadnikTabele\ucGOEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="RadnikTabele\ucGOEdit.Designer.cs">
       <DependentUpon>ucGOEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucBolovanjeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucBolovanjeList.Designer.cs">
+      <DependentUpon>ucBolovanjeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucKursList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucKursList.Designer.cs">
+      <DependentUpon>ucKursList.cs</DependentUpon>
     </Compile>
     <Compile Include="RadnikTabele\ucGOList.cs">
       <SubType>UserControl</SubType>
@@ -318,8 +344,20 @@
     <EmbeddedResource Include="RadnikTabele\ucDjete.resx">
       <DependentUpon>ucDjete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucBolovanjeEdit.resx">
+      <DependentUpon>ucBolovanjeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucKursEdit.resx">
+      <DependentUpon>ucKursEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RadnikTabele\ucGOEdit.resx">
       <DependentUpon>ucGOEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucBolovanjeList.resx">
+      <DependentUpon>ucBolovanjeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucKursList.resx">
+      <DependentUpon>ucKursList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RadnikTabele\ucGOList.resx">
       <DependentUpon>ucGOList.cs</DependentUpon>
@@ -389,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sifarnici\ucOpstine.resx">
       <DependentUpon>ucOpstine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sifarnici\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucRadnici.resx">
       <DependentUpon>ucRadnici.cs</DependentUpon>

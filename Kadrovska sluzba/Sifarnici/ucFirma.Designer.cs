@@ -170,7 +170,7 @@
             this.bbPJ.Id = 10;
             this.bbPJ.ImageOptions.ImageUri.Uri = "Home";
             this.bbPJ.Name = "bbPJ";
-            this.bbPJ.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbPJ_ItemClick);
+            //this.bbPJ.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbPJ_ItemClick);
             // 
             // mainRibbonPage
             // 
