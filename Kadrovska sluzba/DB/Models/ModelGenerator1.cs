@@ -44,6 +44,46 @@ namespace Kadrovska_sluzba.DB.Models
 	}
 
     /// <summary>
+    /// A class which represents the Appointments table.
+    /// </summary>
+	[Table("Appointments")]
+	public partial class Appointment
+	{
+		[Key]
+		public virtual int UniqueID { get; set; }
+		public virtual int? Type { get; set; }
+		public virtual DateTime? StartDate { get; set; }
+		public virtual DateTime? EndDate { get; set; }
+		public virtual bool? AllDay { get; set; }
+		public virtual string Subject { get; set; }
+		public virtual string Location { get; set; }
+		public virtual string Description { get; set; }
+		public virtual int? Status { get; set; }
+		public virtual int? Label { get; set; }
+		public virtual int? ResourceID { get; set; }
+		public virtual string ResourceIDs { get; set; }
+		public virtual string ReminderInfo { get; set; }
+		public virtual string RecurrenceInfo { get; set; }
+		public virtual string TimeZoneId { get; set; }
+		public virtual string CustomField1 { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Resources table.
+    /// </summary>
+	[Table("Resources")]
+	public partial class Resource
+	{
+		[Key]
+		public virtual int UniqueID { get; set; }
+		public virtual int ResourceID { get; set; }
+		public virtual string ResourceName { get; set; }
+		public virtual int? Color { get; set; }
+		public virtual byte[] Image { get; set; }
+		public virtual string CustomField1 { get; set; }
+	}
+
+    /// <summary>
     /// A class which represents the PorodicnoStanje table.
     /// </summary>
 	[Table("PorodicnoStanje")]

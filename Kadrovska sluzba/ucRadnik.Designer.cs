@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.ContextButton contextButton2 = new DevExpress.Utils.ContextButton();
+            DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRadnik));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.txtPreDana = new DevExpress.XtraEditors.TextEdit();
@@ -86,7 +86,6 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.ucBolovanjeList1 = new Kadrovska_sluzba.RadnikTabele.ucBolovanjeList();
             this.ucBolovanjeEdit1 = new Kadrovska_sluzba.RadnikTabele.ucBolovanjeEdit();
-            this.tabNotifikacije = new DevExpress.XtraTab.XtraTabPage();
             this.memoNapomena = new DevExpress.XtraEditors.MemoEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.txtPrezime = new DevExpress.XtraEditors.TextEdit();
@@ -732,8 +731,7 @@
             this.xtraTabPage2,
             this.xtraTabPage3,
             this.xtraTabPage4,
-            this.xtraTabPage5,
-            this.tabNotifikacije});
+            this.xtraTabPage5});
             // 
             // xtraTabPage1
             // 
@@ -862,12 +860,6 @@
             this.ucBolovanjeEdit1.Size = new System.Drawing.Size(580, 410);
             this.ucBolovanjeEdit1.TabIndex = 1;
             // 
-            // tabNotifikacije
-            // 
-            this.tabNotifikacije.Name = "tabNotifikacije";
-            this.tabNotifikacije.Size = new System.Drawing.Size(1119, 410);
-            this.tabNotifikacije.Text = "Notifikacije";
-            // 
             // memoNapomena
             // 
             this.memoNapomena.Location = new System.Drawing.Point(306, 72);
@@ -881,12 +873,12 @@
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit1.Location = new System.Drawing.Point(12, 12);
             this.pictureEdit1.Name = "pictureEdit1";
-            contextButton2.Alignment = DevExpress.Utils.ContextItemAlignment.BottomFar;
-            contextButton2.Caption = "Dodaj/promjeni fotografiju";
-            contextButton2.Id = new System.Guid("8877d5fc-004a-4264-9174-58d9edcc153b");
-            contextButton2.Name = "btnUcitajSliku";
-            contextButton2.ToolTip = "Učitaj sliku";
-            this.pictureEdit1.Properties.ContextButtons.Add(contextButton2);
+            contextButton1.Alignment = DevExpress.Utils.ContextItemAlignment.BottomFar;
+            contextButton1.Caption = "Dodaj/promjeni fotografiju";
+            contextButton1.Id = new System.Guid("8877d5fc-004a-4264-9174-58d9edcc153b");
+            contextButton1.Name = "btnUcitajSliku";
+            contextButton1.ToolTip = "Učitaj sliku";
+            this.pictureEdit1.Properties.ContextButtons.Add(contextButton1);
             this.pictureEdit1.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureEdit1.Properties.InitialImage")));
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
@@ -1684,7 +1676,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem38;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
-        private DevExpress.XtraTab.XtraTabPage tabNotifikacije;
         private RadnikTabele.ucDjeca ucDjeca1;
         private RadnikTabele.ucDjete ucDjete1;
         private DevExpress.XtraBars.Ribbon.RibbonControl mainRibbonControl;

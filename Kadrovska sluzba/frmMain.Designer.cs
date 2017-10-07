@@ -30,8 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            Kadrovska_sluzba.DB.Models.Radnik radnik1 = new Kadrovska_sluzba.DB.Models.Radnik();
-            DevExpress.XtraBars.Alerter.AlertButton alertButton1 = new DevExpress.XtraBars.Alerter.AlertButton();
+            Kadrovska_sluzba.DB.Models.Radnik radnik4 = new Kadrovska_sluzba.DB.Models.Radnik();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -55,12 +54,14 @@
             this.ucRadnici1 = new Kadrovska_sluzba.ucRadnici();
             this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.employeeNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.ucRadnik1 = new Kadrovska_sluzba.ucRadnik();
             this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.sifarniciNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucSifarnici1 = new Kadrovska_sluzba.ucSifarnici();
+            this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.ucRadnik1 = new ucRadnik();
-            this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.ucNotifikacije1 = new Kadrovska_sluzba.ucNotifikacije();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -70,6 +71,7 @@
             this.employeesNavigationPage.SuspendLayout();
             this.employeeNavigationPage.SuspendLayout();
             this.sifarniciNavigationPage.SuspendLayout();
+            this.navigationPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabbedView
@@ -150,7 +152,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Podsjeti me!";
+            this.barButtonItem2.Caption = "Kalendar događaja";
             this.barButtonItem2.Id = 49;
             this.barButtonItem2.ImageOptions.ImageUri.Uri = "Today;Size32x32";
             this.barButtonItem2.Name = "barButtonItem2";
@@ -205,7 +207,8 @@
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.employeesNavBarGroup,
             this.emloyeeNavBarGroup,
-            this.navBarGroup1});
+            this.navBarGroup1,
+            this.navBarGroup2});
             this.navBarControl.Location = new System.Drawing.Point(0, 143);
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsLayout.StoreAppearance = true;
@@ -240,13 +243,15 @@
             this.navigationFrame.Controls.Add(this.employeesNavigationPage);
             this.navigationFrame.Controls.Add(this.employeeNavigationPage);
             this.navigationFrame.Controls.Add(this.sifarniciNavigationPage);
+            this.navigationFrame.Controls.Add(this.navigationPage2);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationFrame.Location = new System.Drawing.Point(34, 143);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage,
             this.employeeNavigationPage,
-            this.sifarniciNavigationPage});
+            this.sifarniciNavigationPage,
+            this.navigationPage2});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
             this.navigationFrame.Size = new System.Drawing.Size(756, 380);
@@ -255,23 +260,10 @@
             // 
             // employeesNavigationPage
             // 
-            this.employeeNavigationPage.Controls.Add(this.ucRadnik1);
             this.employeesNavigationPage.Controls.Add(this.ucRadnici1);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
             this.employeesNavigationPage.Size = new System.Drawing.Size(756, 380);
-
-            // 
-            // ucRadnik1
-            // 
-            this.ucRadnik1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucRadnik1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucRadnik1.Location = new System.Drawing.Point(0, 0);
-            this.ucRadnik1.Name = "ucRadnik1";
-            //this.ucRadnik1.Radnik = null;
-            this.ucRadnik1.Size = new System.Drawing.Size(756, 380);
-            this.ucRadnik1.TabIndex = 2;
-            
             // 
             // ucRadnici1
             // 
@@ -280,51 +272,51 @@
             this.ucRadnici1.Name = "ucRadnici1";
             this.ucRadnici1.Size = new System.Drawing.Size(756, 380);
             this.ucRadnici1.TabIndex = 1;
-            radnik1.AdresaStan = null;
-            radnik1.Bitovi = 0;
-            radnik1.BrLK = null;
-            radnik1.BrRadneKnj = null;
-            radnik1.DatumPrestankaRO = null;
-            radnik1.DatumPrvogZapos = null;
-            radnik1.DatumRodjenja = null;
-            radnik1.DatumZapos = null;
-            radnik1.DjevPrezime = null;
-            radnik1.DrzavljanstvoID = null;
-            radnik1.eMail = null;
-            radnik1.FindStr = null;
-            radnik1.Funkcija = null;
-            radnik1.ID = 0;
-            radnik1.Ime = null;
-            radnik1.ImeOca = null;
-            radnik1.JMBG = null;
-            radnik1.LicniBrOsiguranja = null;
-            radnik1.Lozinka = null;
-            radnik1.MjestoRodjenja = null;
-            radnik1.MjestoStan = null;
-            radnik1.NacinPrestankaRoID = null;
-            radnik1.NacionalnostID = null;
-            radnik1.Napomena = null;
-            radnik1.Naziv = null;
-            radnik1.OpstinaIzdavanjaRK = null;
-            radnik1.Pol = null;
-            radnik1.PorodicnoStanjeID = null;
-            radnik1.PoslovnaJedinicaID = null;
-            radnik1.PrethodniStazDan = null;
-            radnik1.PrethodniStazMj = null;
-            radnik1.PrethodniStazUFirmiDan = null;
-            radnik1.PrethodniStazUFirmiMj = null;
-            radnik1.Prezime = null;
-            radnik1.RadnoMjestoID = null;
-            radnik1.Slika = null;
-            radnik1.StrucnaSpremaID = null;
-            radnik1.TelefonMob = null;
-            radnik1.TelefonPosao = null;
-            radnik1.TelefonStan = null;
-            radnik1.TipRadnogOdnosaID = null;
-            radnik1.Titula = null;
-            radnik1.Zanimanje = null;
-            radnik1.ZavrsenaSkola = null;
-            this.ucRadnici1.TrenutniRadnik = radnik1;
+            radnik4.AdresaStan = null;
+            radnik4.Bitovi = 0;
+            radnik4.BrLK = null;
+            radnik4.BrRadneKnj = null;
+            radnik4.DatumPrestankaRO = null;
+            radnik4.DatumPrvogZapos = null;
+            radnik4.DatumRodjenja = null;
+            radnik4.DatumZapos = null;
+            radnik4.DjevPrezime = null;
+            radnik4.DrzavljanstvoID = null;
+            radnik4.eMail = null;
+            radnik4.FindStr = null;
+            radnik4.Funkcija = null;
+            radnik4.ID = 0;
+            radnik4.Ime = null;
+            radnik4.ImeOca = null;
+            radnik4.JMBG = null;
+            radnik4.LicniBrOsiguranja = null;
+            radnik4.Lozinka = null;
+            radnik4.MjestoRodjenja = null;
+            radnik4.MjestoStan = null;
+            radnik4.NacinPrestankaRoID = null;
+            radnik4.NacionalnostID = null;
+            radnik4.Napomena = null;
+            radnik4.Naziv = null;
+            radnik4.OpstinaIzdavanjaRK = null;
+            radnik4.Pol = null;
+            radnik4.PorodicnoStanjeID = null;
+            radnik4.PoslovnaJedinicaID = null;
+            radnik4.PrethodniStazDan = null;
+            radnik4.PrethodniStazMj = null;
+            radnik4.PrethodniStazUFirmiDan = null;
+            radnik4.PrethodniStazUFirmiMj = null;
+            radnik4.Prezime = null;
+            radnik4.RadnoMjestoID = null;
+            radnik4.Slika = null;
+            radnik4.StrucnaSpremaID = null;
+            radnik4.TelefonMob = null;
+            radnik4.TelefonPosao = null;
+            radnik4.TelefonStan = null;
+            radnik4.TipRadnogOdnosaID = null;
+            radnik4.Titula = null;
+            radnik4.Zanimanje = null;
+            radnik4.ZavrsenaSkola = null;
+            this.ucRadnici1.TrenutniRadnik = radnik4;
             this.ucRadnici1.IzmjenaRadnika += new Kadrovska_sluzba.ucRadnici.RadnikChangedHandler(this.ucRadnici1_IzmjenaRadnika);
             // 
             // employeesLabelControl
@@ -346,9 +338,20 @@
             // 
             // employeeNavigationPage
             // 
+            this.employeeNavigationPage.Controls.Add(this.ucRadnik1);
             this.employeeNavigationPage.Controls.Add(this.customersLabelControl);
             this.employeeNavigationPage.Name = "employeeNavigationPage";
             this.employeeNavigationPage.Size = new System.Drawing.Size(756, 380);
+            // 
+            // ucRadnik1
+            // 
+            this.ucRadnik1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucRadnik1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucRadnik1.Location = new System.Drawing.Point(0, 0);
+            this.ucRadnik1.Name = "ucRadnik1";
+            this.ucRadnik1.Radnik = null;
+            this.ucRadnik1.Size = new System.Drawing.Size(756, 380);
+            this.ucRadnik1.TabIndex = 2;
             // 
             // customersLabelControl
             // 
@@ -381,18 +384,30 @@
             this.ucSifarnici1.Size = new System.Drawing.Size(756, 380);
             this.ucSifarnici1.TabIndex = 0;
             // 
+            // navigationPage2
+            // 
+            this.navigationPage2.Controls.Add(this.ucNotifikacije1);
+            this.navigationPage2.Name = "navigationPage2";
+            this.navigationPage2.Size = new System.Drawing.Size(756, 380);
+            // 
             // navigationPage1
             // 
             this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(750, 380);
             // 
-            // alertControl1
+            // ucNotifikacije1
             // 
-            alertButton1.Image = ((System.Drawing.Image)(resources.GetObject("alertButton1.Image")));
-            alertButton1.Name = "Open";
-            this.alertControl1.Buttons.Add(alertButton1);
-            this.alertControl1.ButtonClick += new DevExpress.XtraBars.Alerter.AlertButtonClickEventHandler(this.alertControl1_ButtonClick);
+            this.ucNotifikacije1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucNotifikacije1.Location = new System.Drawing.Point(0, 0);
+            this.ucNotifikacije1.Name = "ucNotifikacije1";
+            this.ucNotifikacije1.Size = new System.Drawing.Size(756, 380);
+            this.ucNotifikacije1.TabIndex = 0;
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Kalendar događaja";
+            this.navBarGroup2.Name = "navBarGroup2";
             // 
             // frmMain
             // 
@@ -419,6 +434,7 @@
             this.employeesNavigationPage.ResumeLayout(false);
             this.employeeNavigationPage.ResumeLayout(false);
             this.sifarniciNavigationPage.ResumeLayout(false);
+            this.navigationPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,8 +468,10 @@
         private DevExpress.XtraBars.Navigation.NavigationPage sifarniciNavigationPage;
         private ucSifarnici ucSifarnici1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private ucNotifikacije ucNotifikacije1;
         //private System.Windows.Forms.Timer timer1;
     }
 }

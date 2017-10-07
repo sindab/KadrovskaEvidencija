@@ -44,7 +44,7 @@ namespace Kadrovska_sluzba
 
         private void ucRadnici_Load(object sender, EventArgs e)
         {
-            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            if (!this.DesignMode)
             {
                 if (System.IO.File.Exists(openFileDialog1.FileName))
                     gridView.RestoreLayoutFromXml(openFileDialog1.FileName);

@@ -65,30 +65,12 @@ namespace Kadrovska_sluzba
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            PodsjetiMe();
+
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PodsjetiMe();
+            navBarControl.ActiveGroup = navBarControl.Groups[3];
         }
-
-        private void PodsjetiMe()
-        {
-            DevExpress.XtraBars.Alerter.AlertInfo a = new DevExpress.XtraBars.Alerter.AlertInfo("Podsjetnik", "Imate sastanak!");
-            a.HotTrackedText = "VAZAN SASTANAK";
-            alertControl1.Show(this, a);
-        }
-
-        private void alertControl1_ButtonClick(object sender, DevExpress.XtraBars.Alerter.AlertButtonClickEventArgs e)
-        {
-           if (e.ButtonName == "Open")
-            {
-                //TEST
-                frmLogin fl = new frmLogin();
-                fl.Show();
-            }
-        }
-        
     }
 }
