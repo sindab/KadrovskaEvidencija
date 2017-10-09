@@ -17,12 +17,11 @@ namespace Kadrovska_sluzba.DB.Service
         {
             try
             {
-            return _db.GetAll<Radnik>();
-
+                return _db.GetAll<Radnik>();
             }
             catch (Exception)
             {
-                List<Radnik> er=new List<Radnik>();
+                List<Radnik> er = new List<Radnik>();
                 er.Add(new Radnik { ID = 0 });
                 return er;
             }
@@ -34,6 +33,11 @@ namespace Kadrovska_sluzba.DB.Service
             //    "[TipRadnogOdnosa],[NacinPrestankaRO],[DatumPrestankaRO],[Napomena],[FindStr],[Lozinka],[Slika] FROM [dbo].[Radnik] ").ToList();
         }
 
+        public IEnumerable<vRadnik> GetAllV()
+        {
+            return _db.GetAll<vRadnik>();
+        }
+
         public List<Radnik> GetUsers()
         {
             return _db.Query<Radnik>("SELECT * FROM [dbo].[Radnik] WHERE ISNULL(Lozinka,'') <> '' ").ToList();
@@ -43,12 +47,12 @@ namespace Kadrovska_sluzba.DB.Service
         {
             try
             {
-            return _db.Get<Radnik>(Id);
+                return _db.Get<Radnik>(Id);
 
             }
             catch (Exception)
             {
-                Radnik er = new Radnik(){ ID = 0 };
+                Radnik er = new Radnik() { ID = 0 };
                 return er;
             }
             //return _db.Query<Radnik>("SELECT [ID],[JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],Naziv,[Bitovi],[Titula],[Funkcija]," +

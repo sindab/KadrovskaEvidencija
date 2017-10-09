@@ -114,7 +114,7 @@ namespace Kadrovska_sluzba
             {
                 rs = new RadnikService();
                 IEnumerable<Radnik> result = rs.GetAll();
-            return result;
+                return result;
             } else { return null; }
         }
 
