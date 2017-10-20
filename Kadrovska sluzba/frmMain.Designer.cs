@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            Kadrovska_sluzba.DB.Models.Radnik radnik4 = new Kadrovska_sluzba.DB.Models.Radnik();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -40,6 +39,7 @@
             this.mnuRadnici = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -49,6 +49,8 @@
             this.employeesNavBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.emloyeeNavBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucRadnici1 = new Kadrovska_sluzba.ucRadnici();
@@ -59,9 +61,10 @@
             this.sifarniciNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucSifarnici1 = new Kadrovska_sluzba.ucSifarnici();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucNotifikacije1 = new Kadrovska_sluzba.ucNotifikacije();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.ucSettings1 = new Kadrovska_sluzba.ucSettings();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -72,6 +75,7 @@
             this.employeeNavigationPage.SuspendLayout();
             this.sifarniciNavigationPage.SuspendLayout();
             this.navigationPage2.SuspendLayout();
+            this.navigationPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabbedView
@@ -89,9 +93,10 @@
             this.customersBarButtonItem,
             this.mnuRadnici,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barButtonItem3});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 52;
+            this.ribbonControl.MaxItemId = 53;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -158,6 +163,15 @@
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Podešavanje programa";
+            this.barButtonItem3.Id = 52;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -172,6 +186,7 @@
             this.ribbonPageGroupNavigation.ItemLinks.Add(this.mnuRadnici);
             this.ribbonPageGroupNavigation.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroupNavigation.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroupNavigation.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroupNavigation.Name = "ribbonPageGroupNavigation";
             this.ribbonPageGroupNavigation.Text = "Modul";
             // 
@@ -208,7 +223,8 @@
             this.employeesNavBarGroup,
             this.emloyeeNavBarGroup,
             this.navBarGroup1,
-            this.navBarGroup2});
+            this.navBarGroup2,
+            this.navBarGroup3});
             this.navBarControl.Location = new System.Drawing.Point(0, 143);
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsLayout.StoreAppearance = true;
@@ -236,6 +252,16 @@
             this.navBarGroup1.Caption = "Šifarnici";
             this.navBarGroup1.Name = "navBarGroup1";
             // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Kalendar događaja";
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarGroup3
+            // 
+            this.navBarGroup3.Caption = "Podešavanje programa";
+            this.navBarGroup3.Name = "navBarGroup3";
+            // 
             // navigationFrame
             // 
             this.navigationFrame.Appearance.BackColor = System.Drawing.Color.White;
@@ -244,6 +270,7 @@
             this.navigationFrame.Controls.Add(this.employeeNavigationPage);
             this.navigationFrame.Controls.Add(this.sifarniciNavigationPage);
             this.navigationFrame.Controls.Add(this.navigationPage2);
+            this.navigationFrame.Controls.Add(this.navigationPage3);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationFrame.Location = new System.Drawing.Point(34, 143);
             this.navigationFrame.Name = "navigationFrame";
@@ -251,7 +278,8 @@
             this.employeesNavigationPage,
             this.employeeNavigationPage,
             this.sifarniciNavigationPage,
-            this.navigationPage2});
+            this.navigationPage2,
+            this.navigationPage3});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
             this.navigationFrame.Size = new System.Drawing.Size(756, 380);
@@ -272,51 +300,7 @@
             this.ucRadnici1.Name = "ucRadnici1";
             this.ucRadnici1.Size = new System.Drawing.Size(756, 380);
             this.ucRadnici1.TabIndex = 1;
-            radnik4.AdresaStan = null;
-            radnik4.Bitovi = 0;
-            radnik4.BrLK = null;
-            radnik4.BrRadneKnj = null;
-            radnik4.DatumPrestankaRO = null;
-            radnik4.DatumPrvogZapos = null;
-            radnik4.DatumRodjenja = null;
-            radnik4.DatumZapos = null;
-            radnik4.DjevPrezime = null;
-            radnik4.DrzavljanstvoID = null;
-            radnik4.eMail = null;
-            radnik4.FindStr = null;
-            radnik4.Funkcija = null;
-            radnik4.ID = 0;
-            radnik4.Ime = null;
-            radnik4.ImeOca = null;
-            radnik4.JMBG = null;
-            radnik4.LicniBrOsiguranja = null;
-            radnik4.Lozinka = null;
-            radnik4.MjestoRodjenja = null;
-            radnik4.MjestoStan = null;
-            radnik4.NacinPrestankaRoID = null;
-            radnik4.NacionalnostID = null;
-            radnik4.Napomena = null;
-            radnik4.Naziv = null;
-            radnik4.OpstinaIzdavanjaRK = null;
-            radnik4.Pol = null;
-            radnik4.PorodicnoStanjeID = null;
-            radnik4.PoslovnaJedinicaID = null;
-            radnik4.PrethodniStazDan = null;
-            radnik4.PrethodniStazMj = null;
-            radnik4.PrethodniStazUFirmiDan = null;
-            radnik4.PrethodniStazUFirmiMj = null;
-            radnik4.Prezime = null;
-            radnik4.RadnoMjestoID = null;
-            radnik4.Slika = null;
-            radnik4.StrucnaSpremaID = null;
-            radnik4.TelefonMob = null;
-            radnik4.TelefonPosao = null;
-            radnik4.TelefonStan = null;
-            radnik4.TipRadnogOdnosaID = null;
-            radnik4.Titula = null;
-            radnik4.Zanimanje = null;
-            radnik4.ZavrsenaSkola = null;
-            this.ucRadnici1.TrenutniRadnik = radnik4;
+            this.ucRadnici1.TrenutniRadnik = null;
             this.ucRadnici1.IzmjenaRadnika += new Kadrovska_sluzba.ucRadnici.RadnikChangedHandler(this.ucRadnici1_IzmjenaRadnika);
             // 
             // employeesLabelControl
@@ -390,12 +374,6 @@
             this.navigationPage2.Name = "navigationPage2";
             this.navigationPage2.Size = new System.Drawing.Size(756, 380);
             // 
-            // navigationPage1
-            // 
-            this.navigationPage1.Caption = "navigationPage1";
-            this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(750, 380);
-            // 
             // ucNotifikacije1
             // 
             this.ucNotifikacije1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -404,10 +382,25 @@
             this.ucNotifikacije1.Size = new System.Drawing.Size(756, 380);
             this.ucNotifikacije1.TabIndex = 0;
             // 
-            // navBarGroup2
+            // navigationPage3
             // 
-            this.navBarGroup2.Caption = "Kalendar događaja";
-            this.navBarGroup2.Name = "navBarGroup2";
+            this.navigationPage3.Controls.Add(this.ucSettings1);
+            this.navigationPage3.Name = "navigationPage3";
+            this.navigationPage3.Size = new System.Drawing.Size(756, 380);
+            // 
+            // navigationPage1
+            // 
+            this.navigationPage1.Caption = "navigationPage1";
+            this.navigationPage1.Name = "navigationPage1";
+            this.navigationPage1.Size = new System.Drawing.Size(750, 380);
+            // 
+            // ucSettings1
+            // 
+            this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSettings1.Location = new System.Drawing.Point(0, 0);
+            this.ucSettings1.Name = "ucSettings1";
+            this.ucSettings1.Size = new System.Drawing.Size(756, 380);
+            this.ucSettings1.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -435,6 +428,7 @@
             this.employeeNavigationPage.ResumeLayout(false);
             this.sifarniciNavigationPage.ResumeLayout(false);
             this.navigationPage2.ResumeLayout(false);
+            this.navigationPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,6 +466,10 @@
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private ucNotifikacije ucNotifikacije1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage3;
+        private ucSettings ucSettings1;
         //private System.Windows.Forms.Timer timer1;
     }
 }

@@ -49,6 +49,7 @@ namespace Kadrovska_sluzba.RadnikTabele
                             txtJMBG.EditValue = "";
                             txtIme.EditValue = "";
                             dtRodj.EditValue = null;
+                            memoEdit1.EditValue = "";
                         }
                         else
                         {
@@ -56,6 +57,7 @@ namespace Kadrovska_sluzba.RadnikTabele
                             txtJMBG.EditValue = djete.JMBG;
                             txtIme.EditValue = djete.Ime;
                             dtRodj.EditValue = djete.DatumRodj;
+                            memoEdit1.EditValue = djete.Napomena;
                         }
                     }
                 }

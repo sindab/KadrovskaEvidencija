@@ -15,6 +15,7 @@ namespace Kadrovska_sluzba
     {
         public frmMain()
         {
+            //Helpers.RegionalSettings.SetRegionalSettings();
             InitializeComponent();
         }
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -71,6 +72,11 @@ namespace Kadrovska_sluzba
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             navBarControl.ActiveGroup = navBarControl.Groups[3];
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navBarControl.ActiveGroup = navBarControl.Groups[4];
         }
     }
 }

@@ -50,8 +50,9 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
 	tables["tablename"]["columnname"].PropertyType="bool";		// To change the property type of a column
 */
 
-tables["Radnik"].Ignore = true;
+//tables["Radnik"].Ignore = true;
 tables["RadnikKurs"].ClassName = "RadnikKurs";
+tables["Appointments"].ClassName = "Appointments";
 
 #>
 using System;
@@ -75,6 +76,9 @@ foreach(Table tbl in from t in tables where !t.Ignore select t){
 {#>
 	<# if (tbl.PK!=null && tbl.PK.Name==col.PropertyName) { #>
 	[Key]
+	<#}#>
+	<# if (col.IsComputed) { #>
+	[Dapper.Contrib.Extensions.Computed]
 	<#}#>
 	public virtual <#=col.PropertyType #><#=CheckNullable(col)#> <#=col.PropertyName #> { get; set; }
 <#}#>
@@ -160,6 +164,7 @@ public class Column
     public bool IsNullable;
 	public bool IsAutoIncrement;
 	public bool Ignore;
+	public bool IsComputed;
 }
 
 public class Key
@@ -592,6 +597,7 @@ class SqlServerSchemaReader : SchemaReader
 					col.PropertyType=GetPropertyType(rdr["DataType"].ToString());
 					col.IsNullable=rdr["IsNullable"].ToString()=="YES";
 					col.IsAutoIncrement=((int)rdr["IsIdentity"])==1;
+					col.IsComputed=((int)rdr["IsComputed"])==1;
 					result.Add(col);
 				}
 			}

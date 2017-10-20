@@ -154,6 +154,8 @@
             this.txtSifra.Location = new System.Drawing.Point(147, 198);
             this.txtSifra.MenuManager = this.mainRibbonControl;
             this.txtSifra.Name = "txtSifra";
+            this.txtSifra.Properties.Mask.EditMask = "n0";
+            this.txtSifra.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSifra.Size = new System.Drawing.Size(100, 20);
             this.txtSifra.TabIndex = 3;
             // 

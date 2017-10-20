@@ -26,14 +26,14 @@ namespace Kadrovska_sluzba
             {
                 resourcesTableAdapter.Connection = new System.Data.SqlClient.SqlConnection(DbConnection.ConnectionString());
                 appointmentsTableAdapter.Connection = new System.Data.SqlClient.SqlConnection(DbConnection.ConnectionString());
-                LoadData();
+                //LoadData();
                 schedulerControl1.Start = System.DateTime.Now;
             }
         }
 
         private void LoadData()
         {
-            
+
             // TODO: This line of code loads data into the 'schedulerTestDataSet.Resources' table. You can move, or remove it, as needed.
             this.resourcesTableAdapter.Fill(this.kadrovskaDataSet.Resources);
             // TODO: This line of code loads data into the 'schedulerTestDataSet.Appointments' table. You can move, or remove it, as needed.
@@ -44,6 +44,12 @@ namespace Kadrovska_sluzba
         {
             appointmentsTableAdapter.Update(kadrovskaDataSet);
             kadrovskaDataSet.AcceptChanges();
+        }
+
+        private void ucNotifikacije_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!this.DesignMode)
+                LoadData();
         }
     }
 }

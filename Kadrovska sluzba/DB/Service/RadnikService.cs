@@ -15,22 +15,22 @@ namespace Kadrovska_sluzba.DB.Service
 
         public IEnumerable<Radnik> GetAll()
         {
-            try
-            {
-                return _db.GetAll<Radnik>();
-            }
-            catch (Exception)
-            {
-                List<Radnik> er = new List<Radnik>();
-                er.Add(new Radnik { ID = 0 });
-                return er;
-            }
-            //return _db.Query<Radnik>("SELECT [ID],[JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],[Bitovi],[Titula],[Funkcija]," +
-            //    "[MjestoRodjenja],[OpstinaRodjenja],[DatumRodjenja],[Drzavljanstvo],[Nacionalnost],[PorodicnoStanje]," +
-            //    "[MjestoStan],[AdresaStan],[OpstinaStan],[TelefonStan],[TelefonMob],[TelefonPosao],[Zanimanje],[StrucnaSprema],[ZavrsenaSkola]," +
-            //    "[PoslovnaJedinica],[RadnoMjesto],[BrLK],[BrRadneKnj],[OpstinaIzdavanjaRK],[LicniBrOsiguranja],[NacinIsplate],[BrTekucegRn]," +
-            //    "[Banka],[DatumPrvogZapos],[PrethodniStazMj],[PrethodniStazDan],[PrethodniStazUFirmiMj],[PrethodniStazUFirmiDan],[DatumZapos]," +
-            //    "[TipRadnogOdnosa],[NacinPrestankaRO],[DatumPrestankaRO],[Napomena],[FindStr],[Lozinka],[Slika] FROM [dbo].[Radnik] ").ToList();
+            //try
+            //{
+            return _db.GetAll<Radnik>();
+            //}
+            //catch (Exception)
+            //{
+            //    List<Radnik> er = new List<Radnik>();
+            //    er.Add(new Radnik { ID = 0 });
+            //    return er;
+            //}
+            ////return _db.Query<Radnik>("SELECT [ID],[JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],[Bitovi],[Titula],[Funkcija]," +
+            ////    "[MjestoRodjenja],[OpstinaRodjenja],[DatumRodjenja],[Drzavljanstvo],[Nacionalnost],[PorodicnoStanje]," +
+            ////    "[MjestoStan],[AdresaStan],[OpstinaStan],[TelefonStan],[TelefonMob],[TelefonPosao],[Zanimanje],[StrucnaSprema],[ZavrsenaSkola]," +
+            ////    "[PoslovnaJedinica],[RadnoMjesto],[BrLK],[BrRadneKnj],[OpstinaIzdavanjaRK],[LicniBrOsiguranja],[NacinIsplate],[BrTekucegRn]," +
+            ////    "[Banka],[DatumPrvogZapos],[PrethodniStazMj],[PrethodniStazDan],[PrethodniStazUFirmiMj],[PrethodniStazUFirmiDan],[DatumZapos]," +
+            ////    "[TipRadnogOdnosa],[NacinPrestankaRO],[DatumPrestankaRO],[Napomena],[FindStr],[Lozinka],[Slika] FROM [dbo].[Radnik] ").ToList();
         }
 
         public IEnumerable<vRadnik> GetAllV()
@@ -147,9 +147,10 @@ namespace Kadrovska_sluzba.DB.Service
             return result;
         }
 
-        public void Delete(Radnik radnik)
+        public void Delete(int radID)
         {
-            _db.Delete<Radnik>(radnik);
+            //_db.Delete<Radnik>(radnik);
+            _db.Execute(@"DELETE FROM [Radnik] WHERE ID = @RadID", new { RadID = radID });
             //int rowsAffected = _db.Execute(@"DELETE FROM [Radnik] WHERE RadID = @RadID", new { ParID = Id });
             //if (rowsAffected > 0)
             //{

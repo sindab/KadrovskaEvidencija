@@ -52,8 +52,8 @@ namespace Kadrovska_sluzba.RadnikTabele
                 if (!(value == null))
                 {
                     _roditelj = value;
-                        rds = new RadnikGOService();
-                        LoadData();
+                    rds = new RadnikGOService();
+                    LoadData();
                 }
             }
         }
@@ -74,8 +74,8 @@ namespace Kadrovska_sluzba.RadnikTabele
         }
         public IEnumerable<RadnikGO> GetDataSource()
         {
-                IEnumerable<RadnikGO> result = rds.GetByRadId(Roditelj.ID);
-                return result;
+            IEnumerable<RadnikGO> result = rds.GetByRadId(Roditelj.ID);
+            return result;
         }
 
         private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
@@ -88,13 +88,15 @@ namespace Kadrovska_sluzba.RadnikTabele
             RadnikGO trenutniGO = new RadnikGO()
             {
                 ID = 0,
-                RadID = Roditelj.ID
+                RadID = Roditelj.ID,
+                Zaduzio = 0,
+                Razduzio = 0
             };
             GOArgs myArgs = new GOArgs(trenutniGO);
             IzmjenaGO(this, myArgs);
         }
 
-                private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {

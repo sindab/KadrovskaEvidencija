@@ -19,8 +19,8 @@ namespace Kadrovska_sluzba
     public partial class ucRadnici : DevExpress.XtraEditors.XtraUserControl
     {
         RadnikService rs;
-        IEnumerable<Radnik> dataSource;
-        Radnik trenutni;
+        IEnumerable<vRadnik> dataSource;
+        vRadnik trenutni;
         public delegate void RadnikChangedHandler(object myObject, RadnikArgs myArgs);
         public event RadnikChangedHandler IzmjenaRadnika;
         //RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(@"Software\Kadrovska\frmRadnikLayout");
@@ -62,7 +62,7 @@ namespace Kadrovska_sluzba
 
         public void LoadData(int focusID)
         {
-            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            if (!this.DesignMode)
             {
                 dataSource = GetDataSource();
                 gridControl.DataSource = dataSource;
@@ -76,7 +76,7 @@ namespace Kadrovska_sluzba
             }
         }
 
-        public Radnik TrenutniRadnik
+        public vRadnik TrenutniRadnik
         {
             get
             {
@@ -108,14 +108,15 @@ namespace Kadrovska_sluzba
         {
             gridControl.ShowRibbonPrintPreview();
         }
-        public IEnumerable<Radnik> GetDataSource()
+        public IEnumerable<vRadnik> GetDataSource()
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
                 rs = new RadnikService();
-                IEnumerable<Radnik> result = rs.GetAll();
+                IEnumerable<vRadnik> result = rs.GetAllV();
                 return result;
-            } else { return null; }
+            }
+            else { return null; }
         }
 
         private void gridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -126,7 +127,7 @@ namespace Kadrovska_sluzba
             }
             else
             {
-                trenutni = new Radnik();
+                trenutni = new vRadnik();
             }
         }
 
@@ -134,7 +135,7 @@ namespace Kadrovska_sluzba
         {
             if (TrenutniRadnik.ID > 0)
             {
-                RadnikArgs myArgs = new RadnikArgs(TrenutniRadnik);
+                RadnikArgs myArgs = new RadnikArgs(rs.GetByID(TrenutniRadnik.ID));
                 IzmjenaRadnika(this, myArgs);
             }
         }
@@ -192,12 +193,12 @@ namespace Kadrovska_sluzba
             {
                 if (MessageBox.Show("Da li ste sigurni u brisanje podatka?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    rs.Delete(TrenutniRadnik);
+                    rs.Delete(TrenutniRadnik.ID);
                     LoadData(0);
                 }
             }
         }
-        
+
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             saveFileDialog1.ShowDialog();

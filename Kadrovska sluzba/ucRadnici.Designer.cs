@@ -74,10 +74,6 @@
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcLicniBrOsiguranja = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDatumPrvogZapos = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPrethodniStazMj = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPrethodniStazDan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPrethodniStazUFirmiMj = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPrethodniStazUFirmiDan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDatumZapos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcTipRadnogOdnosaID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkpTipRadnogOdnosaID = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
@@ -93,6 +89,8 @@
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcPol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -105,10 +103,19 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).BeginInit();
@@ -192,10 +199,6 @@
             this.gcOpstinaIzdavanjaRK,
             this.gcLicniBrOsiguranja,
             this.gcDatumPrvogZapos,
-            this.gcPrethodniStazMj,
-            this.gcPrethodniStazDan,
-            this.gcPrethodniStazUFirmiMj,
-            this.gcPrethodniStazUFirmiDan,
             this.gcDatumZapos,
             this.gcTipRadnogOdnosaID,
             this.gcNacinPrestankaRoID,
@@ -204,7 +207,18 @@
             this.gcEMail,
             this.gcPoslovnaJedinicaID,
             this.gcPol,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.AutoExpandAllGroups = true;
@@ -275,6 +289,7 @@
             this.gcBitovi.Caption = "Bitovi";
             this.gcBitovi.FieldName = "Bitovi";
             this.gcBitovi.Name = "gcBitovi";
+            this.gcBitovi.OptionsColumn.ShowInCustomizationForm = false;
             // 
             // gcTitula
             // 
@@ -378,8 +393,6 @@
             this.gcPorodicnoStanjeID.ColumnEdit = this.lkpPorodicnoStanjeID;
             this.gcPorodicnoStanjeID.FieldName = "PorodicnoStanjeID";
             this.gcPorodicnoStanjeID.Name = "gcPorodicnoStanjeID";
-            this.gcPorodicnoStanjeID.Visible = true;
-            this.gcPorodicnoStanjeID.VisibleIndex = 5;
             this.gcPorodicnoStanjeID.Width = 140;
             // 
             // lkpPorodicnoStanjeID
@@ -407,8 +420,6 @@
             this.gcMjestoStan.ColumnEdit = this.lkpMjestoStan;
             this.gcMjestoStan.FieldName = "MjestoStan";
             this.gcMjestoStan.Name = "gcMjestoStan";
-            this.gcMjestoStan.Visible = true;
-            this.gcMjestoStan.VisibleIndex = 7;
             this.gcMjestoStan.Width = 140;
             // 
             // lkpMjestoStan
@@ -436,7 +447,7 @@
             this.gcAdresaStan.FieldName = "AdresaStan";
             this.gcAdresaStan.Name = "gcAdresaStan";
             this.gcAdresaStan.Visible = true;
-            this.gcAdresaStan.VisibleIndex = 6;
+            this.gcAdresaStan.VisibleIndex = 5;
             this.gcAdresaStan.Width = 140;
             // 
             // gcTelefonStan
@@ -450,8 +461,6 @@
             this.gcTelefonMob.Caption = "Mobilni";
             this.gcTelefonMob.FieldName = "TelefonMob";
             this.gcTelefonMob.Name = "gcTelefonMob";
-            this.gcTelefonMob.Visible = true;
-            this.gcTelefonMob.VisibleIndex = 8;
             this.gcTelefonMob.Width = 140;
             // 
             // gcTelefonPosao
@@ -460,7 +469,7 @@
             this.gcTelefonPosao.FieldName = "TelefonPosao";
             this.gcTelefonPosao.Name = "gcTelefonPosao";
             this.gcTelefonPosao.Visible = true;
-            this.gcTelefonPosao.VisibleIndex = 9;
+            this.gcTelefonPosao.VisibleIndex = 6;
             this.gcTelefonPosao.Width = 140;
             // 
             // gcZanimanje
@@ -508,7 +517,7 @@
             this.gcRadnoMjestoID.FieldName = "RadnoMjestoID";
             this.gcRadnoMjestoID.Name = "gcRadnoMjestoID";
             this.gcRadnoMjestoID.Visible = true;
-            this.gcRadnoMjestoID.VisibleIndex = 10;
+            this.gcRadnoMjestoID.VisibleIndex = 7;
             this.gcRadnoMjestoID.Width = 140;
             // 
             // lkpRadnoMjestoID
@@ -576,33 +585,9 @@
             // 
             // gcDatumPrvogZapos
             // 
-            this.gcDatumPrvogZapos.Caption = "DatumPrvogZapos";
+            this.gcDatumPrvogZapos.Caption = "Datum prvog zapos.";
             this.gcDatumPrvogZapos.FieldName = "DatumPrvogZapos";
             this.gcDatumPrvogZapos.Name = "gcDatumPrvogZapos";
-            // 
-            // gcPrethodniStazMj
-            // 
-            this.gcPrethodniStazMj.Caption = "PrethodniStazMj";
-            this.gcPrethodniStazMj.FieldName = "PrethodniStazMj";
-            this.gcPrethodniStazMj.Name = "gcPrethodniStazMj";
-            // 
-            // gcPrethodniStazDan
-            // 
-            this.gcPrethodniStazDan.Caption = "PrethodniStazDan";
-            this.gcPrethodniStazDan.FieldName = "PrethodniStazDan";
-            this.gcPrethodniStazDan.Name = "gcPrethodniStazDan";
-            // 
-            // gcPrethodniStazUFirmiMj
-            // 
-            this.gcPrethodniStazUFirmiMj.Caption = "PrethodniStazUFirmiMj";
-            this.gcPrethodniStazUFirmiMj.FieldName = "PrethodniStazUFirmiMj";
-            this.gcPrethodniStazUFirmiMj.Name = "gcPrethodniStazUFirmiMj";
-            // 
-            // gcPrethodniStazUFirmiDan
-            // 
-            this.gcPrethodniStazUFirmiDan.Caption = "PrethodniStazUFirmiDan";
-            this.gcPrethodniStazUFirmiDan.FieldName = "PrethodniStazUFirmiDan";
-            this.gcPrethodniStazUFirmiDan.Name = "gcPrethodniStazUFirmiDan";
             // 
             // gcDatumZapos
             // 
@@ -617,7 +602,7 @@
             this.gcTipRadnogOdnosaID.FieldName = "TipRadnogOdnosaID";
             this.gcTipRadnogOdnosaID.Name = "gcTipRadnogOdnosaID";
             this.gcTipRadnogOdnosaID.Visible = true;
-            this.gcTipRadnogOdnosaID.VisibleIndex = 11;
+            this.gcTipRadnogOdnosaID.VisibleIndex = 8;
             this.gcTipRadnogOdnosaID.Width = 140;
             // 
             // lkpTipRadnogOdnosaID
@@ -667,7 +652,7 @@
             // 
             // gcDatumPrestankaRO
             // 
-            this.gcDatumPrestankaRO.Caption = "DatumPrestankaRO";
+            this.gcDatumPrestankaRO.Caption = "Datum prestanka RO";
             this.gcDatumPrestankaRO.FieldName = "DatumPrestankaRO";
             this.gcDatumPrestankaRO.Name = "gcDatumPrestankaRO";
             // 
@@ -690,7 +675,7 @@
             this.gcPoslovnaJedinicaID.FieldName = "PoslovnaJedinicaID";
             this.gcPoslovnaJedinicaID.Name = "gcPoslovnaJedinicaID";
             this.gcPoslovnaJedinicaID.Visible = true;
-            this.gcPoslovnaJedinicaID.VisibleIndex = 12;
+            this.gcPoslovnaJedinicaID.VisibleIndex = 9;
             this.gcPoslovnaJedinicaID.Width = 172;
             // 
             // lkpPoslovnaJedinicaID
@@ -729,8 +714,24 @@
             this.gridColumn1.UnboundExpression = "DateDiffMonth([DatumRodjenja], LocalDateTimeNow())/12";
             this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 13;
+            this.gridColumn1.VisibleIndex = 10;
             this.gridColumn1.Width = 76;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Staž god.";
+            this.gridColumn2.FieldName = "G";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 15;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Staž mj.";
+            this.gridColumn3.FieldName = "M";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 16;
             // 
             // ribbonControl
             // 
@@ -847,6 +848,13 @@
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Izvještaji i export";
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Tema";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
@@ -866,12 +874,71 @@
             this.saveFileDialog1.FileName = "Radnici.xml";
             this.saveFileDialog1.Filter = "XML|*.xml";
             // 
-            // ribbonPageGroup3
+            // gridColumn4
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Tema";
+            this.gridColumn4.Caption = "GO dana";
+            this.gridColumn4.FieldName = "GOOstalo";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 17;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Datum isteka ugovora";
+            this.gridColumn5.FieldName = "DatumIstekaUgovora";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Do isteka ug.";
+            this.gridColumn6.FieldName = "DoIstekaUg";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 18;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Pre. staž god.";
+            this.gridColumn7.FieldName = "StazGPrethodni";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 11;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Pre. staž mj.";
+            this.gridColumn8.FieldName = "StazMjPrethodni";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 12;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Pre. staž dana";
+            this.gridColumn9.FieldName = "StazDanaPrethodni";
+            this.gridColumn9.Name = "gridColumn9";
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Staž u f. god.";
+            this.gridColumn10.FieldName = "Godina";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 13;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Staž u f. mj.";
+            this.gridColumn11.FieldName = "Mjeseci";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 14;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Staž u f. dana";
+            this.gridColumn12.FieldName = "Dana";
+            this.gridColumn12.Name = "gridColumn12";
             // 
             // ucRadnici
             // 
@@ -973,10 +1040,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
         private DevExpress.XtraGrid.Columns.GridColumn gcLicniBrOsiguranja;
         private DevExpress.XtraGrid.Columns.GridColumn gcDatumPrvogZapos;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPrethodniStazMj;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPrethodniStazDan;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPrethodniStazUFirmiMj;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPrethodniStazUFirmiDan;
         private DevExpress.XtraGrid.Columns.GridColumn gcDatumZapos;
         private DevExpress.XtraGrid.Columns.GridColumn gcTipRadnogOdnosaID;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit lkpTipRadnogOdnosaID;
@@ -997,5 +1060,16 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

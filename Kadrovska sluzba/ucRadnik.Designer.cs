@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRadnik));
+            DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtPreDana = new DevExpress.XtraEditors.TextEdit();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
@@ -110,6 +111,7 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.autoGroupForHomeAddressAndPhone = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -212,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGroupForHomeAddressAndPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
@@ -251,6 +254,7 @@
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
+            this.dataLayoutControl1.Controls.Add(this.simpleButton1);
             this.dataLayoutControl1.Controls.Add(this.txtPreDana);
             this.dataLayoutControl1.Controls.Add(this.lkpNacinPrestanka);
             this.dataLayoutControl1.Controls.Add(this.dtPrestanka);
@@ -297,12 +301,22 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(1149, 702);
             this.dataLayoutControl1.TabIndex = 0;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(690, 120);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(215, 22);
+            this.simpleButton1.StyleController = this.dataLayoutControl1;
+            this.simpleButton1.TabIndex = 46;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            // 
             // txtPreDana
             // 
-            this.txtPreDana.Location = new System.Drawing.Point(740, 72);
+            this.txtPreDana.Location = new System.Drawing.Point(572, 72);
             this.txtPreDana.MenuManager = this.mainRibbonControl;
             this.txtPreDana.Name = "txtPreDana";
-            this.txtPreDana.Size = new System.Drawing.Size(110, 20);
+            this.txtPreDana.Size = new System.Drawing.Size(260, 20);
             this.txtPreDana.StyleController = this.dataLayoutControl1;
             this.txtPreDana.TabIndex = 45;
             // 
@@ -399,59 +413,59 @@
             // 
             // lkpNacinPrestanka
             // 
-            this.lkpNacinPrestanka.Location = new System.Drawing.Point(878, 216);
+            this.lkpNacinPrestanka.Location = new System.Drawing.Point(847, 216);
             this.lkpNacinPrestanka.Name = "lkpNacinPrestanka";
             this.lkpNacinPrestanka.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpNacinPrestanka.Properties.DisplayMember = "Naziv";
             this.lkpNacinPrestanka.Properties.NullText = "Izaberite...";
             this.lkpNacinPrestanka.Properties.ValueMember = "ID";
-            this.lkpNacinPrestanka.Size = new System.Drawing.Size(247, 20);
+            this.lkpNacinPrestanka.Size = new System.Drawing.Size(278, 20);
             this.lkpNacinPrestanka.StyleController = this.dataLayoutControl1;
             this.lkpNacinPrestanka.TabIndex = 44;
             // 
             // dtPrestanka
             // 
             this.dtPrestanka.EditValue = null;
-            this.dtPrestanka.Location = new System.Drawing.Point(466, 216);
+            this.dtPrestanka.Location = new System.Drawing.Point(412, 216);
             this.dtPrestanka.Name = "dtPrestanka";
             this.dtPrestanka.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtPrestanka.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtPrestanka.Size = new System.Drawing.Size(248, 20);
+            this.dtPrestanka.Size = new System.Drawing.Size(274, 20);
             this.dtPrestanka.StyleController = this.dataLayoutControl1;
             this.dtPrestanka.TabIndex = 43;
             // 
             // lkpTipRadnogOdnosa
             // 
-            this.lkpTipRadnogOdnosa.Location = new System.Drawing.Point(1014, 192);
+            this.lkpTipRadnogOdnosa.Location = new System.Drawing.Point(930, 192);
             this.lkpTipRadnogOdnosa.Name = "lkpTipRadnogOdnosa";
             this.lkpTipRadnogOdnosa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpTipRadnogOdnosa.Properties.DisplayMember = "Naziv";
             this.lkpTipRadnogOdnosa.Properties.NullText = "Izaberite...";
             this.lkpTipRadnogOdnosa.Properties.ValueMember = "ID";
-            this.lkpTipRadnogOdnosa.Size = new System.Drawing.Size(111, 20);
+            this.lkpTipRadnogOdnosa.Size = new System.Drawing.Size(195, 20);
             this.lkpTipRadnogOdnosa.StyleController = this.dataLayoutControl1;
             this.lkpTipRadnogOdnosa.TabIndex = 42;
             // 
             // lkpRadnoMjesto
             // 
-            this.lkpRadnoMjesto.Location = new System.Drawing.Point(740, 192);
+            this.lkpRadnoMjesto.Location = new System.Drawing.Point(614, 192);
             this.lkpRadnoMjesto.Name = "lkpRadnoMjesto";
             this.lkpRadnoMjesto.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpRadnoMjesto.Properties.DisplayMember = "Naziv";
             this.lkpRadnoMjesto.Properties.NullText = "Izaberite...";
             this.lkpRadnoMjesto.Properties.ValueMember = "ID";
-            this.lkpRadnoMjesto.Size = new System.Drawing.Size(110, 20);
+            this.lkpRadnoMjesto.Size = new System.Drawing.Size(218, 20);
             this.lkpRadnoMjesto.StyleController = this.dataLayoutControl1;
             this.lkpRadnoMjesto.TabIndex = 41;
             // 
             // lkpPoslovnaJedinica
             // 
-            this.lkpPoslovnaJedinica.Location = new System.Drawing.Point(466, 192);
+            this.lkpPoslovnaJedinica.Location = new System.Drawing.Point(337, 192);
             this.lkpPoslovnaJedinica.Name = "lkpPoslovnaJedinica";
             this.lkpPoslovnaJedinica.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -461,270 +475,270 @@
             this.lkpPoslovnaJedinica.Properties.DisplayMember = "Naziv";
             this.lkpPoslovnaJedinica.Properties.NullText = "Izaberite...";
             this.lkpPoslovnaJedinica.Properties.ValueMember = "ID";
-            this.lkpPoslovnaJedinica.Size = new System.Drawing.Size(110, 20);
+            this.lkpPoslovnaJedinica.Size = new System.Drawing.Size(202, 20);
             this.lkpPoslovnaJedinica.StyleController = this.dataLayoutControl1;
             this.lkpPoslovnaJedinica.TabIndex = 40;
             // 
             // lkpStrucnaSprema
             // 
-            this.lkpStrucnaSprema.Location = new System.Drawing.Point(1014, 168);
+            this.lkpStrucnaSprema.Location = new System.Drawing.Point(916, 168);
             this.lkpStrucnaSprema.Name = "lkpStrucnaSprema";
             this.lkpStrucnaSprema.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpStrucnaSprema.Properties.DisplayMember = "Naziv";
             this.lkpStrucnaSprema.Properties.NullText = "Izaberite...";
             this.lkpStrucnaSprema.Properties.ValueMember = "ID";
-            this.lkpStrucnaSprema.Size = new System.Drawing.Size(111, 20);
+            this.lkpStrucnaSprema.Size = new System.Drawing.Size(209, 20);
             this.lkpStrucnaSprema.StyleController = this.dataLayoutControl1;
             this.lkpStrucnaSprema.TabIndex = 39;
             // 
             // txtZanimanje
             // 
-            this.txtZanimanje.Location = new System.Drawing.Point(740, 168);
+            this.txtZanimanje.Location = new System.Drawing.Point(597, 168);
             this.txtZanimanje.Name = "txtZanimanje";
-            this.txtZanimanje.Size = new System.Drawing.Size(110, 20);
+            this.txtZanimanje.Size = new System.Drawing.Size(235, 20);
             this.txtZanimanje.StyleController = this.dataLayoutControl1;
             this.txtZanimanje.TabIndex = 38;
             // 
             // txtZavrsenaSkola
             // 
-            this.txtZavrsenaSkola.Location = new System.Drawing.Point(466, 168);
+            this.txtZavrsenaSkola.Location = new System.Drawing.Point(327, 168);
             this.txtZavrsenaSkola.Name = "txtZavrsenaSkola";
-            this.txtZavrsenaSkola.Size = new System.Drawing.Size(110, 20);
+            this.txtZavrsenaSkola.Size = new System.Drawing.Size(212, 20);
             this.txtZavrsenaSkola.StyleController = this.dataLayoutControl1;
             this.txtZavrsenaSkola.TabIndex = 37;
             // 
             // lkpOpstinaIzdavanjaRK
             // 
-            this.lkpOpstinaIzdavanjaRK.Location = new System.Drawing.Point(878, 120);
+            this.lkpOpstinaIzdavanjaRK.Location = new System.Drawing.Point(781, 120);
             this.lkpOpstinaIzdavanjaRK.Name = "lkpOpstinaIzdavanjaRK";
             this.lkpOpstinaIzdavanjaRK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpOpstinaIzdavanjaRK.Properties.DisplayMember = "Naziv";
             this.lkpOpstinaIzdavanjaRK.Properties.NullText = "Izaberite...";
             this.lkpOpstinaIzdavanjaRK.Properties.ValueMember = "ID";
-            this.lkpOpstinaIzdavanjaRK.Size = new System.Drawing.Size(247, 20);
+            this.lkpOpstinaIzdavanjaRK.Size = new System.Drawing.Size(344, 20);
             this.lkpOpstinaIzdavanjaRK.StyleController = this.dataLayoutControl1;
             this.lkpOpstinaIzdavanjaRK.TabIndex = 36;
             // 
             // txtBrojRK
             // 
-            this.txtBrojRK.Location = new System.Drawing.Point(466, 120);
+            this.txtBrojRK.Location = new System.Drawing.Point(342, 120);
             this.txtBrojRK.Name = "txtBrojRK";
-            this.txtBrojRK.Size = new System.Drawing.Size(248, 20);
+            this.txtBrojRK.Size = new System.Drawing.Size(344, 20);
             this.txtBrojRK.StyleController = this.dataLayoutControl1;
             this.txtBrojRK.TabIndex = 35;
             // 
             // txtLicniBrO
             // 
-            this.txtLicniBrO.Location = new System.Drawing.Point(878, 96);
+            this.txtLicniBrO.Location = new System.Drawing.Point(790, 96);
             this.txtLicniBrO.Name = "txtLicniBrO";
-            this.txtLicniBrO.Size = new System.Drawing.Size(247, 20);
+            this.txtLicniBrO.Size = new System.Drawing.Size(335, 20);
             this.txtLicniBrO.StyleController = this.dataLayoutControl1;
             this.txtLicniBrO.TabIndex = 34;
             // 
             // txtBrojLK
             // 
-            this.txtBrojLK.Location = new System.Drawing.Point(466, 96);
+            this.txtBrojLK.Location = new System.Drawing.Point(288, 96);
             this.txtBrojLK.Name = "txtBrojLK";
-            this.txtBrojLK.Size = new System.Drawing.Size(248, 20);
+            this.txtBrojLK.Size = new System.Drawing.Size(398, 20);
             this.txtBrojLK.StyleController = this.dataLayoutControl1;
             this.txtBrojLK.TabIndex = 33;
             // 
             // dtZapos
             // 
             this.dtZapos.EditValue = null;
-            this.dtZapos.Location = new System.Drawing.Point(1014, 72);
+            this.dtZapos.Location = new System.Drawing.Point(926, 72);
             this.dtZapos.Name = "dtZapos";
             this.dtZapos.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtZapos.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtZapos.Size = new System.Drawing.Size(111, 20);
+            this.dtZapos.Size = new System.Drawing.Size(199, 20);
             this.dtZapos.StyleController = this.dataLayoutControl1;
             this.dtZapos.TabIndex = 32;
             // 
             // txtPreMjeseci
             // 
-            this.txtPreMjeseci.Location = new System.Drawing.Point(466, 72);
+            this.txtPreMjeseci.Location = new System.Drawing.Point(369, 72);
             this.txtPreMjeseci.Name = "txtPreMjeseci";
             this.txtPreMjeseci.Properties.Mask.EditMask = "n0";
             this.txtPreMjeseci.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtPreMjeseci.Size = new System.Drawing.Size(110, 20);
+            this.txtPreMjeseci.Size = new System.Drawing.Size(170, 20);
             this.txtPreMjeseci.StyleController = this.dataLayoutControl1;
             this.txtPreMjeseci.TabIndex = 28;
             // 
             // lkpPorodicnoStanje
             // 
-            this.lkpPorodicnoStanje.Location = new System.Drawing.Point(878, 168);
+            this.lkpPorodicnoStanje.Location = new System.Drawing.Point(775, 170);
             this.lkpPorodicnoStanje.Name = "lkpPorodicnoStanje";
             this.lkpPorodicnoStanje.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpPorodicnoStanje.Properties.DisplayMember = "Naziv";
             this.lkpPorodicnoStanje.Properties.NullText = "Izaberite...";
             this.lkpPorodicnoStanje.Properties.ValueMember = "ID";
-            this.lkpPorodicnoStanje.Size = new System.Drawing.Size(247, 20);
+            this.lkpPorodicnoStanje.Size = new System.Drawing.Size(350, 20);
             this.lkpPorodicnoStanje.StyleController = this.dataLayoutControl1;
             this.lkpPorodicnoStanje.TabIndex = 26;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(466, 168);
+            this.txtEmail.Location = new System.Drawing.Point(283, 170);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(248, 20);
+            this.txtEmail.Size = new System.Drawing.Size(403, 20);
             this.txtEmail.StyleController = this.dataLayoutControl1;
             this.txtEmail.TabIndex = 25;
             // 
             // txtTelPosao
             // 
-            this.txtTelPosao.Location = new System.Drawing.Point(1014, 216);
+            this.txtTelPosao.Location = new System.Drawing.Point(870, 218);
             this.txtTelPosao.Name = "txtTelPosao";
-            this.txtTelPosao.Size = new System.Drawing.Size(111, 20);
+            this.txtTelPosao.Size = new System.Drawing.Size(255, 20);
             this.txtTelPosao.StyleController = this.dataLayoutControl1;
             this.txtTelPosao.TabIndex = 24;
             // 
             // txtMobilni
             // 
-            this.txtMobilni.Location = new System.Drawing.Point(740, 216);
+            this.txtMobilni.Location = new System.Drawing.Point(580, 218);
             this.txtMobilni.Name = "txtMobilni";
-            this.txtMobilni.Size = new System.Drawing.Size(110, 20);
+            this.txtMobilni.Size = new System.Drawing.Size(252, 20);
             this.txtMobilni.StyleController = this.dataLayoutControl1;
             this.txtMobilni.TabIndex = 23;
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(466, 216);
+            this.txtTelefon.Location = new System.Drawing.Point(291, 218);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(110, 20);
+            this.txtTelefon.Size = new System.Drawing.Size(248, 20);
             this.txtTelefon.StyleController = this.dataLayoutControl1;
             this.txtTelefon.TabIndex = 22;
             // 
             // lkpMjestoStan
             // 
-            this.lkpMjestoStan.Location = new System.Drawing.Point(878, 192);
+            this.lkpMjestoStan.Location = new System.Drawing.Point(727, 194);
             this.lkpMjestoStan.Name = "lkpMjestoStan";
             this.lkpMjestoStan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpMjestoStan.Properties.DisplayMember = "Naziv";
             this.lkpMjestoStan.Properties.NullText = "Izaberite...";
             this.lkpMjestoStan.Properties.ValueMember = "ID";
-            this.lkpMjestoStan.Size = new System.Drawing.Size(247, 20);
+            this.lkpMjestoStan.Size = new System.Drawing.Size(398, 20);
             this.lkpMjestoStan.StyleController = this.dataLayoutControl1;
             this.lkpMjestoStan.TabIndex = 21;
             // 
             // txtAdresa
             // 
-            this.txtAdresa.Location = new System.Drawing.Point(466, 192);
+            this.txtAdresa.Location = new System.Drawing.Point(289, 194);
             this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(248, 20);
+            this.txtAdresa.Size = new System.Drawing.Size(397, 20);
             this.txtAdresa.StyleController = this.dataLayoutControl1;
             this.txtAdresa.TabIndex = 20;
             // 
             // lkpDrzavljanstvo
             // 
-            this.lkpDrzavljanstvo.Location = new System.Drawing.Point(1015, 144);
+            this.lkpDrzavljanstvo.Location = new System.Drawing.Point(980, 146);
             this.lkpDrzavljanstvo.Name = "lkpDrzavljanstvo";
             this.lkpDrzavljanstvo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpDrzavljanstvo.Properties.DisplayMember = "Naziv";
             this.lkpDrzavljanstvo.Properties.NullText = "Izaberite...";
             this.lkpDrzavljanstvo.Properties.ValueMember = "ID";
-            this.lkpDrzavljanstvo.Size = new System.Drawing.Size(110, 20);
+            this.lkpDrzavljanstvo.Size = new System.Drawing.Size(145, 20);
             this.lkpDrzavljanstvo.StyleController = this.dataLayoutControl1;
             this.lkpDrzavljanstvo.TabIndex = 19;
             // 
             // lkpNacionalnost
             // 
-            this.lkpNacionalnost.Location = new System.Drawing.Point(466, 144);
+            this.lkpNacionalnost.Location = new System.Drawing.Point(316, 146);
             this.lkpNacionalnost.Name = "lkpNacionalnost";
             this.lkpNacionalnost.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpNacionalnost.Properties.DisplayMember = "Naziv";
             this.lkpNacionalnost.Properties.NullText = "Izaberite...";
             this.lkpNacionalnost.Properties.ValueMember = "ID";
-            this.lkpNacionalnost.Size = new System.Drawing.Size(385, 20);
+            this.lkpNacionalnost.Size = new System.Drawing.Size(589, 20);
             this.lkpNacionalnost.StyleController = this.dataLayoutControl1;
             this.lkpNacionalnost.TabIndex = 18;
             // 
             // lkpMjestoRodj
             // 
-            this.lkpMjestoRodj.Location = new System.Drawing.Point(1015, 120);
+            this.lkpMjestoRodj.Location = new System.Drawing.Point(986, 120);
             this.lkpMjestoRodj.Name = "lkpMjestoRodj";
             this.lkpMjestoRodj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpMjestoRodj.Properties.DisplayMember = "Naziv";
             this.lkpMjestoRodj.Properties.NullText = "Izaberite...";
             this.lkpMjestoRodj.Properties.ValueMember = "ID";
-            this.lkpMjestoRodj.Size = new System.Drawing.Size(110, 20);
+            this.lkpMjestoRodj.Size = new System.Drawing.Size(139, 20);
             this.lkpMjestoRodj.StyleController = this.dataLayoutControl1;
             this.lkpMjestoRodj.TabIndex = 17;
             // 
             // dtRodj
             // 
             this.dtRodj.EditValue = null;
-            this.dtRodj.Location = new System.Drawing.Point(740, 120);
+            this.dtRodj.Location = new System.Drawing.Point(546, 120);
             this.dtRodj.Name = "dtRodj";
             this.dtRodj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtRodj.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtRodj.Size = new System.Drawing.Size(111, 20);
+            this.dtRodj.Size = new System.Drawing.Size(140, 20);
             this.dtRodj.StyleController = this.dataLayoutControl1;
             this.dtRodj.TabIndex = 16;
             // 
             // cbPol
             // 
-            this.cbPol.Location = new System.Drawing.Point(466, 120);
+            this.cbPol.Location = new System.Drawing.Point(269, 120);
             this.cbPol.Name = "cbPol";
             this.cbPol.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbPol.Properties.Items.AddRange(new object[] {
             "Muški",
             "Ženski"});
-            this.cbPol.Size = new System.Drawing.Size(110, 20);
+            this.cbPol.Size = new System.Drawing.Size(197, 20);
             this.cbPol.StyleController = this.dataLayoutControl1;
             this.cbPol.TabIndex = 15;
             // 
             // txtFunkcija
             // 
-            this.txtFunkcija.Location = new System.Drawing.Point(878, 144);
+            this.txtFunkcija.Location = new System.Drawing.Point(734, 144);
             this.txtFunkcija.Name = "txtFunkcija";
-            this.txtFunkcija.Size = new System.Drawing.Size(247, 20);
+            this.txtFunkcija.Size = new System.Drawing.Size(391, 20);
             this.txtFunkcija.StyleController = this.dataLayoutControl1;
             this.txtFunkcija.TabIndex = 14;
             // 
             // txtTitula
             // 
-            this.txtTitula.Location = new System.Drawing.Point(466, 144);
+            this.txtTitula.Location = new System.Drawing.Point(281, 144);
             this.txtTitula.Name = "txtTitula";
-            this.txtTitula.Size = new System.Drawing.Size(248, 20);
+            this.txtTitula.Size = new System.Drawing.Size(405, 20);
             this.txtTitula.StyleController = this.dataLayoutControl1;
             this.txtTitula.TabIndex = 13;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(466, 72);
+            this.txtID.Location = new System.Drawing.Point(277, 72);
             this.txtID.Name = "txtID";
             this.txtID.Properties.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(248, 20);
+            this.txtID.Size = new System.Drawing.Size(409, 20);
             this.txtID.StyleController = this.dataLayoutControl1;
             this.txtID.TabIndex = 12;
             // 
             // txtJMBG
             // 
-            this.txtJMBG.Location = new System.Drawing.Point(878, 72);
+            this.txtJMBG.Location = new System.Drawing.Point(721, 72);
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Properties.MaxLength = 13;
-            this.txtJMBG.Size = new System.Drawing.Size(247, 20);
+            this.txtJMBG.Size = new System.Drawing.Size(404, 20);
             this.txtJMBG.StyleController = this.dataLayoutControl1;
             this.txtJMBG.TabIndex = 11;
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 252);
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 254);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1125, 438);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1125, 436);
             this.xtraTabControl1.TabIndex = 10;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -738,7 +752,7 @@
             this.xtraTabPage1.Controls.Add(this.ucDjeca1);
             this.xtraTabPage1.Controls.Add(this.ucDjete1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1119, 410);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1119, 408);
             this.xtraTabPage1.Text = "Djeca";
             // 
             // ucDjeca1
@@ -747,7 +761,7 @@
             this.ucDjeca1.Location = new System.Drawing.Point(0, 0);
             this.ucDjeca1.Name = "ucDjeca1";
             this.ucDjeca1.Roditelj = null;
-            this.ucDjeca1.Size = new System.Drawing.Size(645, 410);
+            this.ucDjeca1.Size = new System.Drawing.Size(645, 408);
             this.ucDjeca1.TabIndex = 0;
             this.ucDjeca1.IzmjenaDjeteta += new Kadrovska_sluzba.RadnikTabele.ucDjeca.DjeteChangedHandler(this.ucDjeca1_IzmjenaDjeteta);
             // 
@@ -758,7 +772,7 @@
             this.ucDjete1.Dock = System.Windows.Forms.DockStyle.Right;
             this.ucDjete1.Location = new System.Drawing.Point(645, 0);
             this.ucDjete1.Name = "ucDjete1";
-            this.ucDjete1.Size = new System.Drawing.Size(474, 410);
+            this.ucDjete1.Size = new System.Drawing.Size(474, 408);
             this.ucDjete1.TabIndex = 1;
             // 
             // xtraTabPage2
@@ -766,7 +780,7 @@
             this.xtraTabPage2.Controls.Add(this.ucKursList1);
             this.xtraTabPage2.Controls.Add(this.ucKursEdit1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1119, 410);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1119, 408);
             this.xtraTabPage2.Text = "Kursevi, seminari, licence";
             // 
             // ucKursList1
@@ -775,7 +789,7 @@
             this.ucKursList1.Location = new System.Drawing.Point(0, 0);
             this.ucKursList1.Name = "ucKursList1";
             this.ucKursList1.Roditelj = null;
-            this.ucKursList1.Size = new System.Drawing.Size(634, 410);
+            this.ucKursList1.Size = new System.Drawing.Size(634, 408);
             this.ucKursList1.TabIndex = 0;
             this.ucKursList1.IzmjenaKurs += new Kadrovska_sluzba.RadnikTabele.ucKursList.KursChangedHandler(this.ucKursList1_IzmjenaKurs);
             // 
@@ -786,19 +800,19 @@
             this.ucKursEdit1.Kurs = null;
             this.ucKursEdit1.Location = new System.Drawing.Point(634, 0);
             this.ucKursEdit1.Name = "ucKursEdit1";
-            this.ucKursEdit1.Size = new System.Drawing.Size(485, 410);
+            this.ucKursEdit1.Size = new System.Drawing.Size(485, 408);
             this.ucKursEdit1.TabIndex = 1;
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.ucRadniStaz1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1119, 410);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1119, 408);
             this.xtraTabPage3.Text = "Radni staž";
             // 
             // ucRadniStaz1
             // 
-            this.ucRadniStaz1.Location = new System.Drawing.Point(80, 84);
+            this.ucRadniStaz1.Location = new System.Drawing.Point(69, 6);
             this.ucRadniStaz1.Name = "ucRadniStaz1";
             this.ucRadniStaz1.Radnik = null;
             this.ucRadniStaz1.Size = new System.Drawing.Size(317, 150);
@@ -809,7 +823,7 @@
             this.xtraTabPage4.Controls.Add(this.ucGOEdit1);
             this.xtraTabPage4.Controls.Add(this.ucGOList1);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1119, 410);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1119, 408);
             this.xtraTabPage4.Text = "Godišnji odmori";
             // 
             // ucGOEdit1
@@ -819,7 +833,7 @@
             this.ucGOEdit1.GOdmor = null;
             this.ucGOEdit1.Location = new System.Drawing.Point(800, 0);
             this.ucGOEdit1.Name = "ucGOEdit1";
-            this.ucGOEdit1.Size = new System.Drawing.Size(319, 410);
+            this.ucGOEdit1.Size = new System.Drawing.Size(319, 408);
             this.ucGOEdit1.TabIndex = 1;
             // 
             // ucGOList1
@@ -828,7 +842,7 @@
             this.ucGOList1.Location = new System.Drawing.Point(0, 0);
             this.ucGOList1.Name = "ucGOList1";
             this.ucGOList1.Roditelj = null;
-            this.ucGOList1.Size = new System.Drawing.Size(800, 410);
+            this.ucGOList1.Size = new System.Drawing.Size(800, 408);
             this.ucGOList1.TabIndex = 0;
             this.ucGOList1.IzmjenaGO += new Kadrovska_sluzba.RadnikTabele.ucGOList.GOChangedHandler(this.ucGOList1_IzmjenaGO);
             // 
@@ -837,7 +851,7 @@
             this.xtraTabPage5.Controls.Add(this.ucBolovanjeList1);
             this.xtraTabPage5.Controls.Add(this.ucBolovanjeEdit1);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1119, 410);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1119, 408);
             this.xtraTabPage5.Text = "Bolovanja";
             // 
             // ucBolovanjeList1
@@ -846,7 +860,7 @@
             this.ucBolovanjeList1.Location = new System.Drawing.Point(0, 0);
             this.ucBolovanjeList1.Name = "ucBolovanjeList1";
             this.ucBolovanjeList1.Roditelj = null;
-            this.ucBolovanjeList1.Size = new System.Drawing.Size(539, 410);
+            this.ucBolovanjeList1.Size = new System.Drawing.Size(539, 408);
             this.ucBolovanjeList1.TabIndex = 0;
             this.ucBolovanjeList1.IzmjenaBolovanje += new Kadrovska_sluzba.RadnikTabele.ucBolovanjeList.BolovanjeChangedHandler(this.ucBolovanjeList1_IzmjenaBolovanje);
             // 
@@ -857,14 +871,14 @@
             this.ucBolovanjeEdit1.Dock = System.Windows.Forms.DockStyle.Right;
             this.ucBolovanjeEdit1.Location = new System.Drawing.Point(539, 0);
             this.ucBolovanjeEdit1.Name = "ucBolovanjeEdit1";
-            this.ucBolovanjeEdit1.Size = new System.Drawing.Size(580, 410);
+            this.ucBolovanjeEdit1.Size = new System.Drawing.Size(580, 408);
             this.ucBolovanjeEdit1.TabIndex = 1;
             // 
             // memoNapomena
             // 
-            this.memoNapomena.Location = new System.Drawing.Point(306, 72);
+            this.memoNapomena.Location = new System.Drawing.Point(250, 72);
             this.memoNapomena.Name = "memoNapomena";
-            this.memoNapomena.Size = new System.Drawing.Size(819, 164);
+            this.memoNapomena.Size = new System.Drawing.Size(875, 166);
             this.memoNapomena.StyleController = this.dataLayoutControl1;
             this.memoNapomena.TabIndex = 7;
             // 
@@ -883,7 +897,7 @@
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit1.Size = new System.Drawing.Size(278, 236);
+            this.pictureEdit1.Size = new System.Drawing.Size(222, 238);
             this.pictureEdit1.StyleController = this.dataLayoutControl1;
             this.pictureEdit1.TabIndex = 4;
             this.pictureEdit1.ContextButtonClick += new DevExpress.Utils.ContextItemClickEventHandler(this.pictureEdit1_ContextButtonClick);
@@ -891,37 +905,37 @@
             // txtPrezime
             // 
             this.txtPrezime.EditValue = "";
-            this.txtPrezime.Location = new System.Drawing.Point(454, 12);
+            this.txtPrezime.Location = new System.Drawing.Point(280, 12);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.txtPrezime.Properties.Appearance.Options.UseFont = true;
-            this.txtPrezime.Size = new System.Drawing.Size(260, 22);
+            this.txtPrezime.Size = new System.Drawing.Size(406, 22);
             this.txtPrezime.StyleController = this.dataLayoutControl1;
             this.txtPrezime.TabIndex = 5;
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(878, 12);
+            this.txtIme.Location = new System.Drawing.Point(713, 12);
             this.txtIme.Name = "txtIme";
             this.txtIme.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.txtIme.Properties.Appearance.Options.UseFont = true;
-            this.txtIme.Size = new System.Drawing.Size(259, 22);
+            this.txtIme.Size = new System.Drawing.Size(424, 22);
             this.txtIme.StyleController = this.dataLayoutControl1;
             this.txtIme.TabIndex = 6;
             // 
             // txtDjevPrezime
             // 
-            this.txtDjevPrezime.Location = new System.Drawing.Point(466, 96);
+            this.txtDjevPrezime.Location = new System.Drawing.Point(348, 96);
             this.txtDjevPrezime.Name = "txtDjevPrezime";
-            this.txtDjevPrezime.Size = new System.Drawing.Size(248, 20);
+            this.txtDjevPrezime.Size = new System.Drawing.Size(338, 20);
             this.txtDjevPrezime.StyleController = this.dataLayoutControl1;
             this.txtDjevPrezime.TabIndex = 8;
             // 
             // txtImeOca
             // 
-            this.txtImeOca.Location = new System.Drawing.Point(878, 96);
+            this.txtImeOca.Location = new System.Drawing.Point(733, 96);
             this.txtImeOca.Name = "txtImeOca";
-            this.txtImeOca.Size = new System.Drawing.Size(247, 20);
+            this.txtImeOca.Size = new System.Drawing.Size(392, 20);
             this.txtImeOca.StyleController = this.dataLayoutControl1;
             this.txtImeOca.TabIndex = 9;
             // 
@@ -978,7 +992,7 @@
             this.layoutControlItem1.Control = this.pictureEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(282, 240);
+            this.layoutControlItem1.Size = new System.Drawing.Size(226, 242);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -990,9 +1004,9 @@
             this.autoGroupForTabs,
             this.layoutControlItem2,
             this.layoutControlItem3});
-            this.autoGroupForFirstAndLastName.Location = new System.Drawing.Point(282, 0);
+            this.autoGroupForFirstAndLastName.Location = new System.Drawing.Point(226, 0);
             this.autoGroupForFirstAndLastName.Name = "autoGroupForFirstAndLastName";
-            this.autoGroupForFirstAndLastName.Size = new System.Drawing.Size(847, 240);
+            this.autoGroupForFirstAndLastName.Size = new System.Drawing.Size(903, 242);
             this.autoGroupForFirstAndLastName.Text = "FirstAndLastName";
             // 
             // autoGroupForTabs
@@ -1002,7 +1016,7 @@
             this.autoGroupForTabs.Name = "autoGroupForTabs";
             this.autoGroupForTabs.SelectedTabPage = this.autoGroupForContact;
             this.autoGroupForTabs.SelectedTabPageIndex = 0;
-            this.autoGroupForTabs.Size = new System.Drawing.Size(847, 214);
+            this.autoGroupForTabs.Size = new System.Drawing.Size(903, 216);
             this.autoGroupForTabs.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.autoGroupForContact,
             this.autoGroupForJob,
@@ -1017,7 +1031,7 @@
             this.autoGroupForHomeAddressAndPhone});
             this.autoGroupForContact.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForContact.Name = "autoGroupForContact";
-            this.autoGroupForContact.Size = new System.Drawing.Size(823, 168);
+            this.autoGroupForContact.Size = new System.Drawing.Size(879, 170);
             this.autoGroupForContact.Text = "Kontakt";
             // 
             // autoGroupForBDateAndGender
@@ -1034,10 +1048,11 @@
             this.layoutControlItem5,
             this.layoutControlItem6,
             this.layoutControlItem9,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem26});
             this.autoGroupForBDateAndGender.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForBDateAndGender.Name = "autoGroupForBDateAndGender";
-            this.autoGroupForBDateAndGender.Size = new System.Drawing.Size(823, 96);
+            this.autoGroupForBDateAndGender.Size = new System.Drawing.Size(879, 98);
             this.autoGroupForBDateAndGender.Text = "BDateAndGender";
             // 
             // layoutControlItem12
@@ -1045,81 +1060,108 @@
             this.layoutControlItem12.Control = this.cbPol;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem12.Size = new System.Drawing.Size(220, 26);
             this.layoutControlItem12.Text = "Pol";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(14, 13);
+            this.layoutControlItem12.TextToControlDistance = 5;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.dtRodj;
-            this.layoutControlItem13.Location = new System.Drawing.Point(274, 48);
+            this.layoutControlItem13.Location = new System.Drawing.Point(220, 48);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(275, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(220, 26);
             this.layoutControlItem13.Text = "Datum rođenja";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(71, 13);
+            this.layoutControlItem13.TextToControlDistance = 5;
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.lkpMjestoRodj;
-            this.layoutControlItem14.Location = new System.Drawing.Point(549, 48);
+            this.layoutControlItem14.Location = new System.Drawing.Point(659, 48);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(220, 26);
             this.layoutControlItem14.Text = "Mjesto rođenja";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(72, 13);
+            this.layoutControlItem14.TextToControlDistance = 5;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.lkpNacionalnost;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 74);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(549, 24);
+            this.layoutControlItem15.Size = new System.Drawing.Size(659, 24);
             this.layoutControlItem15.Text = "Nacionalnost";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(61, 13);
+            this.layoutControlItem15.TextToControlDistance = 5;
             // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.lkpDrzavljanstvo;
-            this.layoutControlItem16.Location = new System.Drawing.Point(549, 72);
+            this.layoutControlItem16.Location = new System.Drawing.Point(659, 74);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem16.Size = new System.Drawing.Size(220, 24);
             this.layoutControlItem16.Text = "Državljanstvo";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(66, 13);
+            this.layoutControlItem16.TextToControlDistance = 5;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtDjevPrezime;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem5.Text = "Djevojačko prezime";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(93, 13);
+            this.layoutControlItem5.TextToControlDistance = 5;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtImeOca;
-            this.layoutControlItem6.Location = new System.Drawing.Point(412, 24);
+            this.layoutControlItem6.Location = new System.Drawing.Point(440, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem6.Text = "Ime oca";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(38, 13);
+            this.layoutControlItem6.TextToControlDistance = 5;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtID;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem9.Text = "Šifra";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(22, 13);
+            this.layoutControlItem9.TextToControlDistance = 5;
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtJMBG;
-            this.layoutControlItem8.Location = new System.Drawing.Point(412, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(440, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem8.Text = "JMBG";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(26, 13);
+            this.layoutControlItem8.TextToControlDistance = 5;
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.simpleButton1;
+            this.layoutControlItem26.Location = new System.Drawing.Point(440, 48);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(219, 26);
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem26.TextVisible = false;
             // 
             // autoGroupForHomeAddressAndPhone
             // 
@@ -1134,9 +1176,9 @@
             this.layoutControlItem21,
             this.layoutControlItem22,
             this.layoutControlItem23});
-            this.autoGroupForHomeAddressAndPhone.Location = new System.Drawing.Point(0, 96);
+            this.autoGroupForHomeAddressAndPhone.Location = new System.Drawing.Point(0, 98);
             this.autoGroupForHomeAddressAndPhone.Name = "autoGroupForHomeAddressAndPhone";
-            this.autoGroupForHomeAddressAndPhone.Size = new System.Drawing.Size(823, 72);
+            this.autoGroupForHomeAddressAndPhone.Size = new System.Drawing.Size(879, 72);
             this.autoGroupForHomeAddressAndPhone.Text = "HomeAddressAndPhone";
             // 
             // layoutControlItem17
@@ -1144,63 +1186,77 @@
             this.layoutControlItem17.Control = this.txtAdresa;
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem17.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem17.Text = "Adresa";
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(34, 13);
+            this.layoutControlItem17.TextToControlDistance = 5;
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.lkpMjestoStan;
-            this.layoutControlItem18.Location = new System.Drawing.Point(412, 24);
+            this.layoutControlItem18.Location = new System.Drawing.Point(440, 24);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem18.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem18.Text = "Mjesto";
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(32, 13);
+            this.layoutControlItem18.TextToControlDistance = 5;
             // 
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.txtTelefon;
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem19.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem19.Text = "Telefon";
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(36, 13);
+            this.layoutControlItem19.TextToControlDistance = 5;
             // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.txtMobilni;
-            this.layoutControlItem20.Location = new System.Drawing.Point(274, 48);
+            this.layoutControlItem20.Location = new System.Drawing.Point(293, 48);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem20.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem20.Text = "Mobilni";
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem20.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(32, 13);
+            this.layoutControlItem20.TextToControlDistance = 5;
             // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.txtTelPosao;
-            this.layoutControlItem21.Location = new System.Drawing.Point(548, 48);
+            this.layoutControlItem21.Location = new System.Drawing.Point(586, 48);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(275, 24);
+            this.layoutControlItem21.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem21.Text = "Posao";
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem21.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(29, 13);
+            this.layoutControlItem21.TextToControlDistance = 5;
             // 
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.txtEmail;
             this.layoutControlItem22.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem22.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem22.Text = "e-mail";
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem22.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(28, 13);
+            this.layoutControlItem22.TextToControlDistance = 5;
             // 
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.lkpPorodicnoStanje;
-            this.layoutControlItem23.Location = new System.Drawing.Point(412, 0);
+            this.layoutControlItem23.Location = new System.Drawing.Point(440, 0);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem23.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem23.Text = "Porodično stanje";
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem23.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem23.TextToControlDistance = 5;
             // 
             // autoGroupForJob
             // 
@@ -1211,7 +1267,7 @@
             this.autoGroupForGroupAndTitle});
             this.autoGroupForJob.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForJob.Name = "autoGroupForJob";
-            this.autoGroupForJob.Size = new System.Drawing.Size(823, 168);
+            this.autoGroupForJob.Size = new System.Drawing.Size(879, 170);
             this.autoGroupForJob.Text = "Zaposlenje";
             // 
             // autoGroupForHDateAndSalary
@@ -1225,7 +1281,7 @@
             this.layoutControlItem24});
             this.autoGroupForHDateAndSalary.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForHDateAndSalary.Name = "autoGroupForHDateAndSalary";
-            this.autoGroupForHDateAndSalary.Size = new System.Drawing.Size(823, 24);
+            this.autoGroupForHDateAndSalary.Size = new System.Drawing.Size(879, 24);
             this.autoGroupForHDateAndSalary.Text = "HDateAndSalary";
             // 
             // layoutControlItem25
@@ -1233,27 +1289,33 @@
             this.layoutControlItem25.Control = this.txtPreMjeseci;
             this.layoutControlItem25.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem25.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem25.Text = "Prethodni staž - mjeseci";
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem25.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(114, 13);
+            this.layoutControlItem25.TextToControlDistance = 5;
             // 
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.dtZapos;
-            this.layoutControlItem29.Location = new System.Drawing.Point(548, 0);
+            this.layoutControlItem29.Location = new System.Drawing.Point(586, 0);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(275, 24);
+            this.layoutControlItem29.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem29.Text = "Datum zaposlenja";
-            this.layoutControlItem29.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem29.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem29.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem29.TextToControlDistance = 5;
             // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.txtPreDana;
-            this.layoutControlItem24.Location = new System.Drawing.Point(274, 0);
+            this.layoutControlItem24.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem24.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem24.Text = "dana";
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(24, 13);
+            this.layoutControlItem24.TextToControlDistance = 5;
             // 
             // autoGroupForEmailAndSkype
             // 
@@ -1269,62 +1331,74 @@
             this.layoutControlItem11});
             this.autoGroupForEmailAndSkype.Location = new System.Drawing.Point(0, 24);
             this.autoGroupForEmailAndSkype.Name = "autoGroupForEmailAndSkype";
-            this.autoGroupForEmailAndSkype.Size = new System.Drawing.Size(823, 72);
+            this.autoGroupForEmailAndSkype.Size = new System.Drawing.Size(879, 72);
             this.autoGroupForEmailAndSkype.Text = "EmailAndSkype";
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.txtLicniBrO;
-            this.layoutControlItem31.Location = new System.Drawing.Point(412, 0);
+            this.layoutControlItem31.Location = new System.Drawing.Point(440, 0);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem31.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem31.Text = "Lični broj osiguranja";
-            this.layoutControlItem31.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem31.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem31.TextSize = new System.Drawing.Size(95, 13);
+            this.layoutControlItem31.TextToControlDistance = 5;
             // 
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.txtBrojRK;
             this.layoutControlItem32.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem32.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem32.Text = "Broj radne knjižice";
-            this.layoutControlItem32.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem32.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem32.TextSize = new System.Drawing.Size(87, 13);
+            this.layoutControlItem32.TextToControlDistance = 5;
             // 
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.lkpOpstinaIzdavanjaRK;
-            this.layoutControlItem33.Location = new System.Drawing.Point(412, 24);
+            this.layoutControlItem33.Location = new System.Drawing.Point(440, 24);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem33.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem33.Text = "Opština izdavanja";
-            this.layoutControlItem33.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem33.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem33.TextSize = new System.Drawing.Size(86, 13);
+            this.layoutControlItem33.TextToControlDistance = 5;
             // 
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.txtBrojLK;
             this.layoutControlItem30.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem30.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem30.Text = "Broj LK";
-            this.layoutControlItem30.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem30.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem30.TextSize = new System.Drawing.Size(33, 13);
+            this.layoutControlItem30.TextToControlDistance = 5;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtTitula;
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem10.Text = "Titula";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(26, 13);
+            this.layoutControlItem10.TextToControlDistance = 5;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.txtFunkcija;
-            this.layoutControlItem11.Location = new System.Drawing.Point(412, 48);
+            this.layoutControlItem11.Location = new System.Drawing.Point(440, 48);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem11.Text = "Funkcija";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem11.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(39, 13);
+            this.layoutControlItem11.TextToControlDistance = 5;
             // 
             // autoGroupForGroupAndTitle
             // 
@@ -1342,7 +1416,7 @@
             this.layoutControlItem39});
             this.autoGroupForGroupAndTitle.Location = new System.Drawing.Point(0, 96);
             this.autoGroupForGroupAndTitle.Name = "autoGroupForGroupAndTitle";
-            this.autoGroupForGroupAndTitle.Size = new System.Drawing.Size(823, 72);
+            this.autoGroupForGroupAndTitle.Size = new System.Drawing.Size(879, 74);
             this.autoGroupForGroupAndTitle.Text = "GroupAndTitle";
             // 
             // layoutControlItem34
@@ -1350,72 +1424,88 @@
             this.layoutControlItem34.Control = this.txtZavrsenaSkola;
             this.layoutControlItem34.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem34.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem34.Text = "Završena škola";
-            this.layoutControlItem34.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem34.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem34.TextSize = new System.Drawing.Size(72, 13);
+            this.layoutControlItem34.TextToControlDistance = 5;
             // 
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.txtZanimanje;
-            this.layoutControlItem35.Location = new System.Drawing.Point(274, 0);
+            this.layoutControlItem35.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem35.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem35.Text = "Zanimanje";
-            this.layoutControlItem35.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem35.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem35.TextSize = new System.Drawing.Size(49, 13);
+            this.layoutControlItem35.TextToControlDistance = 5;
             // 
             // layoutControlItem36
             // 
             this.layoutControlItem36.Control = this.lkpStrucnaSprema;
-            this.layoutControlItem36.Location = new System.Drawing.Point(548, 0);
+            this.layoutControlItem36.Location = new System.Drawing.Point(586, 0);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(275, 24);
+            this.layoutControlItem36.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem36.Text = "Stručna sprema";
-            this.layoutControlItem36.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem36.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem36.TextSize = new System.Drawing.Size(75, 13);
+            this.layoutControlItem36.TextToControlDistance = 5;
             // 
             // layoutControlItem40
             // 
             this.layoutControlItem40.Control = this.dtPrestanka;
             this.layoutControlItem40.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem40.Size = new System.Drawing.Size(440, 26);
             this.layoutControlItem40.Text = "Datum prestanka radnog odnosa";
+            this.layoutControlItem40.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem40.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem40.TextToControlDistance = 5;
             // 
             // layoutControlItem41
             // 
             this.layoutControlItem41.Control = this.lkpNacinPrestanka;
-            this.layoutControlItem41.Location = new System.Drawing.Point(412, 48);
+            this.layoutControlItem41.Location = new System.Drawing.Point(440, 48);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem41.Size = new System.Drawing.Size(439, 26);
             this.layoutControlItem41.Text = "Način prestanka radnog odnosa";
-            this.layoutControlItem41.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem41.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem41.TextSize = new System.Drawing.Size(152, 13);
+            this.layoutControlItem41.TextToControlDistance = 5;
             // 
             // layoutControlItem37
             // 
             this.layoutControlItem37.Control = this.lkpPoslovnaJedinica;
             this.layoutControlItem37.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem37.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem37.Text = "Poslovna jedinica";
-            this.layoutControlItem37.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem37.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem37.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem37.TextToControlDistance = 5;
             // 
             // layoutControlItem38
             // 
             this.layoutControlItem38.Control = this.lkpRadnoMjesto;
-            this.layoutControlItem38.Location = new System.Drawing.Point(274, 24);
+            this.layoutControlItem38.Location = new System.Drawing.Point(293, 24);
             this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem38.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem38.Text = "Radno mjesto";
-            this.layoutControlItem38.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem38.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem38.TextSize = new System.Drawing.Size(66, 13);
+            this.layoutControlItem38.TextToControlDistance = 5;
             // 
             // layoutControlItem39
             // 
             this.layoutControlItem39.Control = this.lkpTipRadnogOdnosa;
-            this.layoutControlItem39.Location = new System.Drawing.Point(548, 24);
+            this.layoutControlItem39.Location = new System.Drawing.Point(586, 24);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(275, 24);
+            this.layoutControlItem39.Size = new System.Drawing.Size(293, 24);
             this.layoutControlItem39.Text = "Tip radnog odnosa";
-            this.layoutControlItem39.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem39.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem39.TextSize = new System.Drawing.Size(89, 13);
+            this.layoutControlItem39.TextToControlDistance = 5;
             // 
             // layoutControlGroup2
             // 
@@ -1423,7 +1513,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(823, 168);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(879, 170);
             this.layoutControlGroup2.Text = "Napomena";
             // 
             // layoutControlItem4
@@ -1431,7 +1521,7 @@
             this.layoutControlItem4.Control = this.memoNapomena;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(823, 168);
+            this.layoutControlItem4.Size = new System.Drawing.Size(879, 170);
             this.layoutControlItem4.Text = "Napomena";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -1442,25 +1532,29 @@
             this.layoutControlItem2.Control = this.txtPrezime;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(424, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(452, 26);
             this.layoutControlItem2.Text = "Prezime";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(37, 13);
+            this.layoutControlItem2.TextToControlDistance = 5;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtIme;
-            this.layoutControlItem3.Location = new System.Drawing.Point(424, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(452, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(423, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(451, 26);
             this.layoutControlItem3.Text = "Ime";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(157, 13);
+            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(18, 13);
+            this.layoutControlItem3.TextToControlDistance = 5;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.xtraTabControl1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 240);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 242);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(1129, 442);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1129, 440);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -1542,6 +1636,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGroupForHomeAddressAndPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
@@ -1696,5 +1791,7 @@
         private RadnikTabele.ucKursEdit ucKursEdit1;
         private RadnikTabele.ucBolovanjeList ucBolovanjeList1;
         private RadnikTabele.ucBolovanjeEdit ucBolovanjeEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
     }
 }

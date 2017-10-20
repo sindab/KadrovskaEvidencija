@@ -39,7 +39,7 @@ namespace Kadrovska_sluzba.RadnikTabele
         {
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
-                if (!(Radnik == null))
+                if (!(Radnik == null) && (Radnik.ID != 0))
                 {
                     RadnikService rs = new RadnikService();
                     RadnikStaz rst = rs.GetStaz(Radnik.ID);

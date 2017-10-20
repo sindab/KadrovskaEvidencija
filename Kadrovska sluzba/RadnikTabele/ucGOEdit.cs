@@ -34,8 +34,8 @@ namespace Kadrovska_sluzba.RadnikTabele
                         if (gOd.ID == 0)
                         {
                             mainRibbonPage.Text = "";
-                            txtZaduzio.EditValue = "";
-                            txtRazduzio.EditValue = "";
+                            txtZaduzio.EditValue = "0";
+                            txtRazduzio.EditValue = "0";
                             dtOd.EditValue = null;
                             dtDo.EditValue = null;
                             txtNapomena.EditValue = "";

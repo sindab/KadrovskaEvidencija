@@ -22,11 +22,11 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class RadnikKurs
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual int RadID { get; set; }
-		public virtual DateTime? Datum { get; set; }
-		public virtual DateTime? DatumDo { get; set; }
-		public virtual string Opis { get; set; }
+			public virtual int ID { get; set; }
+			public virtual int RadID { get; set; }
+			public virtual DateTime? Datum { get; set; }
+			public virtual DateTime? DatumDo { get; set; }
+			public virtual string Opis { get; set; }
 	}
 
     /// <summary>
@@ -36,36 +36,36 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class RadnikBolovanje
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual int RadID { get; set; }
-		public virtual DateTime? DatumOd { get; set; }
-		public virtual DateTime? DatumDo { get; set; }
-		public virtual string Opis { get; set; }
+			public virtual int ID { get; set; }
+			public virtual int RadID { get; set; }
+			public virtual DateTime? DatumOd { get; set; }
+			public virtual DateTime? DatumDo { get; set; }
+			public virtual string Opis { get; set; }
 	}
 
     /// <summary>
     /// A class which represents the Appointments table.
     /// </summary>
 	[Table("Appointments")]
-	public partial class Appointment
+	public partial class Appointments
 	{
 		[Key]
-		public virtual int UniqueID { get; set; }
-		public virtual int? Type { get; set; }
-		public virtual DateTime? StartDate { get; set; }
-		public virtual DateTime? EndDate { get; set; }
-		public virtual bool? AllDay { get; set; }
-		public virtual string Subject { get; set; }
-		public virtual string Location { get; set; }
-		public virtual string Description { get; set; }
-		public virtual int? Status { get; set; }
-		public virtual int? Label { get; set; }
-		public virtual int? ResourceID { get; set; }
-		public virtual string ResourceIDs { get; set; }
-		public virtual string ReminderInfo { get; set; }
-		public virtual string RecurrenceInfo { get; set; }
-		public virtual string TimeZoneId { get; set; }
-		public virtual string CustomField1 { get; set; }
+			public virtual int UniqueID { get; set; }
+			public virtual int? Type { get; set; }
+			public virtual DateTime? StartDate { get; set; }
+			public virtual DateTime? EndDate { get; set; }
+			public virtual bool? AllDay { get; set; }
+			public virtual string Subject { get; set; }
+			public virtual string Location { get; set; }
+			public virtual string Description { get; set; }
+			public virtual int? Status { get; set; }
+			public virtual int? Label { get; set; }
+			public virtual int? ResourceID { get; set; }
+			public virtual string ResourceIDs { get; set; }
+			public virtual string ReminderInfo { get; set; }
+			public virtual string RecurrenceInfo { get; set; }
+			public virtual string TimeZoneId { get; set; }
+			public virtual string CustomField1 { get; set; }
 	}
 
     /// <summary>
@@ -75,12 +75,12 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class Resource
 	{
 		[Key]
-		public virtual int UniqueID { get; set; }
-		public virtual int ResourceID { get; set; }
-		public virtual string ResourceName { get; set; }
-		public virtual int? Color { get; set; }
-		public virtual byte[] Image { get; set; }
-		public virtual string CustomField1 { get; set; }
+			public virtual int UniqueID { get; set; }
+			public virtual int ResourceID { get; set; }
+			public virtual string ResourceName { get; set; }
+			public virtual int? Color { get; set; }
+			public virtual byte[] Image { get; set; }
+			public virtual string CustomField1 { get; set; }
 	}
 
     /// <summary>
@@ -89,159 +89,71 @@ namespace Kadrovska_sluzba.DB.Models
 	[Table("vRadnik")]
 	public partial class vRadnik
 	{
-		public virtual int ID { get; set; }
-		public virtual string JMBG { get; set; }
-		public virtual string Prezime { get; set; }
-		public virtual string DjevPrezime { get; set; }
-		public virtual string Ime { get; set; }
-		public virtual string ImeOca { get; set; }
-		public virtual int Bitovi { get; set; }
-		public virtual string Titula { get; set; }
-		public virtual string Funkcija { get; set; }
-		public virtual int? MjestoRodjenja { get; set; }
-		public virtual string MjestoRodjenjaNaziv { get; set; }
-		public virtual DateTime? DatumRodjenja { get; set; }
-		public virtual int? DrzavljanstvoID { get; set; }
-		public virtual string DrzavljanstvoNaziv { get; set; }
-		public virtual int? NacionalnostID { get; set; }
-		public virtual string NacionalnostNaziv { get; set; }
-		public virtual int? PorodicnoStanjeID { get; set; }
-		public virtual string PorodicnoStanjeNaziv { get; set; }
-		public virtual int? MjestoStan { get; set; }
-		public virtual string MjestoStanNaziv { get; set; }
-		public virtual string AdresaStan { get; set; }
-		public virtual string TelefonStan { get; set; }
-		public virtual string TelefonMob { get; set; }
-		public virtual string TelefonPosao { get; set; }
-		public virtual string Zanimanje { get; set; }
-		public virtual int? StrucnaSpremaID { get; set; }
-		public virtual string StrucnaSpremaNaziv { get; set; }
-		public virtual string ZavrsenaSkola { get; set; }
-		public virtual int? RadnoMjestoID { get; set; }
-		public virtual string RadnoMjestoNaziv { get; set; }
-		public virtual string BrLK { get; set; }
-		public virtual string BrRadneKnj { get; set; }
-		public virtual int? OpstinaIzdavanjaRK { get; set; }
-		public virtual string OpstinaIzdavanjaNaziv { get; set; }
-		public virtual string LicniBrOsiguranja { get; set; }
-		public virtual DateTime? DatumPrvogZapos { get; set; }
-		public virtual int? PrethodniStazMj { get; set; }
-		public virtual int? PrethodniStazDan { get; set; }
-		public virtual int? PrethodniStazUFirmiMj { get; set; }
-		public virtual int? PrethodniStazUFirmiDan { get; set; }
-		public virtual DateTime? DatumZapos { get; set; }
-		public virtual int? TipRadnogOdnosaID { get; set; }
-		public virtual string TipRadnogOdnosaNaziv { get; set; }
-		public virtual int? NacinPrestankaRoID { get; set; }
-		public virtual string NacinPrestankaNaziv { get; set; }
-		public virtual DateTime? DatumPrestankaRO { get; set; }
-		public virtual string Napomena { get; set; }
-		public virtual string FindStr { get; set; }
-		public virtual string Lozinka { get; set; }
-		public virtual byte[] Slika { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string eMail { get; set; }
-		public virtual int? PoslovnaJedinicaID { get; set; }
-		public virtual string PoslovnaJedinicaNaziv { get; set; }
-		public virtual string Pol { get; set; }
-		public virtual int? G { get; set; }
-		public virtual int? M { get; set; }
-		public virtual int? D { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the PorodicnoStanje table.
-    /// </summary>
-	[Table("PorodicnoStanje")]
-	public partial class PorodicnoStanje
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the Mjesto table.
-    /// </summary>
-	[Table("Mjesto")]
-	public partial class Mjesto
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual int? OpstinaID { get; set; }
-		public virtual int PostBr { get; set; }
-		public virtual string Naziv { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the PoslovnaJedinica table.
-    /// </summary>
-	[Table("PoslovnaJedinica")]
-	public partial class PoslovnaJedinica
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string PuniNaziv { get; set; }
-		public virtual int? Mjesto { get; set; }
-		public virtual string Adresa { get; set; }
-		public virtual string Telefon { get; set; }
-		public virtual string Fax { get; set; }
-		public virtual string Mobilni { get; set; }
-		public virtual string Maticni { get; set; }
-		public virtual string PIB { get; set; }
-		public virtual string JIB { get; set; }
-		public virtual string Ziro { get; set; }
-		public virtual string Web { get; set; }
-		public virtual string Mail { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the TipRadnogOdnosa table.
-    /// </summary>
-	[Table("TipRadnogOdnosa")]
-	public partial class TipRadnogOdnosa
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string Opis { get; set; }
-		public virtual int? Bitovi { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the Firma table.
-    /// </summary>
-	[Table("Firma")]
-	public partial class Firma
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string PuniNaziv { get; set; }
-		public virtual int? Mjesto { get; set; }
-		public virtual string Adresa { get; set; }
-		public virtual string Telefon { get; set; }
-		public virtual string Fax { get; set; }
-		public virtual string Mobilni { get; set; }
-		public virtual string Maticni { get; set; }
-		public virtual string PIB { get; set; }
-		public virtual string JIB { get; set; }
-		public virtual string Ziro { get; set; }
-		public virtual string Web { get; set; }
-		public virtual string Mail { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the RadnoMjesto table.
-    /// </summary>
-	[Table("RadnoMjesto")]
-	public partial class RadnoMjesto
-	{
-		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string Opis { get; set; }
+			public virtual int ID { get; set; }
+			public virtual string JMBG { get; set; }
+			public virtual string Prezime { get; set; }
+			public virtual string DjevPrezime { get; set; }
+			public virtual string Ime { get; set; }
+			public virtual string ImeOca { get; set; }
+			public virtual int Bitovi { get; set; }
+			public virtual string Titula { get; set; }
+			public virtual string Funkcija { get; set; }
+			public virtual int? MjestoRodjenja { get; set; }
+			public virtual string MjestoRodjenjaNaziv { get; set; }
+			public virtual DateTime? DatumRodjenja { get; set; }
+			public virtual int? DrzavljanstvoID { get; set; }
+			public virtual string DrzavljanstvoNaziv { get; set; }
+			public virtual int? NacionalnostID { get; set; }
+			public virtual string NacionalnostNaziv { get; set; }
+			public virtual int? PorodicnoStanjeID { get; set; }
+			public virtual string PorodicnoStanjeNaziv { get; set; }
+			public virtual int? MjestoStan { get; set; }
+			public virtual string MjestoStanNaziv { get; set; }
+			public virtual string AdresaStan { get; set; }
+			public virtual string TelefonStan { get; set; }
+			public virtual string TelefonMob { get; set; }
+			public virtual string TelefonPosao { get; set; }
+			public virtual string Zanimanje { get; set; }
+			public virtual int? StrucnaSpremaID { get; set; }
+			public virtual string StrucnaSpremaNaziv { get; set; }
+			public virtual string ZavrsenaSkola { get; set; }
+			public virtual int? RadnoMjestoID { get; set; }
+			public virtual string RadnoMjestoNaziv { get; set; }
+			public virtual string BrLK { get; set; }
+			public virtual string BrRadneKnj { get; set; }
+			public virtual int? OpstinaIzdavanjaRK { get; set; }
+			public virtual string OpstinaIzdavanjaNaziv { get; set; }
+			public virtual string LicniBrOsiguranja { get; set; }
+			public virtual DateTime? DatumPrvogZapos { get; set; }
+			public virtual DateTime? DatumZapos { get; set; }
+			public virtual int? TipRadnogOdnosaID { get; set; }
+			public virtual string TipRadnogOdnosaNaziv { get; set; }
+			public virtual DateTime? DatumIstekaUgovora { get; set; }
+			public virtual int? DoIstekaUg { get; set; }
+			public virtual int? NacinPrestankaRoID { get; set; }
+			public virtual string NacinPrestankaNaziv { get; set; }
+			public virtual DateTime? DatumPrestankaRO { get; set; }
+			public virtual string Napomena { get; set; }
+			public virtual string FindStr { get; set; }
+			public virtual string Lozinka { get; set; }
+			public virtual byte[] Slika { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string eMail { get; set; }
+			public virtual int? PoslovnaJedinicaID { get; set; }
+			public virtual string PoslovnaJedinicaNaziv { get; set; }
+			public virtual string Pol { get; set; }
+			public virtual int? StazGPrethodni { get; set; }
+			public virtual int? StazMjPrethodni { get; set; }
+			public virtual int? StazDanaPrethodni { get; set; }
+			public virtual int? Godina { get; set; }
+			public virtual int? Mjeseci { get; set; }
+			public virtual int? Dana { get; set; }
+			public virtual int? G { get; set; }
+			public virtual int? M { get; set; }
+			public virtual int? D { get; set; }
+			public virtual int? GOZaduzio { get; set; }
+			public virtual int? GORazduzio { get; set; }
+			public virtual int? GOOstalo { get; set; }
 	}
 
     /// <summary>
@@ -251,9 +163,160 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class StrucnaSprema
 	{
 		[Key]
-		public virtual int ID { get; set; }
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string Opis { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the PorodicnoStanje table.
+    /// </summary>
+	[Table("PorodicnoStanje")]
+	public partial class PorodicnoStanje
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Mjesto table.
+    /// </summary>
+	[Table("Mjesto")]
+	public partial class Mjesto
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual int? OpstinaID { get; set; }
+			public virtual int PostBr { get; set; }
+			public virtual string Naziv { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the PoslovnaJedinica table.
+    /// </summary>
+	[Table("PoslovnaJedinica")]
+	public partial class PoslovnaJedinica
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string PuniNaziv { get; set; }
+			public virtual int? Mjesto { get; set; }
+			public virtual string Adresa { get; set; }
+			public virtual string Telefon { get; set; }
+			public virtual string Fax { get; set; }
+			public virtual string Mobilni { get; set; }
+			public virtual string Maticni { get; set; }
+			public virtual string PIB { get; set; }
+			public virtual string JIB { get; set; }
+			public virtual string Ziro { get; set; }
+			public virtual string Web { get; set; }
+			public virtual string Mail { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the TipRadnogOdnosa table.
+    /// </summary>
+	[Table("TipRadnogOdnosa")]
+	public partial class TipRadnogOdnosa
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string Opis { get; set; }
+			public virtual int? Bitovi { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Firma table.
+    /// </summary>
+	[Table("Firma")]
+	public partial class Firma
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string PuniNaziv { get; set; }
+			public virtual int? Mjesto { get; set; }
+			public virtual string Adresa { get; set; }
+			public virtual string Telefon { get; set; }
+			public virtual string Fax { get; set; }
+			public virtual string Mobilni { get; set; }
+			public virtual string Maticni { get; set; }
+			public virtual string PIB { get; set; }
+			public virtual string JIB { get; set; }
+			public virtual string Ziro { get; set; }
+			public virtual string Web { get; set; }
+			public virtual string Mail { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the RadnoMjesto table.
+    /// </summary>
+	[Table("RadnoMjesto")]
+	public partial class RadnoMjesto
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string Opis { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the Radnik table.
+    /// </summary>
+	[Table("Radnik")]
+	public partial class Radnik
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual string JMBG { get; set; }
+			public virtual string Prezime { get; set; }
+			public virtual string DjevPrezime { get; set; }
+			public virtual string Ime { get; set; }
+			public virtual string ImeOca { get; set; }
+			public virtual int Bitovi { get; set; }
+			public virtual string Titula { get; set; }
+			public virtual string Funkcija { get; set; }
+			public virtual int? MjestoRodjenja { get; set; }
+			public virtual DateTime? DatumRodjenja { get; set; }
+			public virtual int? DrzavljanstvoID { get; set; }
+			public virtual int? NacionalnostID { get; set; }
+			public virtual int? PorodicnoStanjeID { get; set; }
+			public virtual int? MjestoStan { get; set; }
+			public virtual string AdresaStan { get; set; }
+			public virtual string TelefonStan { get; set; }
+			public virtual string TelefonMob { get; set; }
+			public virtual string TelefonPosao { get; set; }
+			public virtual string Zanimanje { get; set; }
+			public virtual int? StrucnaSpremaID { get; set; }
+			public virtual string ZavrsenaSkola { get; set; }
+			public virtual int? RadnoMjestoID { get; set; }
+			public virtual string BrLK { get; set; }
+			public virtual string BrRadneKnj { get; set; }
+			public virtual int? OpstinaIzdavanjaRK { get; set; }
+			public virtual string LicniBrOsiguranja { get; set; }
+			public virtual DateTime? DatumPrvogZapos { get; set; }
+			public virtual int? PrethodniStazMj { get; set; }
+			public virtual int? PrethodniStazDan { get; set; }
+			public virtual int? PrethodniStazUFirmiMj { get; set; }
+			public virtual int? PrethodniStazUFirmiDan { get; set; }
+			public virtual DateTime? DatumZapos { get; set; }
+			public virtual int? TipRadnogOdnosaID { get; set; }
+			public virtual DateTime? DatumIstekaUgovora { get; set; }
+			public virtual int? NacinPrestankaRoID { get; set; }
+			public virtual DateTime? DatumPrestankaRO { get; set; }
+			public virtual string eMail { get; set; }
+			public virtual int? PoslovnaJedinicaID { get; set; }
+			public virtual string Pol { get; set; }
+			public virtual byte[] Slika { get; set; }
+			public virtual string Lozinka { get; set; }
+			public virtual string Napomena { get; set; }
+			[Dapper.Contrib.Extensions.Computed]
 		public virtual string Naziv { get; set; }
-		public virtual string Opis { get; set; }
+			[Dapper.Contrib.Extensions.Computed]
+		public virtual string FindStr { get; set; }
 	}
 
     /// <summary>
@@ -263,13 +326,13 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class RadnikDjeca
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual int RadID { get; set; }
-		public virtual string Ime { get; set; }
-		public virtual DateTime? DatumRodj { get; set; }
-		public virtual string JMBG { get; set; }
-		public virtual int Bitovi { get; set; }
-		public virtual string Napomena { get; set; }
+			public virtual int ID { get; set; }
+			public virtual int RadID { get; set; }
+			public virtual string Ime { get; set; }
+			public virtual DateTime? DatumRodj { get; set; }
+			public virtual string JMBG { get; set; }
+			public virtual int Bitovi { get; set; }
+			public virtual string Napomena { get; set; }
 	}
 
     /// <summary>
@@ -279,9 +342,9 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class NacinPrestankaRO
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
-		public virtual string Opis { get; set; }
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
+			public virtual string Opis { get; set; }
 	}
 
     /// <summary>
@@ -291,9 +354,9 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class Opstina
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Sifra { get; set; }
-		public virtual string Naziv { get; set; }
+			public virtual int ID { get; set; }
+			public virtual string Sifra { get; set; }
+			public virtual string Naziv { get; set; }
 	}
 
     /// <summary>
@@ -302,16 +365,16 @@ namespace Kadrovska_sluzba.DB.Models
 	[Table("RadnikStaz")]
 	public partial class RadnikStaz
 	{
-		public virtual int RadID { get; set; }
-		public virtual int Godina { get; set; }
-		public virtual int Mjeseci { get; set; }
-		public virtual int Dana { get; set; }
-		public virtual int StazGPrethodni { get; set; }
-		public virtual int StazMjPrethodni { get; set; }
-		public virtual int? StazDanaPrethodni { get; set; }
-		public virtual int? G { get; set; }
-		public virtual int? M { get; set; }
-		public virtual int? D { get; set; }
+			public virtual int RadID { get; set; }
+			public virtual int Godina { get; set; }
+			public virtual int Mjeseci { get; set; }
+			public virtual int Dana { get; set; }
+			public virtual int StazGPrethodni { get; set; }
+			public virtual int StazMjPrethodni { get; set; }
+			public virtual int? StazDanaPrethodni { get; set; }
+			public virtual int? G { get; set; }
+			public virtual int? M { get; set; }
+			public virtual int? D { get; set; }
 	}
 
     /// <summary>
@@ -321,8 +384,8 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class Nacionalnost
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
 	}
 
     /// <summary>
@@ -332,13 +395,13 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class RadnikGO
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual int RadID { get; set; }
-		public virtual DateTime? DatumOd { get; set; }
-		public virtual DateTime? DatumDo { get; set; }
-		public virtual int Zaduzio { get; set; }
-		public virtual int Razduzio { get; set; }
-		public virtual string Napomena { get; set; }
+			public virtual int ID { get; set; }
+			public virtual int RadID { get; set; }
+			public virtual DateTime? DatumOd { get; set; }
+			public virtual DateTime? DatumDo { get; set; }
+			public virtual int Zaduzio { get; set; }
+			public virtual int Razduzio { get; set; }
+			public virtual string Napomena { get; set; }
 	}
 
     /// <summary>
@@ -348,8 +411,8 @@ namespace Kadrovska_sluzba.DB.Models
 	public partial class Drzavljanstvo
 	{
 		[Key]
-		public virtual int ID { get; set; }
-		public virtual string Naziv { get; set; }
+			public virtual int ID { get; set; }
+			public virtual string Naziv { get; set; }
 	}
 
 }

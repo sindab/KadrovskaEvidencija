@@ -105,7 +105,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelGenerator.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Models\Radnik.cs" />
+    <Compile Include="DB\Service\AppointmentsService.cs" />
     <Compile Include="DB\Service\DrzavljanstvoService.cs" />
     <Compile Include="DB\Service\FirmaService.cs" />
     <Compile Include="DB\Service\MjestoService.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="DB\Service\RadnikKursService.cs" />
     <Compile Include="DB\Service\RadnikService.cs" />
     <Compile Include="DB\Service\RadnoMjestoService.cs" />
+    <Compile Include="DB\Service\SharedService.cs" />
     <Compile Include="DB\Service\StrucnaSpremaService.cs" />
     <Compile Include="DB\Service\TipRadnogOdnosaService.cs" />
     <Compile Include="frmLogin.cs">
@@ -135,6 +136,19 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\NotifikacijeHelper.cs" />
+    <Compile Include="Helpers\RegionalSettings.cs" />
+    <Compile Include="Settings\ucGodisnjiOdmori.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\ucGodisnjiOdmori.Designer.cs">
+      <DependentUpon>ucGodisnjiOdmori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ucKalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\ucKalendar.Designer.cs">
+      <DependentUpon>ucKalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucNotifikacije.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -346,6 +360,12 @@
     <Compile Include="ucRadnik.Designer.cs">
       <DependentUpon>ucRadnik.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSettings.Designer.cs">
+      <DependentUpon>ucSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucSifarnici.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +377,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\ucGodisnjiOdmori.resx">
+      <DependentUpon>ucGodisnjiOdmori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\ucKalendar.resx">
+      <DependentUpon>ucKalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucNotifikacije.resx">
       <DependentUpon>ucNotifikacije.cs</DependentUpon>
@@ -469,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucRadnik.resx">
       <DependentUpon>ucRadnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSettings.resx">
+      <DependentUpon>ucSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucSifarnici.resx">
       <DependentUpon>ucSifarnici.cs</DependentUpon>

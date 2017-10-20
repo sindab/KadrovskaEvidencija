@@ -31,33 +31,7 @@ namespace Kadrovska_sluzba
 
         private void ucRadnik_Load(object sender, EventArgs e)
         {
-            if (!this.DesignMode)
-            { 
-                MjestoService ms = new MjestoService();
-                IEnumerable<Mjesto> mj = ms.GetAll();
-                lkpMjestoRodj.Properties.DataSource = mj.ToList();
-                lkpMjestoStan.Properties.DataSource = mj.ToList();
-                OpstinaService os = new OpstinaService();
-                lkpOpstinaIzdavanjaRK.Properties.DataSource = os.GetAll().ToList();
-                NacionalnostService ns = new NacionalnostService();
-                lkpNacionalnost.Properties.DataSource = ns.GetAll().ToList();
-                DrzavljanstvoService ds = new DrzavljanstvoService();
-                lkpDrzavljanstvo.Properties.DataSource = ds.GetAll().ToList();
-                PorodicnoStanjeService ps = new PorodicnoStanjeService();
-                lkpPorodicnoStanje.Properties.DataSource = ps.GetAll().ToList();
-                StrucnaSpremaService ss = new StrucnaSpremaService();
-                lkpStrucnaSprema.Properties.DataSource = ss.GetAll().ToList();
-                PoslovnaJedinicaService pjs = new PoslovnaJedinicaService();
-                lkpPoslovnaJedinica.Properties.DataSource = pjs.GetAll().ToList();
-                RadnoMjestoService rms = new RadnoMjestoService();
-                lkpRadnoMjesto.Properties.DataSource = rms.GetAll().ToList();
-                TipRadnogOdnosaService trs = new TipRadnogOdnosaService();
-                lkpTipRadnogOdnosa.Properties.DataSource = trs.GetAll().ToList();
-                NacinPrestankaROService nps = new NacinPrestankaROService();
-                lkpNacinPrestanka.Properties.DataSource = nps.GetAll().ToList();
 
-                ucRadniStaz1.Radnik = Radnik;
-            }
         }
         private Radnik _radnik;
         public Radnik Radnik
@@ -131,7 +105,8 @@ namespace Kadrovska_sluzba
                     }
                     xtraTabControl1.Enabled = (_radnik.ID > 0);
 
-                SetTabs();
+                    LoadLookups();
+                    SetTabs();
                 }
                 //List<Radnik> lR = new List<Radnik>();
                 //lR.Add(_radnik);
@@ -149,6 +124,36 @@ namespace Kadrovska_sluzba
             }
         }
 
+        private void LoadLookups()
+        {
+            if (!this.DesignMode)
+            {
+                MjestoService ms = new MjestoService();
+                IEnumerable<Mjesto> mj = ms.GetAll();
+                lkpMjestoRodj.Properties.DataSource = mj.ToList();
+                lkpMjestoStan.Properties.DataSource = mj.ToList();
+                OpstinaService os = new OpstinaService();
+                lkpOpstinaIzdavanjaRK.Properties.DataSource = os.GetAll().ToList();
+                NacionalnostService ns = new NacionalnostService();
+                lkpNacionalnost.Properties.DataSource = ns.GetAll().ToList();
+                DrzavljanstvoService ds = new DrzavljanstvoService();
+                lkpDrzavljanstvo.Properties.DataSource = ds.GetAll().ToList();
+                PorodicnoStanjeService ps = new PorodicnoStanjeService();
+                lkpPorodicnoStanje.Properties.DataSource = ps.GetAll().ToList();
+                StrucnaSpremaService ss = new StrucnaSpremaService();
+                lkpStrucnaSprema.Properties.DataSource = ss.GetAll().ToList();
+                PoslovnaJedinicaService pjs = new PoslovnaJedinicaService();
+                lkpPoslovnaJedinica.Properties.DataSource = pjs.GetAll().ToList();
+                RadnoMjestoService rms = new RadnoMjestoService();
+                lkpRadnoMjesto.Properties.DataSource = rms.GetAll().ToList();
+                TipRadnogOdnosaService trs = new TipRadnogOdnosaService();
+                lkpTipRadnogOdnosa.Properties.DataSource = trs.GetAll().ToList();
+                NacinPrestankaROService nps = new NacinPrestankaROService();
+                lkpNacinPrestanka.Properties.DataSource = nps.GetAll().ToList();
+
+                ucRadniStaz1.Radnik = Radnik;
+            }
+        }
 
         private void Snimi()
         {
@@ -262,6 +267,8 @@ namespace Kadrovska_sluzba
 
             _radnik.ID = rs.CreateOrUpdate(_radnik);
             Radnik = rs.GetByID(_radnik.ID);
+
+            SetTabs();
         }
 
         byte[] m_barrImg;
@@ -295,7 +302,7 @@ namespace Kadrovska_sluzba
         {
             Snimi();
         }
-        
+
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Snimi();
@@ -323,6 +330,7 @@ namespace Kadrovska_sluzba
                     ucGOList1.Roditelj = Radnik;
                     ucKursList1.Roditelj = Radnik;
                     ucBolovanjeList1.Roditelj = Radnik;
+                    ucRadniStaz1.Radnik = Radnik;
                 }
                 else
                 {
@@ -334,6 +342,7 @@ namespace Kadrovska_sluzba
                     ucGOList1.Roditelj = r;
                     ucKursList1.Roditelj = r;
                     ucBolovanjeList1.Roditelj = r;
+                    ucRadniStaz1.Radnik = r;
                 }
                 ucDjete1.AfterSave += this.DjeteAfterSave;
                 ucGOEdit1.AfterSave += this.GOAfterSave;
@@ -400,5 +409,12 @@ namespace Kadrovska_sluzba
             }
         }
 
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            //dodaj rodjendan
+            AppointmentsService s = new AppointmentsService();
+            Appointments rodj = s.NoviRodjendan(Radnik.ID, dtRodj.DateTime);
+            s.Create(rodj);
+        }
     }
 }

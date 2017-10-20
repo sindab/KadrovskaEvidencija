@@ -78,6 +78,7 @@
             // 
             this.dateNavigator.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNavigator.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Default;
             this.dateNavigator.Cursor = System.Windows.Forms.Cursors.Default;
             this.dateNavigator.Dock = System.Windows.Forms.DockStyle.Right;
             this.dateNavigator.FirstDayOfWeek = System.DayOfWeek.Monday;
@@ -94,6 +95,7 @@
             this.schedulerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.schedulerControl1.Location = new System.Drawing.Point(0, 141);
             this.schedulerControl1.Name = "schedulerControl1";
+            this.schedulerControl1.OptionsView.FirstDayOfWeek = DevExpress.XtraScheduler.FirstDayOfWeek.Monday;
             this.schedulerControl1.Size = new System.Drawing.Size(682, 510);
             this.schedulerControl1.Start = new System.DateTime(2017, 10, 2, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 4;
@@ -344,6 +346,7 @@
             this.Name = "ucNotifikacije";
             this.Size = new System.Drawing.Size(907, 651);
             this.Load += new System.EventHandler(this.frmNotifikacije_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucNotifikacije_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).EndInit();
