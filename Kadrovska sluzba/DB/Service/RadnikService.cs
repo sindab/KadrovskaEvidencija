@@ -13,18 +13,16 @@ namespace Kadrovska_sluzba.DB.Service
     {
         private IDbConnection _db = new SqlConnection(DbConnection.ConnectionString());
 
-        public IEnumerable<Radnik> GetAll()
+        public IEnumerable<Radnik> GetAll(bool neaktivni)
         {
-            //try
-            //{
-            return _db.GetAll<Radnik>();
-            //}
-            //catch (Exception)
-            //{
-            //    List<Radnik> er = new List<Radnik>();
-            //    er.Add(new Radnik { ID = 0 });
-            //    return er;
-            //}
+            if (neaktivni)
+            {
+                return _db.Query<Radnik>("SELECT * FROM [dbo].[Radnik] WHERE ISNULL(DatumPrestankaRO,0)<GETDATE()");
+            }
+            else
+            {
+                return _db.GetAll<Radnik>();
+            }
             ////return _db.Query<Radnik>("SELECT [ID],[JMBG],[Prezime],[DjevPrezime],[Ime],[ImeOca],[Bitovi],[Titula],[Funkcija]," +
             ////    "[MjestoRodjenja],[OpstinaRodjenja],[DatumRodjenja],[Drzavljanstvo],[Nacionalnost],[PorodicnoStanje]," +
             ////    "[MjestoStan],[AdresaStan],[OpstinaStan],[TelefonStan],[TelefonMob],[TelefonPosao],[Zanimanje],[StrucnaSprema],[ZavrsenaSkola]," +

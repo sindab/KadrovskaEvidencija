@@ -36,10 +36,8 @@
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucGodisnjiOdmori1 = new Kadrovska_sluzba.Settings.ucGodisnjiOdmori();
-            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.ucKalendar1 = new Kadrovska_sluzba.Settings.ucKalendar();
+            this.ucKalendar1 = new Kadrovska_sluzba.Settings.ucKalendarUpis();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
@@ -102,7 +100,6 @@
             // 
             this.employeesNavigationPage.Caption = "employeesNavigationPage";
             this.employeesNavigationPage.Controls.Add(this.ucGodisnjiOdmori1);
-            this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
             this.employeesNavigationPage.Size = new System.Drawing.Size(635, 600);
             // 
@@ -114,46 +111,11 @@
             this.ucGodisnjiOdmori1.Size = new System.Drawing.Size(635, 600);
             this.ucGodisnjiOdmori1.TabIndex = 1;
             // 
-            // employeesLabelControl
-            // 
-            this.employeesLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.employeesLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.employeesLabelControl.Appearance.Options.UseFont = true;
-            this.employeesLabelControl.Appearance.Options.UseForeColor = true;
-            this.employeesLabelControl.Appearance.Options.UseTextOptions = true;
-            this.employeesLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.employeesLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.employeesLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(635, 600);
-            this.employeesLabelControl.TabIndex = 0;
-            this.employeesLabelControl.Text = "Godišnji odmori";
-            // 
             // customersNavigationPage
             // 
             this.customersNavigationPage.Controls.Add(this.ucKalendar1);
-            this.customersNavigationPage.Controls.Add(this.customersLabelControl);
             this.customersNavigationPage.Name = "customersNavigationPage";
             this.customersNavigationPage.Size = new System.Drawing.Size(635, 600);
-            // 
-            // customersLabelControl
-            // 
-            this.customersLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.customersLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.customersLabelControl.Appearance.Options.UseFont = true;
-            this.customersLabelControl.Appearance.Options.UseForeColor = true;
-            this.customersLabelControl.Appearance.Options.UseTextOptions = true;
-            this.customersLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.customersLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(635, 600);
-            this.customersLabelControl.TabIndex = 1;
-            this.customersLabelControl.Text = "Kalendar";
             // 
             // ucKalendar1
             // 
@@ -188,10 +150,8 @@
         private DevExpress.XtraNavBar.NavBarGroup goNavBarGroup;
         private DevExpress.XtraNavBar.NavBarGroup kalendarNavBarGroup;
         private DevExpress.XtraBars.Navigation.NavigationPage employeesNavigationPage;
-        private DevExpress.XtraEditors.LabelControl employeesLabelControl;
         private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
-        private DevExpress.XtraEditors.LabelControl customersLabelControl;
         private Settings.ucGodisnjiOdmori ucGodisnjiOdmori1;
-        private Settings.ucKalendar ucKalendar1;
+        private Settings.ucKalendarUpis ucKalendar1;
     }
 }

@@ -12,16 +12,18 @@ namespace Kadrovska_sluzba.Helpers
             Application.DoEvents();
 
             //REGIONAL SETTINGS
-            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("sl-SI"));
-            CultureInfo ci = new CultureInfo("en-US");
-            NumberFormatInfo nfi = new NumberFormatInfo();
-            nfi.CurrencyDecimalSeparator = ",";
-            nfi.CurrencyGroupSeparator = ".";
-            nfi.CurrencySymbol = "KM";
-            nfi.CurrencyPositivePattern = 3;
-            nfi.CurrencyNegativePattern = 8;
-            nfi.NumberDecimalSeparator = ",";
-            nfi.NumberGroupSeparator = ".";
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("sr-SR"));
+            NumberFormatInfo nfi = new NumberFormatInfo()
+            {
+                CurrencyDecimalSeparator = ",",
+                CurrencyGroupSeparator = ".",
+                CurrencySymbol = "KM",
+                CurrencyPositivePattern = 3,
+                CurrencyNegativePattern = 8,
+                NumberDecimalSeparator = ",",
+                NumberGroupSeparator = "."
+            };
+            CultureInfo ci = new CultureInfo("sr-SR");
             ci.NumberFormat = nfi;
             ci.DateTimeFormat.PMDesignator = String.Empty;
             ci.DateTimeFormat.AMDesignator = String.Empty;

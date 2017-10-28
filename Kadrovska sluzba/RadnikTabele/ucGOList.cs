@@ -111,7 +111,6 @@ namespace Kadrovska_sluzba.RadnikTabele
         private void gridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             // proslijedi 
-
             if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
             {
                 RadnikGO trenutniGO;

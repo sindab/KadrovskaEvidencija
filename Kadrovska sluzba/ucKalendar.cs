@@ -13,9 +13,9 @@ using Kadrovska_sluzba.DB;
 
 namespace Kadrovska_sluzba
 {
-    public partial class ucNotifikacije : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucKalendar : DevExpress.XtraEditors.XtraUserControl
     {
-        public ucNotifikacije()
+        public ucKalendar()
         {
             InitializeComponent();
         }

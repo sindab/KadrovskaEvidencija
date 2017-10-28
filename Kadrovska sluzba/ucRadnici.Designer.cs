@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRadnici));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -89,8 +90,17 @@
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcPol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -100,6 +110,9 @@
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -107,15 +120,9 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpMjestoRodjenja)).BeginInit();
@@ -717,6 +724,50 @@
             this.gridColumn1.VisibleIndex = 10;
             this.gridColumn1.Width = 76;
             // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Pre. staž god.";
+            this.gridColumn7.FieldName = "StazGPrethodni";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 11;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Pre. staž mj.";
+            this.gridColumn8.FieldName = "StazMjPrethodni";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 12;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Pre. staž dana";
+            this.gridColumn9.FieldName = "StazDanaPrethodni";
+            this.gridColumn9.Name = "gridColumn9";
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Staž u f. god.";
+            this.gridColumn10.FieldName = "Godina";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 13;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Staž u f. mj.";
+            this.gridColumn11.FieldName = "Mjeseci";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 14;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Staž u f. dana";
+            this.gridColumn12.FieldName = "Dana";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Staž god.";
@@ -733,6 +784,28 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 16;
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "GO dana";
+            this.gridColumn4.FieldName = "GOOstalo";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 17;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Datum isteka ugovora";
+            this.gridColumn5.FieldName = "DatumIstekaUgovora";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Do isteka ug.";
+            this.gridColumn6.FieldName = "DoIstekaUg";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 18;
+            // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
@@ -745,9 +818,15 @@
             this.bbiDelete,
             this.bbiRefresh,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barSubItem1,
+            this.barButtonItem3,
+            this.barButtonItem4,
+            this.barButtonItem5,
+            this.barButtonItem6,
+            this.barButtonItem7});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 3;
+            this.ribbonControl.MaxItemId = 9;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -819,6 +898,32 @@
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Izvještaji";
+            this.barSubItem1.Id = 3;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Spisak radnika";
+            this.barButtonItem4.Id = 5;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 4;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -844,6 +949,7 @@
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.bbiPrintPreview);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Izvještaji i export";
@@ -874,71 +980,26 @@
             this.saveFileDialog1.FileName = "Radnici.xml";
             this.saveFileDialog1.Filter = "XML|*.xml";
             // 
-            // gridColumn4
+            // barButtonItem5
             // 
-            this.gridColumn4.Caption = "GO dana";
-            this.gridColumn4.FieldName = "GOOstalo";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 17;
+            this.barButtonItem5.Caption = "Spisak po polu";
+            this.barButtonItem5.Id = 6;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
-            // gridColumn5
+            // barButtonItem6
             // 
-            this.gridColumn5.Caption = "Datum isteka ugovora";
-            this.gridColumn5.FieldName = "DatumIstekaUgovora";
-            this.gridColumn5.Name = "gridColumn5";
+            this.barButtonItem6.Caption = "Spisak po tipu radnog odnosa";
+            this.barButtonItem6.Id = 7;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
-            // gridColumn6
+            // barButtonItem7
             // 
-            this.gridColumn6.Caption = "Do isteka ug.";
-            this.gridColumn6.FieldName = "DoIstekaUg";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 18;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Pre. staž god.";
-            this.gridColumn7.FieldName = "StazGPrethodni";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 11;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Pre. staž mj.";
-            this.gridColumn8.FieldName = "StazMjPrethodni";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 12;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Pre. staž dana";
-            this.gridColumn9.FieldName = "StazDanaPrethodni";
-            this.gridColumn9.Name = "gridColumn9";
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Staž u f. god.";
-            this.gridColumn10.FieldName = "Godina";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 13;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Staž u f. mj.";
-            this.gridColumn11.FieldName = "Mjeseci";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 14;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "Staž u f. dana";
-            this.gridColumn12.FieldName = "Dana";
-            this.gridColumn12.Name = "gridColumn12";
+            this.barButtonItem7.Caption = "Godišnji odmori";
+            this.barButtonItem7.Id = 8;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // ucRadnici
             // 
@@ -1071,5 +1132,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

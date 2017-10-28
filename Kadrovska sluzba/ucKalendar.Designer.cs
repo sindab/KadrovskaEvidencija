@@ -1,6 +1,6 @@
 ﻿namespace Kadrovska_sluzba
 {
-    partial class ucNotifikacije
+    partial class ucKalendar
     {
         /// <summary>
         /// Required designer variable.
@@ -96,18 +96,47 @@
             this.schedulerControl1.Location = new System.Drawing.Point(0, 141);
             this.schedulerControl1.Name = "schedulerControl1";
             this.schedulerControl1.OptionsView.FirstDayOfWeek = DevExpress.XtraScheduler.FirstDayOfWeek.Monday;
+            this.schedulerControl1.OptionsView.NavigationButtons.NextCaption = "Sljedeći događaj";
+            this.schedulerControl1.OptionsView.NavigationButtons.PrevCaption = "Prethodni događaj";
             this.schedulerControl1.Size = new System.Drawing.Size(682, 510);
             this.schedulerControl1.Start = new System.DateTime(2017, 10, 2, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 4;
             this.schedulerControl1.Text = "schedulerControl1";
+            this.schedulerControl1.Views.AgendaView.Enabled = false;
+            this.schedulerControl1.Views.DayView.DisplayName = "Dnevni kalendar";
+            this.schedulerControl1.Views.DayView.MenuCaption = "Dnevni";
+            this.schedulerControl1.Views.DayView.ShortDisplayName = "Dan";
             this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1);
-            this.schedulerControl1.Views.FullWeekView.Enabled = true;
+            this.schedulerControl1.Views.DayView.WorkTime = new DevExpress.XtraScheduler.WorkTimeInterval(System.TimeSpan.Parse("08:00:00"), System.TimeSpan.Parse("16:00:00"));
+            this.schedulerControl1.Views.FullWeekView.DisplayName = "Sedmični kalendar";
+            this.schedulerControl1.Views.FullWeekView.MenuCaption = "Sedmični";
+            this.schedulerControl1.Views.FullWeekView.ShortDisplayName = "Cijela sedmica";
             this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
+            this.schedulerControl1.Views.FullWeekView.WorkTime = new DevExpress.XtraScheduler.WorkTimeInterval(System.TimeSpan.Parse("08:00:00"), System.TimeSpan.Parse("16:00:00"));
+            this.schedulerControl1.Views.GanttView.Enabled = false;
+            this.schedulerControl1.Views.MonthView.DisplayName = "Mjesečni kalendar";
+            this.schedulerControl1.Views.MonthView.MenuCaption = "Mjesečni";
+            this.schedulerControl1.Views.MonthView.ShortDisplayName = "Mjesec";
+            this.schedulerControl1.Views.TimelineView.Enabled = false;
+            this.schedulerControl1.Views.WeekView.DisplayName = "Sedmični kalendar";
+            this.schedulerControl1.Views.WeekView.MenuCaption = "Sedmica";
+            this.schedulerControl1.Views.WeekView.ShortDisplayName = "Sedmica";
+            this.schedulerControl1.Views.WorkWeekView.DisplayName = "Kalendar radne sedmice";
+            this.schedulerControl1.Views.WorkWeekView.Enabled = false;
+            this.schedulerControl1.Views.WorkWeekView.MenuCaption = "Radna sedmica";
+            this.schedulerControl1.Views.WorkWeekView.ShortDisplayName = "Radna sedmica";
             this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
             // 
             // schedulerStorage1
             // 
             this.schedulerStorage1.Appointments.DataSource = this.appointmentsBindingSource;
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.NoneLabel, "None", "&None");
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.BusinessLabel, "10. godišnjica zaposlenja", "10. godišnjica zaposlenja");
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.PersonalLabel, "20. godišnjica zaposlenja", "20. godišnjica zaposlenja");
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.VacationLabel, "25. godišnjica zaposlenja", "25. godišnjica zaposlenja");
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.MustAttendLabel, "30. godišnjica zaposlenja", "30. godišnjica zaposlenja");
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.NeedsPreparationLabel, "Datum isteka ugovora", "Datum isteka ugovora");
+            this.schedulerStorage1.Appointments.Labels.Add(DevExpress.XtraScheduler.SchedulerColorId.TravelRequiredLabel, "Rođendan", "Rođendan");
             this.schedulerStorage1.Appointments.Mappings.AllDay = "AllDay";
             this.schedulerStorage1.Appointments.Mappings.Description = "Description";
             this.schedulerStorage1.Appointments.Mappings.End = "EndDate";
@@ -121,6 +150,7 @@
             this.schedulerStorage1.Appointments.Mappings.Subject = "Subject";
             this.schedulerStorage1.Appointments.Mappings.TimeZoneId = "TimeZoneId";
             this.schedulerStorage1.Appointments.Mappings.Type = "Type";
+            this.schedulerStorage1.EnableTimeZones = false;
             this.schedulerStorage1.Resources.DataSource = this.resourcesBindingSource;
             this.schedulerStorage1.Resources.Mappings.Caption = "ResourceName";
             this.schedulerStorage1.Resources.Mappings.Color = "Color";
@@ -179,13 +209,16 @@
             // 
             // switchToWorkWeekViewItem1
             // 
+            this.switchToWorkWeekViewItem1.Caption = "Radni dani";
             this.switchToWorkWeekViewItem1.Id = 1;
             this.switchToWorkWeekViewItem1.Name = "switchToWorkWeekViewItem1";
+            this.switchToWorkWeekViewItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // switchToWeekViewItem1
             // 
             this.switchToWeekViewItem1.Id = 2;
             this.switchToWeekViewItem1.Name = "switchToWeekViewItem1";
+            this.switchToWeekViewItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // switchToFullWeekViewItem1
             // 
@@ -201,16 +234,19 @@
             // 
             this.switchToTimelineViewItem1.Id = 5;
             this.switchToTimelineViewItem1.Name = "switchToTimelineViewItem1";
+            this.switchToTimelineViewItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // switchToGanttViewItem1
             // 
             this.switchToGanttViewItem1.Id = 6;
             this.switchToGanttViewItem1.Name = "switchToGanttViewItem1";
+            this.switchToGanttViewItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // switchToAgendaViewItem1
             // 
             this.switchToAgendaViewItem1.Id = 7;
             this.switchToAgendaViewItem1.Name = "switchToAgendaViewItem1";
+            this.switchToAgendaViewItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // switchTimeScalesItem1
             // 
@@ -326,6 +362,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.switchTimeScalesCaptionItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Time Scale";
+            this.ribbonPageGroup2.Visible = false;
             // 
             // ribbonPageGroup3
             // 
@@ -335,15 +372,16 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.changeSnapToCellsUIItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Layout";
+            this.ribbonPageGroup3.Visible = false;
             // 
-            // ucNotifikacije
+            // ucKalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.schedulerControl1);
             this.Controls.Add(this.dateNavigator);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "ucNotifikacije";
+            this.Name = "ucKalendar";
             this.Size = new System.Drawing.Size(907, 651);
             this.Load += new System.EventHandler(this.frmNotifikacije_Load);
             this.VisibleChanged += new System.EventHandler(this.ucNotifikacije_VisibleChanged);

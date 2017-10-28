@@ -20,6 +20,15 @@ namespace Kadrovska_sluzba.DB.Service
             return _db.GetAll<RadnikGO>();
         }
 
+        public IEnumerable<vRadnikGO> GetAllV()
+        {
+            return _db.GetAll<vRadnikGO>();
+        }
+        public IEnumerable<vRadnikGO> GetVByGodina(int godina)
+        {
+            return _db.Query<vRadnikGO>("SELECT * FROM [vRadnikGO] WHERE [Godina] = @godina", new { godina = godina });
+        }
+
         public RadnikGO GetByID(int Id)
         {
             return _db.Get<RadnikGO>(Id);
@@ -28,6 +37,11 @@ namespace Kadrovska_sluzba.DB.Service
         public IEnumerable<RadnikGO> GetByRadId(int radId)
         {
             return _db.Query<RadnikGO>("SELECT * FROM [RadnikGO] WHERE [RadID] = @RadId", new { RadId = radId });
+        }
+
+        public int GetBrojNeiskoristenihDana(int radId = 0)
+        {
+            return (int)_db.ExecuteScalar("SELECT SUM(Zaduzio - Razduzio) FROM [RadnikGO] WHERE [RadID] = CASE @RadId WHEN 0 THEN RadID ELSE @RadId END", new { RadId = radId });
         }
 
         public void CreateOrUpdate(RadnikGO radnikGO)
@@ -60,6 +74,11 @@ namespace Kadrovska_sluzba.DB.Service
         public void Delete(int id)
         {
             _db.Execute(@"DELETE FROM [RadnikGO] WHERE ID = @ID", new { ID = id });
+        }
+
+        public void PSGodisnjiOdmor(int dana, int zatvori)
+        {
+            var result = _db.Execute("DodajGodisnjiOdmor", new { dana, zatvori }, commandType: CommandType.StoredProcedure);
         }
     }
 }

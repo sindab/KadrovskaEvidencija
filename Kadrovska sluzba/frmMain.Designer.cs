@@ -61,7 +61,7 @@
             this.sifarniciNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucSifarnici1 = new Kadrovska_sluzba.ucSifarnici();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.ucNotifikacije1 = new Kadrovska_sluzba.ucNotifikacije();
+            this.ucNotifikacije1 = new Kadrovska_sluzba.ucKalendar();
             this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucSettings1 = new Kadrovska_sluzba.ucSettings();
@@ -465,7 +465,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
-        private ucNotifikacije ucNotifikacije1;
+        private ucKalendar ucNotifikacije1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage3;

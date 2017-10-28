@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRadnik));
             DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRadnik));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtPreDana = new DevExpress.XtraEditors.TextEdit();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
@@ -111,7 +110,6 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.autoGroupForHomeAddressAndPhone = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -214,7 +212,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGroupForHomeAddressAndPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
@@ -254,7 +251,6 @@
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
-            this.dataLayoutControl1.Controls.Add(this.simpleButton1);
             this.dataLayoutControl1.Controls.Add(this.txtPreDana);
             this.dataLayoutControl1.Controls.Add(this.lkpNacinPrestanka);
             this.dataLayoutControl1.Controls.Add(this.dtPrestanka);
@@ -300,16 +296,6 @@
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(1149, 702);
             this.dataLayoutControl1.TabIndex = 0;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(690, 120);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(215, 22);
-            this.simpleButton1.StyleController = this.dataLayoutControl1;
-            this.simpleButton1.TabIndex = 46;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // txtPreDana
             // 
@@ -570,7 +556,7 @@
             // 
             // lkpPorodicnoStanje
             // 
-            this.lkpPorodicnoStanje.Location = new System.Drawing.Point(775, 170);
+            this.lkpPorodicnoStanje.Location = new System.Drawing.Point(775, 168);
             this.lkpPorodicnoStanje.Name = "lkpPorodicnoStanje";
             this.lkpPorodicnoStanje.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -583,7 +569,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(283, 170);
+            this.txtEmail.Location = new System.Drawing.Point(283, 168);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(403, 20);
             this.txtEmail.StyleController = this.dataLayoutControl1;
@@ -591,7 +577,7 @@
             // 
             // txtTelPosao
             // 
-            this.txtTelPosao.Location = new System.Drawing.Point(870, 218);
+            this.txtTelPosao.Location = new System.Drawing.Point(870, 216);
             this.txtTelPosao.Name = "txtTelPosao";
             this.txtTelPosao.Size = new System.Drawing.Size(255, 20);
             this.txtTelPosao.StyleController = this.dataLayoutControl1;
@@ -599,7 +585,7 @@
             // 
             // txtMobilni
             // 
-            this.txtMobilni.Location = new System.Drawing.Point(580, 218);
+            this.txtMobilni.Location = new System.Drawing.Point(580, 216);
             this.txtMobilni.Name = "txtMobilni";
             this.txtMobilni.Size = new System.Drawing.Size(252, 20);
             this.txtMobilni.StyleController = this.dataLayoutControl1;
@@ -607,7 +593,7 @@
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(291, 218);
+            this.txtTelefon.Location = new System.Drawing.Point(291, 216);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(248, 20);
             this.txtTelefon.StyleController = this.dataLayoutControl1;
@@ -615,7 +601,7 @@
             // 
             // lkpMjestoStan
             // 
-            this.lkpMjestoStan.Location = new System.Drawing.Point(727, 194);
+            this.lkpMjestoStan.Location = new System.Drawing.Point(727, 192);
             this.lkpMjestoStan.Name = "lkpMjestoStan";
             this.lkpMjestoStan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -628,7 +614,7 @@
             // 
             // txtAdresa
             // 
-            this.txtAdresa.Location = new System.Drawing.Point(289, 194);
+            this.txtAdresa.Location = new System.Drawing.Point(289, 192);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(397, 20);
             this.txtAdresa.StyleController = this.dataLayoutControl1;
@@ -636,7 +622,7 @@
             // 
             // lkpDrzavljanstvo
             // 
-            this.lkpDrzavljanstvo.Location = new System.Drawing.Point(980, 146);
+            this.lkpDrzavljanstvo.Location = new System.Drawing.Point(980, 144);
             this.lkpDrzavljanstvo.Name = "lkpDrzavljanstvo";
             this.lkpDrzavljanstvo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -649,7 +635,7 @@
             // 
             // lkpNacionalnost
             // 
-            this.lkpNacionalnost.Location = new System.Drawing.Point(316, 146);
+            this.lkpNacionalnost.Location = new System.Drawing.Point(316, 144);
             this.lkpNacionalnost.Name = "lkpNacionalnost";
             this.lkpNacionalnost.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -662,14 +648,14 @@
             // 
             // lkpMjestoRodj
             // 
-            this.lkpMjestoRodj.Location = new System.Drawing.Point(986, 120);
+            this.lkpMjestoRodj.Location = new System.Drawing.Point(767, 120);
             this.lkpMjestoRodj.Name = "lkpMjestoRodj";
             this.lkpMjestoRodj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpMjestoRodj.Properties.DisplayMember = "Naziv";
             this.lkpMjestoRodj.Properties.NullText = "Izaberite...";
             this.lkpMjestoRodj.Properties.ValueMember = "ID";
-            this.lkpMjestoRodj.Size = new System.Drawing.Size(139, 20);
+            this.lkpMjestoRodj.Size = new System.Drawing.Size(358, 20);
             this.lkpMjestoRodj.StyleController = this.dataLayoutControl1;
             this.lkpMjestoRodj.TabIndex = 17;
             // 
@@ -735,10 +721,10 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 254);
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 252);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1125, 436);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1125, 438);
             this.xtraTabControl1.TabIndex = 10;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -752,7 +738,7 @@
             this.xtraTabPage1.Controls.Add(this.ucDjeca1);
             this.xtraTabPage1.Controls.Add(this.ucDjete1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1119, 408);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1119, 410);
             this.xtraTabPage1.Text = "Djeca";
             // 
             // ucDjeca1
@@ -761,7 +747,7 @@
             this.ucDjeca1.Location = new System.Drawing.Point(0, 0);
             this.ucDjeca1.Name = "ucDjeca1";
             this.ucDjeca1.Roditelj = null;
-            this.ucDjeca1.Size = new System.Drawing.Size(645, 408);
+            this.ucDjeca1.Size = new System.Drawing.Size(645, 410);
             this.ucDjeca1.TabIndex = 0;
             this.ucDjeca1.IzmjenaDjeteta += new Kadrovska_sluzba.RadnikTabele.ucDjeca.DjeteChangedHandler(this.ucDjeca1_IzmjenaDjeteta);
             // 
@@ -772,7 +758,7 @@
             this.ucDjete1.Dock = System.Windows.Forms.DockStyle.Right;
             this.ucDjete1.Location = new System.Drawing.Point(645, 0);
             this.ucDjete1.Name = "ucDjete1";
-            this.ucDjete1.Size = new System.Drawing.Size(474, 408);
+            this.ucDjete1.Size = new System.Drawing.Size(474, 410);
             this.ucDjete1.TabIndex = 1;
             // 
             // xtraTabPage2
@@ -878,7 +864,7 @@
             // 
             this.memoNapomena.Location = new System.Drawing.Point(250, 72);
             this.memoNapomena.Name = "memoNapomena";
-            this.memoNapomena.Size = new System.Drawing.Size(875, 166);
+            this.memoNapomena.Size = new System.Drawing.Size(875, 164);
             this.memoNapomena.StyleController = this.dataLayoutControl1;
             this.memoNapomena.TabIndex = 7;
             // 
@@ -897,7 +883,7 @@
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit1.Size = new System.Drawing.Size(222, 238);
+            this.pictureEdit1.Size = new System.Drawing.Size(222, 236);
             this.pictureEdit1.StyleController = this.dataLayoutControl1;
             this.pictureEdit1.TabIndex = 4;
             this.pictureEdit1.ContextButtonClick += new DevExpress.Utils.ContextItemClickEventHandler(this.pictureEdit1_ContextButtonClick);
@@ -992,7 +978,7 @@
             this.layoutControlItem1.Control = this.pictureEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(226, 242);
+            this.layoutControlItem1.Size = new System.Drawing.Size(226, 240);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -1006,7 +992,7 @@
             this.layoutControlItem3});
             this.autoGroupForFirstAndLastName.Location = new System.Drawing.Point(226, 0);
             this.autoGroupForFirstAndLastName.Name = "autoGroupForFirstAndLastName";
-            this.autoGroupForFirstAndLastName.Size = new System.Drawing.Size(903, 242);
+            this.autoGroupForFirstAndLastName.Size = new System.Drawing.Size(903, 240);
             this.autoGroupForFirstAndLastName.Text = "FirstAndLastName";
             // 
             // autoGroupForTabs
@@ -1016,7 +1002,7 @@
             this.autoGroupForTabs.Name = "autoGroupForTabs";
             this.autoGroupForTabs.SelectedTabPage = this.autoGroupForContact;
             this.autoGroupForTabs.SelectedTabPageIndex = 0;
-            this.autoGroupForTabs.Size = new System.Drawing.Size(903, 216);
+            this.autoGroupForTabs.Size = new System.Drawing.Size(903, 214);
             this.autoGroupForTabs.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.autoGroupForContact,
             this.autoGroupForJob,
@@ -1031,7 +1017,7 @@
             this.autoGroupForHomeAddressAndPhone});
             this.autoGroupForContact.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForContact.Name = "autoGroupForContact";
-            this.autoGroupForContact.Size = new System.Drawing.Size(879, 170);
+            this.autoGroupForContact.Size = new System.Drawing.Size(879, 168);
             this.autoGroupForContact.Text = "Kontakt";
             // 
             // autoGroupForBDateAndGender
@@ -1048,11 +1034,10 @@
             this.layoutControlItem5,
             this.layoutControlItem6,
             this.layoutControlItem9,
-            this.layoutControlItem8,
-            this.layoutControlItem26});
+            this.layoutControlItem8});
             this.autoGroupForBDateAndGender.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForBDateAndGender.Name = "autoGroupForBDateAndGender";
-            this.autoGroupForBDateAndGender.Size = new System.Drawing.Size(879, 98);
+            this.autoGroupForBDateAndGender.Size = new System.Drawing.Size(879, 96);
             this.autoGroupForBDateAndGender.Text = "BDateAndGender";
             // 
             // layoutControlItem12
@@ -1060,7 +1045,7 @@
             this.layoutControlItem12.Control = this.cbPol;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(220, 26);
+            this.layoutControlItem12.Size = new System.Drawing.Size(220, 24);
             this.layoutControlItem12.Text = "Pol";
             this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(14, 13);
@@ -1071,7 +1056,7 @@
             this.layoutControlItem13.Control = this.dtRodj;
             this.layoutControlItem13.Location = new System.Drawing.Point(220, 48);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(220, 26);
+            this.layoutControlItem13.Size = new System.Drawing.Size(220, 24);
             this.layoutControlItem13.Text = "Datum rođenja";
             this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(71, 13);
@@ -1080,9 +1065,9 @@
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.lkpMjestoRodj;
-            this.layoutControlItem14.Location = new System.Drawing.Point(659, 48);
+            this.layoutControlItem14.Location = new System.Drawing.Point(440, 48);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(220, 26);
+            this.layoutControlItem14.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem14.Text = "Mjesto rođenja";
             this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem14.TextSize = new System.Drawing.Size(72, 13);
@@ -1091,7 +1076,7 @@
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.lkpNacionalnost;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(659, 24);
             this.layoutControlItem15.Text = "Nacionalnost";
@@ -1102,7 +1087,7 @@
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.lkpDrzavljanstvo;
-            this.layoutControlItem16.Location = new System.Drawing.Point(659, 74);
+            this.layoutControlItem16.Location = new System.Drawing.Point(659, 72);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(220, 24);
             this.layoutControlItem16.Text = "Državljanstvo";
@@ -1154,15 +1139,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(26, 13);
             this.layoutControlItem8.TextToControlDistance = 5;
             // 
-            // layoutControlItem26
-            // 
-            this.layoutControlItem26.Control = this.simpleButton1;
-            this.layoutControlItem26.Location = new System.Drawing.Point(440, 48);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(219, 26);
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem26.TextVisible = false;
-            // 
             // autoGroupForHomeAddressAndPhone
             // 
             this.autoGroupForHomeAddressAndPhone.CustomizationFormText = "HomeAddressAndPhone";
@@ -1176,7 +1152,7 @@
             this.layoutControlItem21,
             this.layoutControlItem22,
             this.layoutControlItem23});
-            this.autoGroupForHomeAddressAndPhone.Location = new System.Drawing.Point(0, 98);
+            this.autoGroupForHomeAddressAndPhone.Location = new System.Drawing.Point(0, 96);
             this.autoGroupForHomeAddressAndPhone.Name = "autoGroupForHomeAddressAndPhone";
             this.autoGroupForHomeAddressAndPhone.Size = new System.Drawing.Size(879, 72);
             this.autoGroupForHomeAddressAndPhone.Text = "HomeAddressAndPhone";
@@ -1267,7 +1243,7 @@
             this.autoGroupForGroupAndTitle});
             this.autoGroupForJob.Location = new System.Drawing.Point(0, 0);
             this.autoGroupForJob.Name = "autoGroupForJob";
-            this.autoGroupForJob.Size = new System.Drawing.Size(879, 170);
+            this.autoGroupForJob.Size = new System.Drawing.Size(879, 168);
             this.autoGroupForJob.Text = "Zaposlenje";
             // 
             // autoGroupForHDateAndSalary
@@ -1416,7 +1392,7 @@
             this.layoutControlItem39});
             this.autoGroupForGroupAndTitle.Location = new System.Drawing.Point(0, 96);
             this.autoGroupForGroupAndTitle.Name = "autoGroupForGroupAndTitle";
-            this.autoGroupForGroupAndTitle.Size = new System.Drawing.Size(879, 74);
+            this.autoGroupForGroupAndTitle.Size = new System.Drawing.Size(879, 72);
             this.autoGroupForGroupAndTitle.Text = "GroupAndTitle";
             // 
             // layoutControlItem34
@@ -1457,7 +1433,7 @@
             this.layoutControlItem40.Control = this.dtPrestanka;
             this.layoutControlItem40.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(440, 26);
+            this.layoutControlItem40.Size = new System.Drawing.Size(440, 24);
             this.layoutControlItem40.Text = "Datum prestanka radnog odnosa";
             this.layoutControlItem40.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem40.TextSize = new System.Drawing.Size(157, 13);
@@ -1468,7 +1444,7 @@
             this.layoutControlItem41.Control = this.lkpNacinPrestanka;
             this.layoutControlItem41.Location = new System.Drawing.Point(440, 48);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(439, 26);
+            this.layoutControlItem41.Size = new System.Drawing.Size(439, 24);
             this.layoutControlItem41.Text = "Način prestanka radnog odnosa";
             this.layoutControlItem41.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem41.TextSize = new System.Drawing.Size(152, 13);
@@ -1513,7 +1489,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(879, 170);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(879, 168);
             this.layoutControlGroup2.Text = "Napomena";
             // 
             // layoutControlItem4
@@ -1521,7 +1497,7 @@
             this.layoutControlItem4.Control = this.memoNapomena;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(879, 170);
+            this.layoutControlItem4.Size = new System.Drawing.Size(879, 168);
             this.layoutControlItem4.Text = "Napomena";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -1552,9 +1528,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.xtraTabControl1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 242);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 240);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(1129, 440);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1129, 442);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -1636,7 +1612,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGroupForHomeAddressAndPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
@@ -1791,7 +1766,5 @@
         private RadnikTabele.ucKursEdit ucKursEdit1;
         private RadnikTabele.ucBolovanjeList ucBolovanjeList1;
         private RadnikTabele.ucBolovanjeEdit ucBolovanjeEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
     }
 }

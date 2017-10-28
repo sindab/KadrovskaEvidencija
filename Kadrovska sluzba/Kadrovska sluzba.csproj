@@ -55,20 +55,31 @@
     <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.Contrib.1.50.0\lib\net45\Dapper.Contrib.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -137,23 +148,47 @@
     </Compile>
     <Compile Include="Helpers\NotifikacijeHelper.cs" />
     <Compile Include="Helpers\RegionalSettings.cs" />
+    <Compile Include="Reports\rptGodisnjiOdmori.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptGodisnjiOdmori.Designer.cs">
+      <DependentUpon>rptGodisnjiOdmori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoTipuRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoTipuRO.Designer.cs">
+      <DependentUpon>rptSpisakRadnikaPoTipuRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoPolu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoPolu.Designer.cs">
+      <DependentUpon>rptSpisakRadnikaPoPolu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnika.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnika.Designer.cs">
+      <DependentUpon>rptSpisakRadnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings\ucGodisnjiOdmori.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Settings\ucGodisnjiOdmori.Designer.cs">
       <DependentUpon>ucGodisnjiOdmori.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings\ucKalendar.cs">
+    <Compile Include="Settings\ucKalendarUpis.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Settings\ucKalendar.Designer.cs">
+    <Compile Include="Settings\ucKalendarUpis.Designer.cs">
+      <DependentUpon>ucKalendarUpis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKalendar.Designer.cs">
       <DependentUpon>ucKalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucNotifikacije.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucNotifikacije.Designer.cs">
-      <DependentUpon>ucNotifikacije.cs</DependentUpon>
     </Compile>
     <Compile Include="KadrovskaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -378,14 +413,26 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptGodisnjiOdmori.resx">
+      <DependentUpon>rptGodisnjiOdmori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSpisakRadnikaPoTipuRO.resx">
+      <DependentUpon>rptSpisakRadnikaPoTipuRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSpisakRadnikaPoPolu.resx">
+      <DependentUpon>rptSpisakRadnikaPoPolu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSpisakRadnika.resx">
+      <DependentUpon>rptSpisakRadnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\ucGodisnjiOdmori.resx">
       <DependentUpon>ucGodisnjiOdmori.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings\ucKalendar.resx">
-      <DependentUpon>ucKalendar.cs</DependentUpon>
+    <EmbeddedResource Include="Settings\ucKalendarUpis.resx">
+      <DependentUpon>ucKalendarUpis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucNotifikacije.resx">
-      <DependentUpon>ucNotifikacije.cs</DependentUpon>
+    <EmbeddedResource Include="ucKalendar.resx">
+      <DependentUpon>ucKalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

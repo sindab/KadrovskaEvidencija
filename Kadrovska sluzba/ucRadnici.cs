@@ -13,6 +13,8 @@ using System.ComponentModel.DataAnnotations;
 using Kadrovska_sluzba.DB.Models;
 using Kadrovska_sluzba.DB.Service;
 using Microsoft.Win32;
+using Kadrovska_sluzba.Reports;
+using DevExpress.XtraReports.UI;
 
 namespace Kadrovska_sluzba
 {
@@ -209,6 +211,34 @@ namespace Kadrovska_sluzba
         {
             openFileDialog1.ShowDialog();
             gridView.RestoreLayoutFromXml(openFileDialog1.FileName);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //rptSpisakRadnika
+            rptSpisakRadnika r = new rptSpisakRadnika();
+            r.ShowPreview();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //rptSpisakRadnikaPoPolu
+            rptSpisakRadnikaPoPolu r = new rptSpisakRadnikaPoPolu();
+            r.ShowPreview();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //rptSpisakRadnikaPoTipuRO
+            rptSpisakRadnikaPoTipuRO r = new rptSpisakRadnikaPoTipuRO();
+            r.ShowPreview();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //rptGodisnjiOdmori
+            rptGodisnjiOdmori r = new rptGodisnjiOdmori();
+            r.ShowPreview();
         }
     }
 }

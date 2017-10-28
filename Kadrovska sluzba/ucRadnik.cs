@@ -172,7 +172,7 @@ namespace Kadrovska_sluzba
             else _radnik.MjestoRodjenja = Convert.ToInt32(lkpMjestoRodj.EditValue);
 
             //_radnik.DatumRodjenja = (DateTime)dtRodj.EditValue;
-            if (dtRodj.EditValue == null) _radnik.DatumRodjenja = null;
+            if (dtRodj.EditValue == null) _radnik.DatumRodjenja = DateTime.Today;
             else _radnik.DatumRodjenja = Convert.ToDateTime(dtRodj.EditValue);
 
             //_radnik.DrzavljanstvoID = (int)lkpDrzavljanstvo.EditValue;
@@ -233,7 +233,7 @@ namespace Kadrovska_sluzba
             //else _radnik.PrethodniStazUFirmiDan = Convert.ToInt32(txtPreFirmaDana.EditValue);
 
             //_radnik.DatumZapos = (DateTime)dtZapos.EditValue;
-            if (dtZapos.EditValue == null) _radnik.DatumZapos = null;
+            if (dtZapos.EditValue == null) _radnik.DatumZapos = DateTime.Today;
             else _radnik.DatumZapos = Convert.ToDateTime(dtZapos.EditValue);
 
             //_radnik.TipRadnogOdnosaID = (int)lkpTipRadnogOdnosa.EditValue;
@@ -408,13 +408,6 @@ namespace Kadrovska_sluzba
                 ucBolovanjeEdit1.Bolovanje = myArgs.Bolovanje;
             }
         }
-
-        private void simpleButton1_Click_1(object sender, EventArgs e)
-        {
-            //dodaj rodjendan
-            AppointmentsService s = new AppointmentsService();
-            Appointments rodj = s.NoviRodjendan(Radnik.ID, dtRodj.DateTime);
-            s.Create(rodj);
-        }
+        
     }
 }
