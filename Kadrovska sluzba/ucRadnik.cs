@@ -75,8 +75,8 @@ namespace Kadrovska_sluzba
                     //dtPrvoZapos.EditValue = _radnik.DatumPrvogZapos;
                     txtPreMjeseci.EditValue = _radnik.PrethodniStazMj;
                     txtPreDana.EditValue = _radnik.PrethodniStazDan;
-                    //txtPreFirmaMj.EditValue = _radnik.PrethodniStazUFirmiMj;
-                    //txtPreFirmaDana.EditValue = _radnik.PrethodniStazUFirmiDan;
+                    txtPreMjeseciUFirmi.EditValue = _radnik.PrethodniStazUFirmiMj;
+                    txtPreDanaUFirmi.EditValue = _radnik.PrethodniStazUFirmiDan;
                     dtZapos.EditValue = _radnik.DatumZapos;
                     lkpTipRadnogOdnosa.EditValue = _radnik.TipRadnogOdnosaID;
                     lkpNacinPrestanka.EditValue = _radnik.NacinPrestankaRoID;
@@ -224,13 +224,13 @@ namespace Kadrovska_sluzba
             if (txtPreDana.EditValue == null) _radnik.PrethodniStazDan = null;
             else _radnik.PrethodniStazDan = Convert.ToInt32(txtPreDana.EditValue);
 
-            ////_radnik.PrethodniStazUFirmiMj = (int)txtPreFirmaMj.EditValue;
-            //if (txtPreFirmaMj.EditValue == null) _radnik.PrethodniStazUFirmiMj = null;
-            //else _radnik.PrethodniStazUFirmiMj = Convert.ToInt32(txtPreFirmaMj.EditValue);
+            //_radnik.PrethodniStazUFirmiMj = (int)txtPreFirmaMj.EditValue;
+            if (txtPreMjeseciUFirmi.EditValue == null) _radnik.PrethodniStazUFirmiMj = null;
+            else _radnik.PrethodniStazUFirmiMj = Convert.ToInt32(txtPreMjeseciUFirmi.EditValue);
 
-            ////_radnik.PrethodniStazUFirmiDan = (int)txtPreFirmaDana.EditValue;
-            //if (txtPreFirmaDana.EditValue == null) _radnik.PrethodniStazUFirmiDan = null;
-            //else _radnik.PrethodniStazUFirmiDan = Convert.ToInt32(txtPreFirmaDana.EditValue);
+            //_radnik.PrethodniStazUFirmiDan = (int)txtPreFirmaDana.EditValue;
+            if (txtPreDanaUFirmi.EditValue == null) _radnik.PrethodniStazUFirmiDan = null;
+            else _radnik.PrethodniStazUFirmiDan = Convert.ToInt32(txtPreDanaUFirmi.EditValue);
 
             //_radnik.DatumZapos = (DateTime)dtZapos.EditValue;
             if (dtZapos.EditValue == null) _radnik.DatumZapos = DateTime.Today;
@@ -331,6 +331,7 @@ namespace Kadrovska_sluzba
                     ucKursList1.Roditelj = Radnik;
                     ucBolovanjeList1.Roditelj = Radnik;
                     ucRadniStaz1.Radnik = Radnik;
+                    ucPovredaList1.Roditelj = Radnik;
                 }
                 else
                 {
@@ -343,11 +344,13 @@ namespace Kadrovska_sluzba
                     ucKursList1.Roditelj = r;
                     ucBolovanjeList1.Roditelj = r;
                     ucRadniStaz1.Radnik = r;
+                    ucPovredaList1.Roditelj = r;
                 }
                 ucDjete1.AfterSave += this.DjeteAfterSave;
                 ucGOEdit1.AfterSave += this.GOAfterSave;
                 ucKursEdit1.AfterSave += this.KursAfterSave;
                 ucBolovanjeEdit1.AfterSave += this.BolovanjeAfterSave;
+                ucPovredaEdit1.AfterSave += this.PovredaAfterSave;
             }
         }
 
@@ -379,6 +382,13 @@ namespace Kadrovska_sluzba
                 ucBolovanjeList1.LoadData();
             }
         }
+        private void PovredaAfterSave(object sender, EventArgs e)
+        {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucPovredaList1.LoadData();
+            }
+        }
 
         private void ucDjeca1_IzmjenaDjeteta(object myObject, RadnikTabele.ucDjeca.DjeteArgs myArgs)
         {
@@ -408,6 +418,12 @@ namespace Kadrovska_sluzba
                 ucBolovanjeEdit1.Bolovanje = myArgs.Bolovanje;
             }
         }
-        
+        private void ucPovredaList1_IzmjenaPovreda(object myObject, RadnikTabele.ucPovredaList.PovredaArgs myArgs)
+        {
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                ucPovredaEdit1.Povreda = myArgs.Povreda;
+            }
+        }
     }
 }

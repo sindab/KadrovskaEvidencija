@@ -15,7 +15,7 @@ namespace Kadrovska_sluzba
     {
         public frmMain()
         {
-            Helpers.RegionalSettings.SetRegionalSettings();
+            //Helpers.RegionalSettings.SetRegionalSettings();
             InitializeComponent();
         }
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

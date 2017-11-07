@@ -353,6 +353,19 @@ namespace Kadrovska_sluzba.DB.Models
 	}
 
     /// <summary>
+    /// A class which represents the RadnikPovredaRO table.
+    /// </summary>
+	[Table("RadnikPovredaRO")]
+	public partial class RadnikPovredaRO
+	{
+		[Key]
+			public virtual int ID { get; set; }
+			public virtual int RadID { get; set; }
+			public virtual DateTime? Datum { get; set; }
+			public virtual string Opis { get; set; }
+	}
+
+    /// <summary>
     /// A class which represents the NacinPrestankaRO table.
     /// </summary>
 	[Table("NacinPrestankaRO")]
@@ -389,6 +402,9 @@ namespace Kadrovska_sluzba.DB.Models
 			public virtual int StazGPrethodni { get; set; }
 			public virtual int StazMjPrethodni { get; set; }
 			public virtual int? StazDanaPrethodni { get; set; }
+			public virtual int StazGPrethodniUFirmi { get; set; }
+			public virtual int StazMjPrethodniUFirmi { get; set; }
+			public virtual int? StazDanaPrethodniUFirmi { get; set; }
 			public virtual int? G { get; set; }
 			public virtual int? M { get; set; }
 			public virtual int? D { get; set; }

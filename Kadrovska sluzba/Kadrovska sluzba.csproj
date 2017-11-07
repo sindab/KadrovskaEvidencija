@@ -129,6 +129,7 @@
     <Compile Include="DB\Service\RadnikGOService.cs" />
     <Compile Include="DB\Service\RadnikBolovanjeService.cs" />
     <Compile Include="DB\Service\RadnikKursService.cs" />
+    <Compile Include="DB\Service\RadnikPovredaROService.cs" />
     <Compile Include="DB\Service\RadnikService.cs" />
     <Compile Include="DB\Service\RadnoMjestoService.cs" />
     <Compile Include="DB\Service\SharedService.cs" />
@@ -148,11 +149,35 @@
     </Compile>
     <Compile Include="Helpers\NotifikacijeHelper.cs" />
     <Compile Include="Helpers\RegionalSettings.cs" />
+    <Compile Include="RadnikTabele\ucPovredaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucPovredaEdit.Designer.cs">
+      <DependentUpon>ucPovredaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikTabele\ucPovredaList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadnikTabele\ucPovredaList.Designer.cs">
+      <DependentUpon>ucPovredaList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\rptGodisnjiOdmori.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\rptGodisnjiOdmori.Designer.cs">
       <DependentUpon>rptGodisnjiOdmori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoStarosti.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoStarosti.Designer.cs">
+      <DependentUpon>rptSpisakRadnikaPoStarosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoRadnomMjestu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaPoRadnomMjestu.Designer.cs">
+      <DependentUpon>rptSpisakRadnikaPoRadnomMjestu.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\rptSpisakRadnikaPoTipuRO.cs">
       <SubType>Component</SubType>
@@ -413,8 +438,20 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucPovredaEdit.resx">
+      <DependentUpon>ucPovredaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikTabele\ucPovredaList.resx">
+      <DependentUpon>ucPovredaList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptGodisnjiOdmori.resx">
       <DependentUpon>rptGodisnjiOdmori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSpisakRadnikaPoStarosti.resx">
+      <DependentUpon>rptSpisakRadnikaPoStarosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSpisakRadnikaPoRadnomMjestu.resx">
+      <DependentUpon>rptSpisakRadnikaPoRadnomMjestu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptSpisakRadnikaPoTipuRO.resx">
       <DependentUpon>rptSpisakRadnikaPoTipuRO.cs</DependentUpon>

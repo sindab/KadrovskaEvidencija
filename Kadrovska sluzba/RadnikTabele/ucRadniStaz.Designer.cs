@@ -43,6 +43,10 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDPF = new DevExpress.XtraEditors.TextEdit();
+            this.txtMPF = new DevExpress.XtraEditors.TextEdit();
+            this.txtGPF = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtDU.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMU.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGU.Properties)).BeginInit();
@@ -52,11 +56,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDPF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMPF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGPF.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDU
             // 
-            this.txtDU.Location = new System.Drawing.Point(241, 113);
+            this.txtDU.Location = new System.Drawing.Point(331, 140);
             this.txtDU.Name = "txtDU";
             this.txtDU.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtDU.Properties.Appearance.Options.UseFont = true;
@@ -66,7 +73,7 @@
             // 
             // txtMU
             // 
-            this.txtMU.Location = new System.Drawing.Point(165, 113);
+            this.txtMU.Location = new System.Drawing.Point(255, 140);
             this.txtMU.Name = "txtMU";
             this.txtMU.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtMU.Properties.Appearance.Options.UseFont = true;
@@ -76,7 +83,7 @@
             // 
             // txtGU
             // 
-            this.txtGU.Location = new System.Drawing.Point(89, 113);
+            this.txtGU.Location = new System.Drawing.Point(179, 140);
             this.txtGU.Name = "txtGU";
             this.txtGU.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtGU.Properties.Appearance.Options.UseFont = true;
@@ -86,7 +93,7 @@
             // 
             // txtDP
             // 
-            this.txtDP.Location = new System.Drawing.Point(241, 77);
+            this.txtDP.Location = new System.Drawing.Point(331, 32);
             this.txtDP.Name = "txtDP";
             this.txtDP.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtDP.Properties.Appearance.Options.UseFont = true;
@@ -96,7 +103,7 @@
             // 
             // txtMP
             // 
-            this.txtMP.Location = new System.Drawing.Point(165, 77);
+            this.txtMP.Location = new System.Drawing.Point(255, 32);
             this.txtMP.Name = "txtMP";
             this.txtMP.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtMP.Properties.Appearance.Options.UseFont = true;
@@ -106,7 +113,7 @@
             // 
             // txtGP
             // 
-            this.txtGP.Location = new System.Drawing.Point(89, 77);
+            this.txtGP.Location = new System.Drawing.Point(179, 32);
             this.txtGP.Name = "txtGP";
             this.txtGP.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtGP.Properties.Appearance.Options.UseFont = true;
@@ -116,7 +123,7 @@
             // 
             // txtDF
             // 
-            this.txtDF.Location = new System.Drawing.Point(241, 41);
+            this.txtDF.Location = new System.Drawing.Point(331, 104);
             this.txtDF.Name = "txtDF";
             this.txtDF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtDF.Properties.Appearance.Options.UseFont = true;
@@ -126,7 +133,7 @@
             // 
             // txtMF
             // 
-            this.txtMF.Location = new System.Drawing.Point(165, 41);
+            this.txtMF.Location = new System.Drawing.Point(255, 104);
             this.txtMF.Name = "txtMF";
             this.txtMF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtMF.Properties.Appearance.Options.UseFont = true;
@@ -136,7 +143,7 @@
             // 
             // txtGF
             // 
-            this.txtGF.Location = new System.Drawing.Point(89, 41);
+            this.txtGF.Location = new System.Drawing.Point(179, 104);
             this.txtGF.Name = "txtGF";
             this.txtGF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.txtGF.Properties.Appearance.Options.UseFont = true;
@@ -148,7 +155,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(241, 3);
+            this.labelControl6.Location = new System.Drawing.Point(331, 3);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(44, 23);
             this.labelControl6.TabIndex = 20;
@@ -158,7 +165,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(165, 3);
+            this.labelControl5.Location = new System.Drawing.Point(255, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(61, 23);
             this.labelControl5.TabIndex = 19;
@@ -168,7 +175,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(89, 3);
+            this.labelControl4.Location = new System.Drawing.Point(179, 3);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(59, 23);
             this.labelControl4.TabIndex = 18;
@@ -178,7 +185,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(3, 116);
+            this.labelControl3.Location = new System.Drawing.Point(3, 143);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(64, 23);
             this.labelControl3.TabIndex = 17;
@@ -188,7 +195,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(3, 80);
+            this.labelControl2.Location = new System.Drawing.Point(3, 35);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(80, 23);
             this.labelControl2.TabIndex = 16;
@@ -198,16 +205,60 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(3, 44);
+            this.labelControl1.Location = new System.Drawing.Point(3, 107);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(47, 23);
             this.labelControl1.TabIndex = 15;
             this.labelControl1.Text = "Firma";
             // 
+            // txtDPF
+            // 
+            this.txtDPF.Location = new System.Drawing.Point(331, 68);
+            this.txtDPF.Name = "txtDPF";
+            this.txtDPF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.txtDPF.Properties.Appearance.Options.UseFont = true;
+            this.txtDPF.Properties.ReadOnly = true;
+            this.txtDPF.Size = new System.Drawing.Size(70, 30);
+            this.txtDPF.TabIndex = 33;
+            // 
+            // txtMPF
+            // 
+            this.txtMPF.Location = new System.Drawing.Point(255, 68);
+            this.txtMPF.Name = "txtMPF";
+            this.txtMPF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.txtMPF.Properties.Appearance.Options.UseFont = true;
+            this.txtMPF.Properties.ReadOnly = true;
+            this.txtMPF.Size = new System.Drawing.Size(70, 30);
+            this.txtMPF.TabIndex = 32;
+            // 
+            // txtGPF
+            // 
+            this.txtGPF.Location = new System.Drawing.Point(179, 68);
+            this.txtGPF.Name = "txtGPF";
+            this.txtGPF.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.txtGPF.Properties.Appearance.Options.UseFont = true;
+            this.txtGPF.Properties.ReadOnly = true;
+            this.txtGPF.Size = new System.Drawing.Size(70, 30);
+            this.txtGPF.TabIndex = 31;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(3, 71);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(140, 23);
+            this.labelControl7.TabIndex = 30;
+            this.labelControl7.Text = "Prethodni u firmi";
+            // 
             // ucRadniStaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtDPF);
+            this.Controls.Add(this.txtMPF);
+            this.Controls.Add(this.txtGPF);
+            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.txtDU);
             this.Controls.Add(this.txtMU);
             this.Controls.Add(this.txtGU);
@@ -224,7 +275,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "ucRadniStaz";
-            this.Size = new System.Drawing.Size(317, 150);
+            this.Size = new System.Drawing.Size(411, 179);
             ((System.ComponentModel.ISupportInitialize)(this.txtDU.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMU.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGU.Properties)).EndInit();
@@ -234,6 +285,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDPF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMPF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGPF.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +310,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtDPF;
+        private DevExpress.XtraEditors.TextEdit txtMPF;
+        private DevExpress.XtraEditors.TextEdit txtGPF;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

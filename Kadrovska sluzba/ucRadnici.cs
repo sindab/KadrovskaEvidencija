@@ -240,5 +240,26 @@ namespace Kadrovska_sluzba
             rptGodisnjiOdmori r = new rptGodisnjiOdmori();
             r.ShowPreview();
         }
+
+        private void gridControl_DoubleClick(object sender, EventArgs e)
+        {
+            if (TrenutniRadnik.ID > 0)
+            {
+                RadnikArgs myArgs = new RadnikArgs(rs.GetByID(TrenutniRadnik.ID));
+                IzmjenaRadnika(this, myArgs);
+            }
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rptSpisakRadnikaPoStarosti r = new rptSpisakRadnikaPoStarosti();
+            r.ShowPreview();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rptSpisakRadnikaPoRadnomMjestu r = new rptSpisakRadnikaPoRadnomMjestu();
+            r.ShowPreview();
+        }
     }
 }

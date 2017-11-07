@@ -41,7 +41,14 @@ namespace Kadrovska_sluzba.DB.Service
 
         public int GetBrojNeiskoristenihDana(int radId = 0)
         {
-            return (int)_db.ExecuteScalar("SELECT SUM(Zaduzio - Razduzio) FROM [RadnikGO] WHERE [RadID] = CASE @RadId WHEN 0 THEN RadID ELSE @RadId END", new { RadId = radId });
+            try
+            {
+                return (int)_db.ExecuteScalar("SELECT SUM(Zaduzio - Razduzio) FROM [RadnikGO] WHERE [RadID] = CASE @RadId WHEN 0 THEN RadID ELSE @RadId END", new { RadId = radId });
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
         public void CreateOrUpdate(RadnikGO radnikGO)

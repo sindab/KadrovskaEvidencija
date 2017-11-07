@@ -45,28 +45,34 @@ namespace Kadrovska_sluzba.RadnikTabele
                     RadnikStaz rst = rs.GetStaz(Radnik.ID);
                     txtGF.EditValue = rst.Godina;
                     txtGP.EditValue = rst.StazGPrethodni;
+                    txtGPF.EditValue = rst.StazGPrethodniUFirmi;
                     txtGU.EditValue = rst.G;
 
                     txtMF.EditValue = rst.Mjeseci;
                     txtMP.EditValue = rst.StazMjPrethodni;
+                    txtMPF.EditValue = rst.StazMjPrethodniUFirmi;
                     txtMU.EditValue = rst.M;
 
                     txtDF.EditValue = rst.Dana;
                     txtDP.EditValue = rst.StazDanaPrethodni;
+                    txtDPF.EditValue = rst.StazDanaPrethodniUFirmi;
                     txtDU.EditValue = rst.D;
                 }
                 else
                 {
                     txtGF.EditValue = 0;
                     txtGP.EditValue = 0;
+                    txtGPF.EditValue = 0;
                     txtGU.EditValue = 0;
 
                     txtMF.EditValue = 0;
                     txtMP.EditValue = 0;
+                    txtMPF.EditValue = 0;
                     txtMU.EditValue = 0;
 
                     txtDF.EditValue = 0;
                     txtDP.EditValue = 0;
+                    txtDPF.EditValue = 0;
                     txtDU.EditValue = 0;
                 }
             }
