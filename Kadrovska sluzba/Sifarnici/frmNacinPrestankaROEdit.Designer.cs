@@ -140,9 +140,11 @@
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(45, 251);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(21, 13);
+            this.labelControl1.Size = new System.Drawing.Size(32, 19);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Opis";
             // 
@@ -151,14 +153,18 @@
             this.txtOpis.Location = new System.Drawing.Point(96, 248);
             this.txtOpis.MenuManager = this.mainRibbonControl;
             this.txtOpis.Name = "txtOpis";
-            this.txtOpis.Size = new System.Drawing.Size(333, 20);
+            this.txtOpis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtOpis.Properties.Appearance.Options.UseFont = true;
+            this.txtOpis.Size = new System.Drawing.Size(333, 26);
             this.txtOpis.TabIndex = 3;
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(45, 194);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(38, 19);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Naziv";
             // 
@@ -167,10 +173,12 @@
             this.txtNaziv.Location = new System.Drawing.Point(96, 191);
             this.txtNaziv.MenuManager = this.mainRibbonControl;
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(333, 20);
+            this.txtNaziv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtNaziv.Properties.Appearance.Options.UseFont = true;
+            this.txtNaziv.Size = new System.Drawing.Size(333, 26);
             this.txtNaziv.TabIndex = 1;
             // 
-            // frmStrucnaSpremaEdit
+            // frmNacinPrestankaROEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +189,7 @@
             this.Controls.Add(this.txtOpis);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Name = "frmStrucnaSpremaEdit";
+            this.Name = "frmNacinPrestankaROEdit";
             this.Ribbon = this.mainRibbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();

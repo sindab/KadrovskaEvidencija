@@ -31,7 +31,7 @@
             DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRadnik));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.txtPreDanaUFirmi = new DevExpress.XtraEditors.TextEdit();
+            this.dtIstek = new DevExpress.XtraEditors.DateEdit();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -41,6 +41,7 @@
             this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
             this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.txtPreDanaUFirmi = new DevExpress.XtraEditors.TextEdit();
             this.txtPreMjeseciUFirmi = new DevExpress.XtraEditors.TextEdit();
             this.txtPreDana = new DevExpress.XtraEditors.TextEdit();
             this.lkpNacinPrestanka = new DevExpress.XtraEditors.LookUpEdit();
@@ -88,6 +89,9 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.ucBolovanjeList1 = new Kadrovska_sluzba.RadnikTabele.ucBolovanjeList();
             this.ucBolovanjeEdit1 = new Kadrovska_sluzba.RadnikTabele.ucBolovanjeEdit();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.ucPovredaList1 = new Kadrovska_sluzba.RadnikTabele.ucPovredaList();
+            this.ucPovredaEdit1 = new Kadrovska_sluzba.RadnikTabele.ucPovredaEdit();
             this.memoNapomena = new DevExpress.XtraEditors.MemoEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.txtPrezime = new DevExpress.XtraEditors.TextEdit();
@@ -143,18 +147,18 @@
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.ucPovredaEdit1 = new Kadrovska_sluzba.RadnikTabele.ucPovredaEdit();
-            this.ucPovredaList1 = new Kadrovska_sluzba.RadnikTabele.ucPovredaList();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPreDanaUFirmi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIstek.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIstek.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPreDanaUFirmi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreMjeseciUFirmi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreDana.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpNacinPrestanka.Properties)).BeginInit();
@@ -197,6 +201,7 @@
             this.xtraTabPage3.SuspendLayout();
             this.xtraTabPage4.SuspendLayout();
             this.xtraTabPage5.SuspendLayout();
+            this.xtraTabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoNapomena.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrezime.Properties)).BeginInit();
@@ -252,17 +257,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            this.xtraTabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
+            this.dataLayoutControl1.Controls.Add(this.dtIstek);
             this.dataLayoutControl1.Controls.Add(this.txtPreDanaUFirmi);
             this.dataLayoutControl1.Controls.Add(this.txtPreMjeseciUFirmi);
             this.dataLayoutControl1.Controls.Add(this.txtPreDana);
@@ -311,16 +317,19 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(1149, 702);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // txtPreDanaUFirmi
+            // dtIstek
             // 
-            this.txtPreDanaUFirmi.Location = new System.Drawing.Point(740, 96);
-            this.txtPreDanaUFirmi.MenuManager = this.mainRibbonControl;
-            this.txtPreDanaUFirmi.Name = "txtPreDanaUFirmi";
-            this.txtPreDanaUFirmi.Properties.Mask.EditMask = "n0";
-            this.txtPreDanaUFirmi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtPreDanaUFirmi.Size = new System.Drawing.Size(111, 20);
-            this.txtPreDanaUFirmi.StyleController = this.dataLayoutControl1;
-            this.txtPreDanaUFirmi.TabIndex = 47;
+            this.dtIstek.EditValue = null;
+            this.dtIstek.Location = new System.Drawing.Point(1014, 240);
+            this.dtIstek.MenuManager = this.mainRibbonControl;
+            this.dtIstek.Name = "dtIstek";
+            this.dtIstek.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtIstek.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtIstek.Size = new System.Drawing.Size(111, 20);
+            this.dtIstek.StyleController = this.dataLayoutControl1;
+            this.dtIstek.TabIndex = 48;
             // 
             // mainRibbonControl
             // 
@@ -413,6 +422,17 @@
             this.mainRibbonPageGroup.ShowCaptionButton = false;
             this.mainRibbonPageGroup.Text = "Podaci";
             // 
+            // txtPreDanaUFirmi
+            // 
+            this.txtPreDanaUFirmi.Location = new System.Drawing.Point(740, 96);
+            this.txtPreDanaUFirmi.MenuManager = this.mainRibbonControl;
+            this.txtPreDanaUFirmi.Name = "txtPreDanaUFirmi";
+            this.txtPreDanaUFirmi.Properties.Mask.EditMask = "n0";
+            this.txtPreDanaUFirmi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtPreDanaUFirmi.Size = new System.Drawing.Size(111, 20);
+            this.txtPreDanaUFirmi.StyleController = this.dataLayoutControl1;
+            this.txtPreDanaUFirmi.TabIndex = 47;
+            // 
             // txtPreMjeseciUFirmi
             // 
             this.txtPreMjeseciUFirmi.Location = new System.Drawing.Point(466, 96);
@@ -437,14 +457,14 @@
             // 
             // lkpNacinPrestanka
             // 
-            this.lkpNacinPrestanka.Location = new System.Drawing.Point(878, 240);
+            this.lkpNacinPrestanka.Location = new System.Drawing.Point(740, 240);
             this.lkpNacinPrestanka.Name = "lkpNacinPrestanka";
             this.lkpNacinPrestanka.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpNacinPrestanka.Properties.DisplayMember = "Naziv";
             this.lkpNacinPrestanka.Properties.NullText = "Izaberite...";
             this.lkpNacinPrestanka.Properties.ValueMember = "ID";
-            this.lkpNacinPrestanka.Size = new System.Drawing.Size(247, 20);
+            this.lkpNacinPrestanka.Size = new System.Drawing.Size(110, 20);
             this.lkpNacinPrestanka.StyleController = this.dataLayoutControl1;
             this.lkpNacinPrestanka.TabIndex = 44;
             // 
@@ -457,7 +477,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtPrestanka.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtPrestanka.Size = new System.Drawing.Size(248, 20);
+            this.dtPrestanka.Size = new System.Drawing.Size(110, 20);
             this.dtPrestanka.StyleController = this.dataLayoutControl1;
             this.dtPrestanka.TabIndex = 43;
             // 
@@ -898,6 +918,34 @@
             this.ucBolovanjeEdit1.Name = "ucBolovanjeEdit1";
             this.ucBolovanjeEdit1.Size = new System.Drawing.Size(580, 386);
             this.ucBolovanjeEdit1.TabIndex = 1;
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Controls.Add(this.ucPovredaList1);
+            this.xtraTabPage6.Controls.Add(this.ucPovredaEdit1);
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1119, 386);
+            this.xtraTabPage6.Text = "Povrede radne obaveze";
+            // 
+            // ucPovredaList1
+            // 
+            this.ucPovredaList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPovredaList1.Location = new System.Drawing.Point(0, 0);
+            this.ucPovredaList1.Name = "ucPovredaList1";
+            this.ucPovredaList1.Roditelj = null;
+            this.ucPovredaList1.Size = new System.Drawing.Size(692, 386);
+            this.ucPovredaList1.TabIndex = 1;
+            this.ucPovredaList1.IzmjenaPovreda += new Kadrovska_sluzba.RadnikTabele.ucPovredaList.PovredaChangedHandler(this.ucPovredaList1_IzmjenaPovreda);
+            // 
+            // ucPovredaEdit1
+            // 
+            this.ucPovredaEdit1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucPovredaEdit1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ucPovredaEdit1.Location = new System.Drawing.Point(692, 0);
+            this.ucPovredaEdit1.Name = "ucPovredaEdit1";
+            this.ucPovredaEdit1.Povreda = null;
+            this.ucPovredaEdit1.Size = new System.Drawing.Size(427, 386);
+            this.ucPovredaEdit1.TabIndex = 0;
             // 
             // memoNapomena
             // 
@@ -1399,7 +1447,8 @@
             this.layoutControlItem41,
             this.layoutControlItem37,
             this.layoutControlItem38,
-            this.layoutControlItem39});
+            this.layoutControlItem39,
+            this.layoutControlItem28});
             this.autoGroupForGroupAndTitle.Location = new System.Drawing.Point(0, 120);
             this.autoGroupForGroupAndTitle.Name = "autoGroupForGroupAndTitle";
             this.autoGroupForGroupAndTitle.Size = new System.Drawing.Size(823, 72);
@@ -1437,16 +1486,16 @@
             this.layoutControlItem40.Control = this.dtPrestanka;
             this.layoutControlItem40.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(412, 24);
+            this.layoutControlItem40.Size = new System.Drawing.Size(274, 24);
             this.layoutControlItem40.Text = "Datum prestanka radnog odnosa";
             this.layoutControlItem40.TextSize = new System.Drawing.Size(157, 13);
             // 
             // layoutControlItem41
             // 
             this.layoutControlItem41.Control = this.lkpNacinPrestanka;
-            this.layoutControlItem41.Location = new System.Drawing.Point(412, 48);
+            this.layoutControlItem41.Location = new System.Drawing.Point(274, 48);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(411, 24);
+            this.layoutControlItem41.Size = new System.Drawing.Size(274, 24);
             this.layoutControlItem41.Text = "Način prestanka radnog odnosa";
             this.layoutControlItem41.TextSize = new System.Drawing.Size(157, 13);
             // 
@@ -1476,6 +1525,15 @@
             this.layoutControlItem39.Size = new System.Drawing.Size(275, 24);
             this.layoutControlItem39.Text = "Tip radnog odnosa";
             this.layoutControlItem39.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem28
+            // 
+            this.layoutControlItem28.Control = this.dtIstek;
+            this.layoutControlItem28.Location = new System.Drawing.Point(548, 48);
+            this.layoutControlItem28.Name = "layoutControlItem28";
+            this.layoutControlItem28.Size = new System.Drawing.Size(275, 24);
+            this.layoutControlItem28.Text = "Datum isteka ugovora";
+            this.layoutControlItem28.TextSize = new System.Drawing.Size(157, 13);
             // 
             // layoutControlGroup2
             // 
@@ -1528,34 +1586,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // xtraTabPage6
-            // 
-            this.xtraTabPage6.Controls.Add(this.ucPovredaList1);
-            this.xtraTabPage6.Controls.Add(this.ucPovredaEdit1);
-            this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1119, 386);
-            this.xtraTabPage6.Text = "Povrede radnog odnosa";
-            // 
-            // ucPovredaEdit1
-            // 
-            this.ucPovredaEdit1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ucPovredaEdit1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ucPovredaEdit1.Location = new System.Drawing.Point(692, 0);
-            this.ucPovredaEdit1.Name = "ucPovredaEdit1";
-            this.ucPovredaEdit1.Povreda = null;
-            this.ucPovredaEdit1.Size = new System.Drawing.Size(427, 386);
-            this.ucPovredaEdit1.TabIndex = 0;
-            // 
-            // ucPovredaList1
-            // 
-            this.ucPovredaList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPovredaList1.Location = new System.Drawing.Point(0, 0);
-            this.ucPovredaList1.Name = "ucPovredaList1";
-            this.ucPovredaList1.Roditelj = null;
-            this.ucPovredaList1.Size = new System.Drawing.Size(692, 386);
-            this.ucPovredaList1.TabIndex = 1;
-            this.ucPovredaList1.IzmjenaPovreda += new Kadrovska_sluzba.RadnikTabele.ucPovredaList.PovredaChangedHandler(this.ucPovredaList1_IzmjenaPovreda);
-            // 
             // ucRadnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1568,8 +1598,10 @@
             this.Load += new System.EventHandler(this.ucRadnik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPreDanaUFirmi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIstek.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIstek.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPreDanaUFirmi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreMjeseciUFirmi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreDana.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpNacinPrestanka.Properties)).EndInit();
@@ -1612,6 +1644,7 @@
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage4.ResumeLayout(false);
             this.xtraTabPage5.ResumeLayout(false);
+            this.xtraTabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoNapomena.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrezime.Properties)).EndInit();
@@ -1667,12 +1700,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            this.xtraTabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1800,5 +1833,7 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
         private RadnikTabele.ucPovredaList ucPovredaList1;
         private RadnikTabele.ucPovredaEdit ucPovredaEdit1;
+        private DevExpress.XtraEditors.DateEdit dtIstek;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
     }
 }

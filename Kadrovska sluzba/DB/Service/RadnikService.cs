@@ -148,6 +148,12 @@ namespace Kadrovska_sluzba.DB.Service
         public void Delete(int radID)
         {
             //_db.Delete<Radnik>(radnik);
+            _db.Execute(@"DELETE FROM [RadnikDjeca] WHERE RadID = @RadID", new { RadID = radID });
+            _db.Execute(@"DELETE FROM [RadnikGO] WHERE RadID = @RadID", new { RadID = radID });
+            _db.Execute(@"DELETE FROM [RadnikPovredaRO] WHERE RadID = @RadID", new { RadID = radID });
+            _db.Execute(@"DELETE FROM [RadnikKurs] WHERE RadID = @RadID", new { RadID = radID });
+            _db.Execute(@"DELETE FROM [RadnikBolovanje] WHERE RadID = @RadID", new { RadID = radID });
+
             _db.Execute(@"DELETE FROM [Radnik] WHERE ID = @RadID", new { RadID = radID });
             //int rowsAffected = _db.Execute(@"DELETE FROM [Radnik] WHERE RadID = @RadID", new { ParID = Id });
             //if (rowsAffected > 0)

@@ -59,6 +59,25 @@ namespace Kadrovska_sluzba
                 IEnumerable<Mjesto> mj = ms.GetAll();
                 lkpMjestoRodjenja.DataSource = mj.ToList();
                 lkpMjestoStan.DataSource = mj.ToList();
+
+                DrzavljanstvoService ds = new DrzavljanstvoService();
+                lkpDrzavljanstvoID.DataSource = ds.GetAll().ToList();
+                NacinPrestankaROService nps = new NacinPrestankaROService();
+                lkpNacinPrestankaRoID.DataSource = nps.GetAll().ToList();
+                NacionalnostService ns = new NacionalnostService();
+                lkpNacionalnostID.DataSource= ns.GetAll().ToList();
+                OpstinaService os = new OpstinaService();
+                lkpOpstinaIzdavanjaRK.DataSource= os.GetAll().ToList();
+                PorodicnoStanjeService  pss = new PorodicnoStanjeService();
+                lkpPorodicnoStanjeID.DataSource = pss.GetAll().ToList();
+                PoslovnaJedinicaService pjs = new PoslovnaJedinicaService();
+                lkpPoslovnaJedinicaID.DataSource = pjs.GetAll().ToList();
+                RadnoMjestoService rms = new RadnoMjestoService();
+                lkpRadnoMjestoID.DataSource = rms.GetAll().ToList();
+                StrucnaSpremaService sss = new StrucnaSpremaService();
+                lkpStrucnaSpremaID.DataSource = sss.GetAll().ToList();
+                TipRadnogOdnosaService trs = new TipRadnogOdnosaService();
+                lkpTipRadnogOdnosaID.DataSource = trs.GetAll().ToList();
             }
         }
 
@@ -193,7 +212,7 @@ namespace Kadrovska_sluzba
         {
             if (TrenutniRadnik.ID > 0)
             {
-                if (MessageBox.Show("Da li ste sigurni u brisanje podatka?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Da li ste sigurni u brisanje radnika iz evidencije?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     rs.Delete(TrenutniRadnik.ID);
                     LoadData(0);
@@ -259,6 +278,12 @@ namespace Kadrovska_sluzba
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
             rptSpisakRadnikaPoRadnomMjestu r = new rptSpisakRadnikaPoRadnomMjestu();
+            r.ShowPreview();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rptSpisakRadnikaDetaljni r = new rptSpisakRadnikaDetaljni();
             r.ShowPreview();
         }
     }

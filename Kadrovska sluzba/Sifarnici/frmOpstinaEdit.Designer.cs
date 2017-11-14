@@ -140,9 +140,11 @@
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(44, 201);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.Size = new System.Drawing.Size(88, 19);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Šifra opštine";
             // 
@@ -151,14 +153,18 @@
             this.txtSifra.Location = new System.Drawing.Point(147, 198);
             this.txtSifra.MenuManager = this.mainRibbonControl;
             this.txtSifra.Name = "txtSifra";
-            this.txtSifra.Size = new System.Drawing.Size(100, 20);
+            this.txtSifra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtSifra.Properties.Appearance.Options.UseFont = true;
+            this.txtSifra.Size = new System.Drawing.Size(100, 26);
             this.txtSifra.TabIndex = 3;
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(44, 255);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(64, 13);
+            this.labelControl2.Size = new System.Drawing.Size(94, 19);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Naziv opštine";
             // 
@@ -167,7 +173,9 @@
             this.txtNaziv.Location = new System.Drawing.Point(147, 252);
             this.txtNaziv.MenuManager = this.mainRibbonControl;
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(281, 20);
+            this.txtNaziv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtNaziv.Properties.Appearance.Options.UseFont = true;
+            this.txtNaziv.Size = new System.Drawing.Size(281, 26);
             this.txtNaziv.TabIndex = 5;
             // 
             // frmOpstinaEdit

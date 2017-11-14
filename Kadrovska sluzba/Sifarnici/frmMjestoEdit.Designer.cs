@@ -143,56 +143,68 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(44, 201);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(58, 184);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(67, 13);
+            this.labelControl1.Size = new System.Drawing.Size(100, 19);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Poštanski broj";
             // 
             // txtSifra
             // 
-            this.txtSifra.Location = new System.Drawing.Point(147, 198);
+            this.txtSifra.Location = new System.Drawing.Point(161, 181);
             this.txtSifra.MenuManager = this.mainRibbonControl;
             this.txtSifra.Name = "txtSifra";
+            this.txtSifra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtSifra.Properties.Appearance.Options.UseFont = true;
             this.txtSifra.Properties.Mask.EditMask = "n0";
             this.txtSifra.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtSifra.Size = new System.Drawing.Size(100, 20);
+            this.txtSifra.Size = new System.Drawing.Size(100, 26);
             this.txtSifra.TabIndex = 3;
             // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(147, 224);
+            this.txtNaziv.Location = new System.Drawing.Point(161, 213);
             this.txtNaziv.MenuManager = this.mainRibbonControl;
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(281, 20);
+            this.txtNaziv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtNaziv.Properties.Appearance.Options.UseFont = true;
+            this.txtNaziv.Size = new System.Drawing.Size(281, 26);
             this.txtNaziv.TabIndex = 5;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(44, 227);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(58, 216);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(38, 19);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Naziv";
             // 
             // lkpOpstine
             // 
-            this.lkpOpstine.Location = new System.Drawing.Point(147, 250);
+            this.lkpOpstine.Location = new System.Drawing.Point(161, 245);
             this.lkpOpstine.MenuManager = this.mainRibbonControl;
             this.lkpOpstine.Name = "lkpOpstine";
+            this.lkpOpstine.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.lkpOpstine.Properties.Appearance.Options.UseFont = true;
             this.lkpOpstine.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpOpstine.Properties.DisplayMember = "Naziv";
             this.lkpOpstine.Properties.NullText = "Izaberite...";
             this.lkpOpstine.Properties.ValueMember = "ID";
-            this.lkpOpstine.Size = new System.Drawing.Size(281, 20);
+            this.lkpOpstine.Size = new System.Drawing.Size(281, 26);
             this.lkpOpstine.TabIndex = 7;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(44, 253);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(58, 248);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(37, 13);
+            this.labelControl3.Size = new System.Drawing.Size(54, 19);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Opština";
             // 

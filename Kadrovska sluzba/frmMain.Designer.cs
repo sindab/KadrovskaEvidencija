@@ -63,8 +63,8 @@
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucNotifikacije1 = new Kadrovska_sluzba.ucKalendar();
             this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ucSettings1 = new Kadrovska_sluzba.ucSettings();
+            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -111,6 +111,7 @@
             // 
             this.skinRibbonGalleryBarItem.Id = 14;
             this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
+            this.skinRibbonGalleryBarItem.RememberLastCommand = true;
             // 
             // barSubItemNavigation
             // 
@@ -388,12 +389,6 @@
             this.navigationPage3.Name = "navigationPage3";
             this.navigationPage3.Size = new System.Drawing.Size(756, 380);
             // 
-            // navigationPage1
-            // 
-            this.navigationPage1.Caption = "navigationPage1";
-            this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(750, 380);
-            // 
             // ucSettings1
             // 
             this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -401,6 +396,12 @@
             this.ucSettings1.Name = "ucSettings1";
             this.ucSettings1.Size = new System.Drawing.Size(756, 380);
             this.ucSettings1.TabIndex = 0;
+            // 
+            // navigationPage1
+            // 
+            this.navigationPage1.Caption = "navigationPage1";
+            this.navigationPage1.Name = "navigationPage1";
+            this.navigationPage1.Size = new System.Drawing.Size(750, 380);
             // 
             // frmMain
             // 

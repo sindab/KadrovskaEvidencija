@@ -137,9 +137,11 @@
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(44, 230);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(38, 19);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Naziv";
             // 
@@ -148,7 +150,9 @@
             this.txtNaziv.Location = new System.Drawing.Point(147, 227);
             this.txtNaziv.MenuManager = this.mainRibbonControl;
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(281, 20);
+            this.txtNaziv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtNaziv.Properties.Appearance.Options.UseFont = true;
+            this.txtNaziv.Size = new System.Drawing.Size(281, 26);
             this.txtNaziv.TabIndex = 5;
             // 
             // frmDrzavljanstvoEdit

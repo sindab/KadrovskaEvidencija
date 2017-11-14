@@ -184,7 +184,7 @@
             this.ribbonPageGroup2});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Povreda radnog odnosa";
+            this.ribbonPage1.Text = "Povreda radne obaveze";
             // 
             // ribbonPageGroup1
             // 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.LookAndFeel;
 
 namespace Kadrovska_sluzba
 {
@@ -17,11 +18,28 @@ namespace Kadrovska_sluzba
         {
             //Helpers.RegionalSettings.SetRegionalSettings();
             InitializeComponent();
+            UserLookAndFeel.Default.SkinName = Properties.Settings.Default["ApplicationSkinName"].ToString();
         }
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Properties.Settings.Default["ApplicationSkinName"] = UserLookAndFeel.Default.SkinName;
+            Properties.Settings.Default.Save();
             Application.Exit();
         }
+
+        //private void LoadTheme()
+        //{
+        //    string themeName = Properties.Settings.Default["ThemeName"] as string;
+        //    ThemeManager.ApplicationThemeName = themeName;
+        //    comboBoxEdit1.EditValue = Theme.FindTheme(themeName);
+        //}
+
+        //private void SaveTheme()
+        //{
+        //    Properties.Settings.Default["ThemeName"] = ThemeManager.ApplicationThemeName;
+        //    Properties.Settings.Default.Save();
+        //}
+
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
         {

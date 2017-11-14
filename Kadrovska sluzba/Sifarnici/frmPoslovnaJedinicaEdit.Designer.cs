@@ -440,6 +440,8 @@
             this.txtNaziv.Location = new System.Drawing.Point(150, 31);
             this.txtNaziv.MenuManager = this.mainRibbonControl;
             this.txtNaziv.Name = "txtNaziv";
+            this.txtNaziv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtNaziv.Properties.Appearance.Options.UseFont = true;
             this.txtNaziv.Size = new System.Drawing.Size(340, 20);
             this.txtNaziv.TabIndex = 2;
             // 
@@ -453,6 +455,8 @@
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(37, 38);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(26, 13);

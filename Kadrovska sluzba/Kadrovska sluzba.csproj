@@ -167,6 +167,12 @@
     <Compile Include="Reports\rptGodisnjiOdmori.Designer.cs">
       <DependentUpon>rptGodisnjiOdmori.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaDetaljni.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSpisakRadnikaDetaljni.Designer.cs">
+      <DependentUpon>rptSpisakRadnikaDetaljni.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\rptSpisakRadnikaPoStarosti.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -446,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptGodisnjiOdmori.resx">
       <DependentUpon>rptGodisnjiOdmori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSpisakRadnikaDetaljni.resx">
+      <DependentUpon>rptSpisakRadnikaDetaljni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptSpisakRadnikaPoStarosti.resx">
       <DependentUpon>rptSpisakRadnikaPoStarosti.cs</DependentUpon>

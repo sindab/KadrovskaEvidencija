@@ -38,7 +38,7 @@ namespace Kadrovska_sluzba.DB.Service
                 });
         }
 
-        public void DodajRodjendan(Radnik radnik)
+        public void DodajRodjendan(vRadnik radnik)
         {
             RadnikService rs = new RadnikService();
             int label = (int)Settings.KalendarLabele.Rodjendan;
@@ -63,12 +63,12 @@ namespace Kadrovska_sluzba.DB.Service
             Create(rodjendan);
             //return rodjendan;
         }
-        public void DodajGodisnjicu10(Radnik radnik)
+        public void DodajGodisnjicu10(vRadnik radnik)
         {
             RadnikService rs = new RadnikService();
             int label = (int)Settings.KalendarLabele.Godisnjica10;
             DeleteIfExist(radnik.ID, label);
-            DateTime datum = (DateTime)radnik.DatumZapos;
+            DateTime datum = (DateTime)radnik.DatumZaposJubilej;
             datum = datum.AddYears(10);
             Appointments godisnjica = new Appointments();
             godisnjica.Type = 0;
@@ -89,12 +89,12 @@ namespace Kadrovska_sluzba.DB.Service
             Create(godisnjica);
             //return godisnjica;
         }
-        public void DodajGodisnjicu20(Radnik radnik)
+        public void DodajGodisnjicu20(vRadnik radnik)
         {
             RadnikService rs = new RadnikService();
             int label = (int)Settings.KalendarLabele.Godisnjica20;
             DeleteIfExist(radnik.ID, label);
-            DateTime datum = (DateTime)radnik.DatumZapos;
+            DateTime datum = (DateTime)radnik.DatumZaposJubilej;
             datum = datum.AddYears(20);
             Appointments godisnjica = new Appointments();
             godisnjica.Type = 0;
@@ -115,12 +115,12 @@ namespace Kadrovska_sluzba.DB.Service
             Create(godisnjica);
             //return godisnjica;
         }
-        public void DodajGodisnjicu25(Radnik radnik)
+        public void DodajGodisnjicu25(vRadnik radnik)
         {
             RadnikService rs = new RadnikService();
             int label = (int)Settings.KalendarLabele.Godisnjica25;
             DeleteIfExist(radnik.ID, label);
-            DateTime datum = (DateTime)radnik.DatumZapos;
+            DateTime datum = (DateTime)radnik.DatumZaposJubilej;
             datum = datum.AddYears(25);
             Appointments godisnjica = new Appointments();
             godisnjica.Type = 0;
@@ -141,12 +141,12 @@ namespace Kadrovska_sluzba.DB.Service
             Create(godisnjica);
             //return godisnjica;
         }
-        public void DodajGodisnjicu30(Radnik radnik)
+        public void DodajGodisnjicu30(vRadnik radnik)
         {
             RadnikService rs = new RadnikService();
             int label = (int)Settings.KalendarLabele.Godisnjica30;
             DeleteIfExist(radnik.ID, label);
-            DateTime datum = (DateTime)radnik.DatumZapos;
+            DateTime datum = (DateTime)radnik.DatumZaposJubilej;
             datum = datum.AddYears(30);
             Appointments godisnjica = new Appointments();
             godisnjica.Type = 0;
@@ -167,7 +167,7 @@ namespace Kadrovska_sluzba.DB.Service
             Create(godisnjica);
             //return godisnjica;
         }
-        public void DodajIstekUgovora(Radnik radnik)
+        public void DodajIstekUgovora(vRadnik radnik)
         {
             DateTime datum;
             try

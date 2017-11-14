@@ -62,6 +62,8 @@
             // 
             // gridView
             // 
+            this.gridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.gridView.Appearance.Row.Options.UseFont = true;
             this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcID,

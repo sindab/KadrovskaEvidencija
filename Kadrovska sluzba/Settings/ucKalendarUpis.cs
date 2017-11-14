@@ -17,19 +17,22 @@ namespace Kadrovska_sluzba.Settings
     {
         RadnikService rs;
         AppointmentsService aS;
-        IEnumerable<Radnik> radnici;
+        IEnumerable<vRadnik> radnici;
         public ucKalendarUpis()
         {
             InitializeComponent();
             aS = new AppointmentsService();
             rs = new RadnikService();
-            radnici = rs.GetAll(false);
+            if (!(LicenseManager.UsageMode == LicenseUsageMode.Designtime))
+            {
+                radnici = rs.GetAllV();
+            }
         }
 
         private void btnUpisiRodj_Click(object sender, EventArgs e)
         {
             aS.DeleteAll(KalendarLabele.Rodjendan);
-            foreach (Radnik radnik in radnici)
+            foreach (vRadnik radnik in radnici)
             {
                 aS.DodajRodjendan(radnik);
             }
@@ -38,7 +41,7 @@ namespace Kadrovska_sluzba.Settings
         private void btnUpisiIstekUg_Click(object sender, EventArgs e)
         {
             aS.DeleteAll(KalendarLabele.IstekUgovora);
-            foreach (Radnik radnik in radnici)
+            foreach (vRadnik radnik in radnici)
             {
                 aS.DodajIstekUgovora(radnik);
             }
@@ -47,7 +50,7 @@ namespace Kadrovska_sluzba.Settings
         private void btnUpisiJubilej1_Click(object sender, EventArgs e)
         {
             aS.DeleteAll(KalendarLabele.Godisnjica10);
-            foreach (Radnik radnik in radnici)
+            foreach (vRadnik radnik in radnici)
             {
                 aS.DodajGodisnjicu10(radnik);
             }
@@ -56,7 +59,7 @@ namespace Kadrovska_sluzba.Settings
         private void btnUpisiJubilej2_Click(object sender, EventArgs e)
         {
             aS.DeleteAll(KalendarLabele.Godisnjica20);
-            foreach (Radnik radnik in radnici)
+            foreach (vRadnik radnik in radnici)
             {
                 aS.DodajGodisnjicu20(radnik);
             }
@@ -65,7 +68,7 @@ namespace Kadrovska_sluzba.Settings
         private void btnUpisiJubilej25_Click(object sender, EventArgs e)
         {
             aS.DeleteAll(KalendarLabele.Godisnjica25);
-            foreach (Radnik radnik in radnici)
+            foreach (vRadnik radnik in radnici)
             {
                 aS.DodajGodisnjicu25(radnik);
             }
@@ -74,7 +77,7 @@ namespace Kadrovska_sluzba.Settings
         private void btnUpisiJubilej3_Click(object sender, EventArgs e)
         {
             aS.DeleteAll(KalendarLabele.Godisnjica30);
-            foreach (Radnik radnik in radnici)
+            foreach (vRadnik radnik in radnici)
             {
                 aS.DodajGodisnjicu30(radnik);
             }

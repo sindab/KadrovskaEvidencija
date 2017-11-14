@@ -154,7 +154,7 @@
             this.mainRibbonPageGroup});
             this.mainRibbonPage.MergeOrder = 0;
             this.mainRibbonPage.Name = "mainRibbonPage";
-            this.mainRibbonPage.Text = "Povreda radnog odnosa";
+            this.mainRibbonPage.Text = "Povreda radne obaveze";
             // 
             // mainRibbonPageGroup
             // 

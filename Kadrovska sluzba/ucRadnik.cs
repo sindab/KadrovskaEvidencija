@@ -81,6 +81,7 @@ namespace Kadrovska_sluzba
                     lkpTipRadnogOdnosa.EditValue = _radnik.TipRadnogOdnosaID;
                     lkpNacinPrestanka.EditValue = _radnik.NacinPrestankaRoID;
                     dtPrestanka.EditValue = _radnik.DatumPrestankaRO;
+                    dtIstek.EditValue = _radnik.DatumIstekaUgovora;
                     memoNapomena.EditValue = _radnik.Napomena;
                     txtEmail.EditValue = _radnik.eMail;
                     lkpPoslovnaJedinica.EditValue = _radnik.PoslovnaJedinicaID;
@@ -247,7 +248,8 @@ namespace Kadrovska_sluzba
             //_radnik.DatumPrestankaRO = (DateTime)dtPrestanka.EditValue;
             if (dtPrestanka.EditValue == null) _radnik.DatumPrestankaRO = null;
             else _radnik.DatumPrestankaRO = Convert.ToDateTime(dtPrestanka.EditValue);
-
+            if (dtIstek.EditValue == null) _radnik.DatumIstekaUgovora = null;
+            else _radnik.DatumIstekaUgovora = Convert.ToDateTime(dtIstek.EditValue);
             _radnik.Napomena = memoNapomena.EditValue.ToString();
             //_radnik.eMail = txtEmail.EditValue.ToString();
             if (txtEmail.EditValue == null) _radnik.eMail = null;
