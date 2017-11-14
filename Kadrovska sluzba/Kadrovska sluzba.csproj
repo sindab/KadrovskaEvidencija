@@ -595,6 +595,7 @@
     <EmbeddedResource Include="ucSifarnici.resx">
       <DependentUpon>ucSifarnici.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DB\kadrovska.bak" />
     <None Include="KadrovskaDataSet.xsc">
       <DependentUpon>KadrovskaDataSet.xsd</DependentUpon>
     </None>
